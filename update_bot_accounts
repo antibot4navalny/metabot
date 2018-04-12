@@ -1,0 +1,10 @@
+#!/bin/sh
+
+FILE="bot_accounts.js"
+DATE=`date +"%H:%M:%S %d.%m.%Y"`
+URL="https://raw.githubusercontent.com/YTObserver/YT-ACC-DB/master/mainDB"
+
+echo -e "/**\n * @updated $DATE\n * @source $URL\n */\n\nvar BOT_ACCOUNTS = {" > $FILE
+wget -O - "$URL" \
+	| sed -r "s/(.+)=(.+)\r/'\1': {date_rus:'\2'},/" >> $FILE
+echo -e "}" >> $FILE
