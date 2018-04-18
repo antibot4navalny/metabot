@@ -1,8 +1,9 @@
 {
 	"manifest_version": 2,
-	"name" : "MetaBot chrome plugin for YouTube",
-	"version" : "1.0",
-	"description" : "More information about users and videos on YouTube.",
+	"name": "MetaBot chrome plugin for YouTube",
+	"version": "1.0",
+	"description": "More information about users and videos on YouTube.",
+	"update_url": "https://raw.githubusercontent.com/CupIvan/metabot/master/updates.xml",
 	"content_scripts": [{
 		"matches": ["https://*.youtube.com/*"],
 		"js": ["bot_accounts.js", "metabot.js"],
