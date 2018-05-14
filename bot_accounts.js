@@ -1,5 +1,5 @@
 /**
- * @updated 14:16:34 09.05.2018
+ * @updated 11:24:37 14.05.2018
  * @source https://raw.githubusercontent.com/YTObserver/YT-ACC-DB/master/mainDB
  */
 
@@ -1214,9 +1214,28 @@ var BOT_ACCOUNTS = {
 'UC1rihrLmnwAqy1bWd4POL6g': {date_rus:'3 мая 2018'},
 'UCIkpicXV3bvuJFffzNkXmrQ': {date_rus:'3 мая 2018'},
 'UC8AwlEJu3OxAjwjFG0-fU7g': {date_rus:'20 апреля 2018', comment: '(притворщик)'},
-'UCZHcPR5kW61Mi2NBEbLMbJg': {date_rus:'21 апреля 2018'},
 'UC25A83cc_fnIFApd3WX8qwQ': {date_rus:'19 апреля 2018'},
 'UCEP8ezGgjFF0psM97aQ6ANA': {date_rus:'20 апреля 2018'},
 'UC9yjYgzYriwBksHjsyZ2geQ': {date_rus:'20 апреля 2018'},
 'UCwwTpc5sd05DEcPKukePKTw': {date_rus:'20 апреля 2018'},
+'UCv5oUbyBTMFDO0whdHCB4kQ': {date_rus:'28 марта 2018'},
+'UCHqK2DQ6S_uEycdA954sWqw': {date_rus:'3 апреля 2018'},
+'UCYuWSFyl3o0MJbCnLw5b8dg': {date_rus:'5 апреля 2018'},
+'UC0V78ZVvNdJ3miuNxFRz6Yg': {date_rus:'5 апреля 2018'},
+'UC35RJf1YlaXiYePAflvhjqA': {date_rus:'7 апреля 2018'},
+'UCU8aGxLMK4JnOeR7wWhDQoQ': {date_rus:'7 апреля 2018'},
+'UCsH7jm4uEffsiLRjEgtVX8A': {date_rus:'10 апреля 2018'},
+'UCoerjoD2Ntm5D7kbJmoeikw': {date_rus:'10 апреля 2018'},
+'UCGACwPJkxtKIOY2K_c5nzbA': {date_rus:'10 апреля 2018'},
+'UCk6vzUT-vLV8W_Blv0wCqdg': {date_rus:'10 апреля 2018'},
+'UCTkxHEbnaA1GfMt5Dad-qRg': {date_rus:'15 апреля 2018'},
+'UC7keaC7RGeYmAtKLC89DZNg': {date_rus:'15 апреля 2018'},
+'UCoNWCl7xBho837oPPRpWKnQ': {date_rus:'17 апреля 2018'},
+'UCf5v0wzwNuGqDAkBEVZzCtw': {date_rus:'17 апреля 2018'},
+'UC0S7uLCqiHVSpC5QgHcGkgQ': {date_rus:'19 ноября 2017'},
+'UCGkFLLiTlPDsHXQZLwiPyTA': {date_rus:'20 ноября 2017'},
+'UC9It3l_nyFid_t29Ro_kHug': {date_rus:'22 ноября 2017'},
+'UCq_NIjeN54I2nlbnVtqp2dA': {date_rus:'16 декабря 2017'},
+'UCc_7H6_xmpUSwzJoyRR5HUw': {date_rus:'17 декабря 2017'},
+'UCYT3LwTBoXBtS9UN18NXekA': {date_rus:'18 декабря 2017'},
 }
