@@ -1,5 +1,5 @@
 /**
- * @updated 10:22:24 31.05.2018
+ * @updated 15:08:08 18.06.2018
  * @source https://raw.githubusercontent.com/YTObserver/YT-ACC-DB/master/mainDB
  */
 
@@ -1241,4 +1241,38 @@ var BOT_ACCOUNTS = {
 'UCI_jX5HW9vT5dSqsttP9yNA': {date_rus:'18 мая 2018'},
 'UC8vyRpYOzonE5S5kFEepT9Q': {date_rus:'7 апреля 2018'},
 'UCAEJ9ecsnYDyIsN6JITzsKQ': {date_rus:'10 апреля 2018'},
+'UC2gpSZ_i6xbhfCdx87qZj4Q': {date_rus:'17 ноября 2017'},
+'UC-wFwxYob_NZrfQNGHHSvuw': {date_rus:'17 ноября 2017'},
+'UCFMWmRC-xXEkXZiHjDXpJMw': {date_rus:'17 ноября 2017'},
+'UC-E3eoCGi6XQClaYzhIjXVQ': {date_rus:'23 декабря 2017'},
+'UC2njslYowl0t2b9Fbah_ATg': {date_rus:'18 ноября 2017'},
+'UCUFr4XQ86OA99qYxeJRFngw': {date_rus:'21 декабря 2017'},
+'UCVn_1s-J8NaYZZWB64Uf0Ww': {date_rus:'21 декабря 2017'},
+'UCdQPWktcizprOJeQgGKcbmQ': {date_rus:'21 декабря 2017'},
+'UCdcmA-MaHPhKb4cafngjSBw': {date_rus:'7 апреля 2018'},
+'UCNkOsT9RuGt6fajvkX8C5NA': {date_rus:'20 апреля 2018'},
+'UC3tMNdVToDRndL9QoMZ3xbg': {date_rus:'20 апреля 2018'},
+'UC5jsCL5NVHLmSUroTg1B-MQ': {date_rus:'19 апреля 2018'},
+'UCAOEd-2X6ybRaa8IBbQ-S7Q': {date_rus:'19 апреля 2018'},
+'UC6YYiWnERA6_pWfuziWb5Ow': {date_rus:'19 апреля 2018'},
+'UCxTSTVRU4J9gEwr1LheWXQw': {date_rus:'19 апреля 2018'},
+'UCtvxhV0LFCTuYHkPicE63bQ': {date_rus:'19 апреля 2018'},
+'UC1AnfAhK7P9Hw4k2Jod6IMA': {date_rus:'19 апреля 2018'},
+'UCCwGYEkxluYGdVbyucI8bbg': {date_rus:'17 ноября 2017'},
+'UCCBEb5L2MdoIL-inrqhySGA': {date_rus:'2 мая 2018'},
+'UCRk2KGoGGzIhRqi7fZBbeMw': {date_rus:'10 апреля 2018'},
+'UCakJhtGQyKiF-Gc-IOxaN3w': {date_rus:'19 апреля 2018'},
+'UCSILiptOxms3qcNfMSZE2gg': {date_rus:'20 апреля 2018'},
+'UCmftA6fpCP_TfdmfrC7WYCw': {date_rus:'9 июня 2018'},
+'UCOWuOWqFJYJWnHdJa873-RQ': {date_rus:'9 июня 2018'},
+'UCZzvoHUOUp9dnD6_cbbTxYg': {date_rus:'9 июня 2018'},
+'UCrZPoyoNddIGgNbZnAX12kg': {date_rus:'9 июня 2018'},
+'UCZkWZDTBpc8ppMWMK_QSGOw': {date_rus:'9 июня 2018'},
+'UCyY6OYL3rSL3FasmfhUF-_A': {date_rus:'9 июня 2018'},
+'UCCOFw-ze_wjnWo7CdK1qOwA': {date_rus:'9 июня 2018'},
+'UCBhAzCnx1d_VKXYLhHUqzuA': {date_rus:'9 июня 2018'},
+'UC4jh-QQo-cS6lhygzdIFS2A': {date_rus:'9 июня 2018'},
+'UC792hBLGzKhhoYJuQsnmXqA': {date_rus:'13 июня 2018'},
+'UCx2qlGpvWFXGjcy5UNZFmBg': {date_rus:'13 июня 2018'},
+'UC4NjX8BeRkgcwNZYb0R7Nsg': {date_rus:'20 июня 2017'},
 }
