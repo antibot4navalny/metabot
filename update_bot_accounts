@@ -1,11 +1,43 @@
-#!/bin/sh
+#!/bin/env php
+<?php
 
-FILE="bot_accounts.js"
-DATE=`date +"%H:%M:%S %d.%m.%Y"`
-URL="https://raw.githubusercontent.com/YTObserver/YT-ACC-DB/master/mainDB"
+$URL  = "https://raw.githubusercontent.com/YTObserver/YT-ACC-DB/master/mainDB";
 
-echo -e "/**\n * @updated $DATE\n * @source $URL\n */\n\nvar BOT_ACCOUNTS = {" > $FILE
-wget -O - "$URL" \
-	| sed -r "s/(.+)=(.+)\r/'\1': {date_rus:'\2'},/" \
-	| sed -r "s/ \(/', comment: '(/" >> $FILE
-echo -e "}" >> $FILE
+# update DB
+$st = file_get_contents($URL);
+ob_start();
+$st = preg_replace('/(.+)=(.+)\r/', "'$1': {date_rus:'$2'},", $st);
+$st = preg_replace('/ \(/', "', comment: '(", $st);
+echo
+"/**
+ * @updated ".date('H:i:s d.m.Y')."
+ * @source $URL\n */\n\nvar BOT_ACCOUNTS = {
+$st}\n";
+file_put_contents('bot_accounts.js', ob_get_clean());
+
+#-	| sed -r "s/(.+)=(.+)\r/'\1': {date_rus:'\2'},/" \
+
+# bump version
+$st = file_get_contents($fname = 'manifest.json');
+if (preg_match('/("version\D*)([\d\.]+)/', $st, $m))
+{
+	$v = explode('.', $m[2]);
+	$v[count($v)-1]++;
+	define('NEW_VERSION', implode('.', $v));
+
+	$st = file_get_contents($fname = 'manifest.json');
+	$st_= preg_replace('/("version\D*)([\d\.])+/s', '${1}'.NEW_VERSION, $st);
+	if ($st != $st_)
+	file_put_contents($fname, $st_);
+
+	$st = file_get_contents($fname = 'updates.xml');
+	$st_= preg_replace('/(updatecheck.+version=\D*)([\d\.])+/', '${1}'.NEW_VERSION, $st);
+	if ($st != $st_)
+	file_put_contents($fname, $st_);
+
+	# repack extension
+	passthru('cd ..; chromium --pack-extension=metabot --pack-extension-key=metabot.pem; mv metabot.crx metabot');
+	# git commit
+	passthru('git add metabot.crx updates.xml manifest.json bot_accounts.js; git commit -m "'.NEW_VERSION.' - обновление базы"');
+	passthru('git push');
+}
