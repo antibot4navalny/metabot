@@ -1,43 +1,54 @@
+// каждые 3 секунды на странице помечаются твиты от ботов, не помеченные ранее
 setInterval(tick, 3000)
 
+
+// добавляем стили для пометки ботов
+
 var d = document.createElement('div')
-var s = ''
-	+ '.is_bot { background: #FEE !important; }'
-	+ '.is_bot .bot_text { display: none; color: #999; font-style: italic; }'
-d.innerHTML = '<style>'+s+'</style>'
-document.body.appendChild(d)
+
+// стиль для пометки красноватым фоном твитов от ботов
+if(JSON.parse(document.querySelector('#init-data').value)["night_mode_activated"])
+{
+	var s = '.is_bot { background: #4b3333 !important; }'
+} else {
+	var s = '.is_bot { background: #FEE !important; }'
+}
+ 	
+// стиль для пометки блёклым текста твитов от ботов
+ s += '.is_bot .bot_text { color: #808080; }'
+
+ d.innerHTML = '<style>'+s+'</style>'
+ document.body.appendChild(d)
+ 
 
 function tick()
 {
-	if (!BOT_ACCOUNTS) return
-
-	var a = document.querySelectorAll('ytd-comment-renderer #header-author a.yt-simple-endpoint')
+	var a=document.querySelectorAll('div.tweet')
 
 	var i, x, t
 	for (i = 0; i < a.length; i++)
 	if (!a[i].dataset.mt_is_upd)
 	{
-		if (x = /(user|channel)\/(.+)$/.exec(a[i].href)) x = x[2]
-		else x = ''
-
-		if (BOT_ACCOUNTS[x]) // проверка есть ли в базе
+		// выделяем все твиты, показанные на странице
+		x=Number(a[i].getAttribute("data-user-id"))
+		
+		if (BOT_ACCOUNTS[x]) // проверка, есть ли пользователь в списке известных ботов
 		{
-			// подсвечиваем заголовок
-			if (x) a[i].innerHTML += ' [БОТ]'
-			a[i].style.color = 'red'
-			a[i].title = 'Дата регистрации: ' + BOT_ACCOUNTS[x].date_rus;
-			
-			// контейнер комментария
-			t = a[i]; while (t.id != 'main') t = t.parentNode
+			// подсвечиваем весь твит стилем is_bot
+			//a[i].innerHTML += '&nbsp;[БОТ]'
+			t = a[i]
 			t.className += ' is_bot'
+			
+			// дописываем "БОТ: " перед именем автора твита
+			fullNm=t.querySelector('span.FullNameGroup')
+			fullNm.style.color = 'red'
+			fullNm.innerHTML = "БОТ:&nbsp;" + fullNm.innerHTML
 
-			// убираем текст
-			t = t.querySelector('#content-text')
-			t.innerHTML = '<a href="/results?search_query=ЕРКЮ">#ЕРКЮ</a>'
-				+ ' —﻿ <span onclick="this.parentNode.querySelector(\'div\').style.display=\'block\'" title="Нажми, чтобы посмотреть" style="cursor: pointer">комментарий бота спрятан...</span>'
-				+ '<div class="bot_text">' + t.innerHTML + '</div>'
+			// делаем текст твита более блёклым
+			tweetTxt=t.querySelector('div.js-tweet-text-container p.tweet-text')
+			tweetTxt.className = 'bot_text ' + tweetTxt.className
 		}
-
+		// помечаем твит как обработанный, чтобы впредь на него не тратить время
 		a[i].dataset.mt_is_upd = 1
 	}
 }
