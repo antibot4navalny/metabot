@@ -33,7 +33,7 @@ else
 	sed -E "s/VVVVVV/$version/" manifest.template.json > MetabotTwitter/manifest.json
 	sed -E "s/VVVVVV/$version/" updates.template.xml > updates.xml
 
-	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory=Profile 12
+	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory="Profile 12"
 
 	git add metabotTwitter.crx updates.xml metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
 
