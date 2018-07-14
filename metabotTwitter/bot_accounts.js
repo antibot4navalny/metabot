@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-07-14 20:28:36
+ * @updated: 2018-07-14 20:29:01
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
