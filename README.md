@@ -10,10 +10,10 @@
 ## Установка
 
 1. Запускаем Google Chrome
-2. Скачиваем упакованное расширение [metabotTwitter.crx](https://raw.githubusercontent.com/antibot4navalny/metabot/master/metabotTwitter.crx)
+2. Скачиваем файл [metabotTwitter.crx](https://raw.githubusercontent.com/antibot4navalny/metabot/master/metabotTwitter.crx)
 3. Открываем новую вкладку (Ctrl+T)
 4. Вводим в адресной строке chrome://extensions/
-5. Перетаскиваем скачанный файл в окно браузера и устанавливаем
+5. Перетаскиваем скачанный файл в эту вкладку в браузере; подтверждаем устанавку
 
 ----
 Создано на базе и благодаря [аналогичному расширению для Youtube](https://github.com/CupIvan/metabot) (c) [CupIvan](https://github.com/CupIvan).
