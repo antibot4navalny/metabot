@@ -17,5 +17,3 @@
 
 ----
 Создано на базе и благодаря [аналогичному расширению для Youtube](https://github.com/CupIvan/metabot) (c) [CupIvan](https://github.com/CupIvan).
-
-Оно, в свою очередь, появилось на базе [скрипта Metabot для Violentmonkey/Tampermonkey/Greasemonkey](https://github.com/asrdri/yt-metabot-user-js) (c) [asrdri](https://github.com/asrdri).
