@@ -13,7 +13,7 @@ if cmp --quiet bot_accounts.csv bot_accounts.previous.csv; then
 else
 	echo "DB changes detected, preparing to push them. Sounds right?"
 	read -n 1 -s
-		
+
 	echo "/**" > bot_accounts.js
 	date -u "+ * @updated: %Y-%m-%d %H:%M:%S" >> bot_accounts.js
 	echo " * @source " $csv_db_URL >> bot_accounts.js
@@ -35,14 +35,14 @@ else
 
 	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory="Profile 12"
 
-	git add metabotTwitter.crx updates.xml metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
+	echo $version > version.txt
+	git add metabotTwitter.crx updates.xml version.txt metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
 
 	git commit -m "$version: update bot list from blocktogether"
 	echo "About to push DB changes. Sounds good?"
 	read -n 1 -s
 	git push
 
-	echo $version > version.txt
 
 	exit 0
 fi
