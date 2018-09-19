@@ -1,11 +1,10 @@
-csv_db_URL=https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
+SCRIPTPATH=$(dirname "$0")
+echo "Switching to script folder:""$SCRIPTPATH"
+cd "$SCRIPTPATH"
 
-if [ -f bot_accounts.csv ]; then
-	echo "Previous DB found, saving it..."
-	mv bot_accounts.csv bot_accounts.previous.csv
-fi
+csv_db_URL="https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3"
 
-curl --silent https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3.csv > bot_accounts.csv
+curl --silent "$csv_db_URL".csv > bot_accounts.csv
 
 if cmp --quiet bot_accounts.csv bot_accounts.previous.csv; then
 	echo "No changes in DB to push"
@@ -33,7 +32,7 @@ else
 	sed -E "s/VVVVVV/$version/" manifest.template.json > MetabotTwitter/manifest.json
 	sed -E "s/VVVVVV/$version/" updates.template.xml > updates.xml
 
-	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory="Profile 12"
+	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory="Profile 12"
 
 	echo $version > version.txt
 	git add metabotTwitter.crx updates.xml version.txt metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
@@ -43,6 +42,6 @@ else
 	read -n 1 -s
 	git push
 
-
+	mv bot_accounts.csv bot_accounts.previous.csv
 	exit 0
 fi
