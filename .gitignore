@@ -1,3 +1,4 @@
 *.pem
 bot_accounts*.csv
 .DS_Store
+.*
