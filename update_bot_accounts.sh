@@ -24,17 +24,18 @@ else
 
 	mv bot_accounts.js metabotTwitter
 
-	version=`cat version.txt`
+	version=`cat next_version.txt`
 	
-	## increment the rightmost component of version (assuming there is has at least two components)
-	version="${version%.*}.$((${version##*.}+1))"
 	
 	sed -E "s/VVVVVV/$version/" manifest.template.json > MetabotTwitter/manifest.json
 	sed -E "s/VVVVVV/$version/" updates.template.xml > updates.xml
 
 	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory="Profile 12"
 
-	echo $version > version.txt
+	## increment the rightmost component of version (assuming there is has at least two components)
+	version="${version%.*}.$((${version##*.}+1))"
+	echo $version > next_version.txt
+
 	git add metabotTwitter.crx updates.xml version.txt metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
 
 	git commit -m "$version: update bot list from blocktogether"
