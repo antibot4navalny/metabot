@@ -1,4 +1,6 @@
 *.pem
 bot_accounts*.csv
 .DS_Store
+for_Chrome_Store/manifest.json
+metabotTwitter.zip
 .*

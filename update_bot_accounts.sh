@@ -46,6 +46,10 @@ else
 # 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory="Profile 12"
 
 
+	grep --invert-match '"update_url":' metabotTwitter/manifest.json > "for_Chrome_Store/manifest.json"
+	rm metabotTwitter.zip
+	zip --recurse-paths metabotTwitter.zip metabotTwitter for_Chrome_Store --exclude "metabotTwitter/manifest.json" --exclude "*/.DS_Store" --junk-paths
+
 	## increment the rightmost component of version (assuming there is has at least two components)
 	version="${version%.*}.$((${version##*.}+1))"
 	echo $version > next_version.txt
