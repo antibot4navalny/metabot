@@ -30,7 +30,11 @@ else
 	sed -E "s/VVVVVV/$version/" manifest.template.json > MetabotTwitter/manifest.json
 	sed -E "s/VVVVVV/$version/" updates.template.xml > updates.xml
 
-	"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory="Profile 12"
+	extensionator -o ./metabotTwitter.crx -i metabotTwitter.pem -d metabotTwitter -e .DS_Store
+
+#	 Previously:
+# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory="Profile 12"
+
 
 	## increment the rightmost component of version (assuming there is has at least two components)
 	version="${version%.*}.$((${version##*.}+1))"
