@@ -22,6 +22,16 @@ else
 	sed -e 's/$/: {},/' bot_accounts.csv >> bot_accounts.js
 	echo "}" >> bot_accounts.js
 
+	echo "var SCREEN_NAMES = {" >> bot_accounts.js
+	tt-users-get-hydrated --user-ids bot_accounts.csv |
+		jq '. | .screen_name' |
+		sed -e 's/$/: {},/' \
+		>> bot_accounts.js
+	echo "}" >> bot_accounts.js
+	
+	echo "DB updated. Ready to continue?"
+	read -n 1 -s	
+
 	mv bot_accounts.js metabotTwitter
 
 	version=`cat next_version.txt`
