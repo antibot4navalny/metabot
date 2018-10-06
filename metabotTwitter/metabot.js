@@ -59,45 +59,45 @@ function tick()
 
 	// десктопная версия: выделяем все твиты, показанные на странице
 	for (i = 0; i < a.length; i++)
-	if (!a[i].dataset.mt_is_upd)
-	{
-		x=Number(a[i].getAttribute("data-user-id"))
-		var actionName=""
-	
-		t = a[i]
-	
-		// проверяем, есть ли пользователь в списке известных ботов
-		if (BOT_ACCOUNTS[x])
+		if (!a[i].dataset.mt_is_upd)
 		{
-			// подсвечиваем весь твит стилем is_bot
-			//a[i].innerHTML += '&nbsp;[БОТ]'
-			t.className += ' is_bot'
-		
-			// дописываем "БОТ: " перед именем автора твита
-			fullNm=t.querySelector('span.FullNameGroup')
-			fullNm.style.color = 'red'
-			fullNm.innerHTML = "БОТ:&nbsp;" + fullNm.innerHTML
-
-			// делаем текст твита более блёклым
-			tweetTxt=t.querySelector('div.js-tweet-text-container p.tweet-text')
-			tweetTxt.className = 'bot_text ' + tweetTxt.className
-		
-			menuAction = "Предложить реабилитировать"
-			dmAction = "Реабилитировать из ботов"
-		} else {
-			menuAction = "Сообщить о кремлеботе"
-			dmAction = "В кремлеботы"
-		}
-		// добавляем пункт меню "Пожаловаться" / "Реабилитировать" 
-		twtBtn=t.querySelector('div.ProfileTweet-action div.dropdown-menu ul')
-
-		tweetPermalink=(new URL(t.getAttribute("data-permalink-path") , document.location)).href
-		// screenName=t.getAttribute("data-screen-name")
-		// fullName=t.getAttribute("data-name")
-		twtBtn.innerHTML +='<li class="dropdown-divider" role="presentation"></li>'
-		twtBtn.innerHTML +="<li role='presentation'><a href=\"https://twitter.com/messages/compose?recipient_id=973677193816571905&text="+encodeURIComponent(tweetPermalink + "\n" + dmAction + ", вот почему:\n") + "\" target=\"_blank\">"+menuAction+"</a></li>"
+			x=Number(a[i].getAttribute("data-user-id"))
+			var actionName=""
 	
-		// Mark tweet as processed to skip in subsequent passes
-		a[i].dataset.mt_is_upd = 1
-	}
+			t = a[i]
+	
+			// проверяем, есть ли пользователь в списке известных ботов
+			if (BOT_ACCOUNTS[x])
+			{
+				// подсвечиваем весь твит стилем is_bot
+				//a[i].innerHTML += '&nbsp;[БОТ]'
+				t.className += ' is_bot'
+		
+				// дописываем "БОТ: " перед именем автора твита
+				fullNm=t.querySelector('span.FullNameGroup')
+				fullNm.style.color = 'red'
+				fullNm.innerHTML = "БОТ:&nbsp;" + fullNm.innerHTML
+
+				// делаем текст твита более блёклым
+				tweetTxt=t.querySelector('div.js-tweet-text-container p.tweet-text')
+				tweetTxt.className = 'bot_text ' + tweetTxt.className
+		
+				menuAction = "Предложить реабилитировать"
+				dmAction = "Реабилитировать из ботов"
+			} else {
+				menuAction = "Сообщить о кремлеботе"
+				dmAction = "В кремлеботы"
+			}
+			// добавляем пункт меню "Пожаловаться" / "Реабилитировать" 
+			twtBtn=t.querySelector('div.ProfileTweet-action div.dropdown-menu ul')
+
+			tweetPermalink=(new URL(t.getAttribute("data-permalink-path") , document.location)).href
+			// screenName=t.getAttribute("data-screen-name")
+			// fullName=t.getAttribute("data-name")
+			twtBtn.innerHTML +='<li class="dropdown-divider" role="presentation"></li>'
+			twtBtn.innerHTML +="<li role='presentation'><a href=\"https://twitter.com/messages/compose?recipient_id=973677193816571905&text="+encodeURIComponent(tweetPermalink + "\n" + dmAction + ", вот почему:\n") + "\" target=\"_blank\">"+menuAction+"</a></li>"
+	
+			// Mark tweet as processed to skip in subsequent passes
+			a[i].dataset.mt_is_upd = 1
+		}
 }
