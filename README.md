@@ -1,4 +1,4 @@
-# Расширение MetaBot для Твиттера: Подсветка кремлеботов в Twitter.
+# Подсветка кремлеботов в Twitter (расширение для браузера)
 
 Подсвечивает твиты, написанные кремлеботами из [списка в Blocktogether](https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3).
 
@@ -37,4 +37,4 @@
     - подтверждаем
 
 ----
-Создано на базе и благодаря [аналогичному расширению для Youtube](https://github.com/CupIvan/metabot) (c) [CupIvan](https://github.com/CupIvan).
+Создано на базе и благодаря расширению [Metabot для Youtube](https://github.com/CupIvan/metabot) (c) [CupIvan](https://github.com/CupIvan).
