@@ -1,4 +1,4 @@
-# MetaBot chrome extension for Twitter: Подсветка кремлеботов в Twitter.
+# Расширение MetaBot для Твиттера: Подсветка кремлеботов в Twitter.
 
 Подсвечивает твиты, написанные кремлеботами из [списка в Blocktogether](https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3).
 
