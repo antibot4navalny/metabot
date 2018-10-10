@@ -10,13 +10,13 @@ var d = document.createElement('div')
 
 if (document.querySelector('#init-data') === null ||	// вероятно, мобильный режим
 	!JSON.parse(document.querySelector('#init-data').value)["night_mode_activated"])
-	var s = '.is_bot { background: #FEE !important; }'		// light
+	var s = '.bot_tweet_highlight { background: #FEE !important; }'		// light
 else
-	var s = '.is_bot { background: #4b3333 !important; }'	// dark
+	var s = '.bot_tweet_highlight { background: #4b3333 !important; }'	// dark
 
  	
 // стиль для пометки блёклым текста твитов от ботов
- s += '.is_bot .bot_text { color: #808080; }'
+ s += '.bot_tweet_highlight .bot_text { color: #808080; }'
 
  d.innerHTML = '<style>'+s+'</style>'
  document.body.appendChild(d)
@@ -38,8 +38,8 @@ function tick()
 
 			if (SCREEN_NAMES[x]) /// здесь должна быть проверка "является ботом?"
 			{
-				// подсвечиваем весь твит стилем is_bot
-				t.parentNode.className+=" is_bot"
+				// подсвечиваем весь твит стилем bot_tweet_highlight
+				t.parentNode.className+=" bot_tweet_highlight"
 					/// ^^^ Убедиться, когда заработает проверка "является ботом?",
 					/// что не покрашивается сразу всё вместо единственного твита.
 				
@@ -51,8 +51,12 @@ function tick()
 				
 				// Над full name
 				fullNm=t.querySelectorAll('a[href]')[1].parentNode
-				fullNm.innerHTML = fullNm.innerHTML+"(БОТ)"
-				fullNm.style.color = 'red'
+
+				botCaption = document.createElement("div")
+				botCaption.innerHTML="(БОТ)"
+				botCaption.style.color = 'red'
+
+				fullNm.appendChild(botCaption)
 			}
 			m[i].dataset.mt_is_upd = 1
 		}
@@ -69,14 +73,18 @@ function tick()
 			// проверяем, есть ли пользователь в списке известных ботов
 			if (BOT_ACCOUNTS[x])
 			{
-				// подсвечиваем весь твит стилем is_bot
-				//a[i].innerHTML += '&nbsp;[БОТ]'
-				t.className += ' is_bot'
+				// подсвечиваем весь твит стилем bot_tweet_highlight
+				t.className += ' bot_tweet_highlight'
 		
 				// дописываем "БОТ: " перед именем автора твита
 				fullNm=t.querySelector('span.FullNameGroup')
-				fullNm.style.color = 'red'
-				fullNm.innerHTML = "БОТ:&nbsp;" + fullNm.innerHTML
+
+				botCaption = document.createElement("div")
+				botCaption.innerHTML="БОТ:&nbsp;"
+				botCaption.style.color = 'red'
+
+				fullNm.prepend(botCaption)
+
 
 				// делаем текст твита более блёклым
 				tweetTxt=t.querySelector('div.js-tweet-text-container p.tweet-text')
@@ -91,11 +99,29 @@ function tick()
 			// добавляем пункт меню "Пожаловаться" / "Реабилитировать" 
 			twtBtn=t.querySelector('div.ProfileTweet-action div.dropdown-menu ul')
 
-			tweetPermalink=(new URL(t.getAttribute("data-permalink-path") , document.location)).href
+			tweetPermalink=DOMPurify.sanitize(
+				(new URL(t.getAttribute("data-permalink-path") , document.location)).href
+			)
 			// screenName=t.getAttribute("data-screen-name")
 			// fullName=t.getAttribute("data-name")
-			twtBtn.innerHTML +='<li class="dropdown-divider" role="presentation"></li>'
-			twtBtn.innerHTML +="<li role='presentation'><a href=\"https://twitter.com/messages/compose?recipient_id=973677193816571905&text="+encodeURIComponent(tweetPermalink + "\n" + dmAction + ", вот почему:\n") + "\" target=\"_blank\">"+menuAction+"</a></li>"
+
+
+			dropdownDivider=document.createElement("li")
+			dropdownDivider.class="dropdown-divider"
+			dropdownDivider.role="presentation"
+			twtBtn.appendChild(dropdownDivider)
+
+			botAction = document.createElement("li")
+			botAction.role = "presentation"
+
+			botActionLink = document.createElement("a")
+			botActionLink.href = "https://twitter.com/messages/compose?recipient_id=973677193816571905&text=" +
+				encodeURIComponent(tweetPermalink + "\n" + dmAction + ", вот почему:\n")
+			botActionLink.target="_blank"
+			botActionLink.textContent=menuAction
+			
+			botAction.appendChild(botActionLink)
+			twtBtn.appendChild(botAction)			
 	
 			// Mark tweet as processed to skip in subsequent passes
 			a[i].dataset.mt_is_upd = 1
