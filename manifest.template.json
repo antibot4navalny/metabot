@@ -3,6 +3,7 @@
 	"name": "MetaBot for Twitter",
 	"version": "VVVVVV",
 	"description": "Highlight known Kremlin bots on Twitter.",
+	"author": "antibot4navalny",
 	"update_url": "https://raw.githubusercontent.com/antibot4navalny/metabot/master/updates.xml",
 	"content_scripts": [
 	  {
