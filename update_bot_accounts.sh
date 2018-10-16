@@ -54,7 +54,7 @@ else
 	version="${version%.*}.$((${version##*.}+1))"
 	echo $version > next_version.txt
 
-	git add metabotTwitter.crx updates.xml version.txt metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
+	git add metabotTwitter.crx updates.xml next_version.txt metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
 
 	git commit -m "$version: update bot list from blocktogether"
 	echo "About to push DB changes. Sounds good?"
