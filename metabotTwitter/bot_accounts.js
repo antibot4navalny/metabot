@@ -3,9 +3,10 @@
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
+1049539464752713728: {},
+1053678219755429888: {},
 3880833437: {},
 975739291254050819: {},
-561405326: {},
 3091705847: {},
 716673211312816129: {},
 792416919542456321: {},
@@ -1019,7 +1020,6 @@ var BOT_ACCOUNTS = {
 2541227191: {},
 1254626803: {},
 316561450: {},
-273922657: {},
 2659931497: {},
 950112434072752130: {},
 1024559442: {},
@@ -3667,9 +3667,10 @@ var BOT_ACCOUNTS = {
 167862628: {},
 }
 var SCREEN_NAMES = {
+"AngonDoc555": {},
+"alex21102018": {},
 "jA9LD8Vi3n3CLrW": {},
 "shnipperson1970": {},
-"lady_Katz": {},
 "Fulyugany": {},
 "RelictOfEmpire": {},
 "jomoneytrue": {},
@@ -4683,7 +4684,6 @@ var SCREEN_NAMES = {
 "Iskra_Veter": {},
 "Viktuar1964": {},
 "dama1725": {},
-"Goldtais": {},
 "scorpio515": {},
 "rCOu1El76wbWWD7": {},
 "Pallanx": {},
