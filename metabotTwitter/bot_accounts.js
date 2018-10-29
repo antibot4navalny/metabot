@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-10-29 15:12:22
+ * @updated: 2018-10-29 15:31:53
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -1647,7 +1647,6 @@ var BOT_ACCOUNTS = {
 3860282368: {},
 884758317599518721: {},
 722696323707887616: {},
-2617492669: {},
 3109079882: {},
 1862910080: {},
 2964012711: {},
@@ -5321,7 +5320,6 @@ var SCREEN_NAMES = {
 "karinarom393": {},
 "IbT7FKzWXYyQpiA": {},
 "mysoajscky": {},
-"SERG__ROTENBERG": {},
 "friendofmafia": {},
 "sapronovsergey1": {},
 "Al_Cheshegorov": {},
