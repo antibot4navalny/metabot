@@ -1,8 +1,12 @@
 /**
- * @updated: 2018-10-28 19:05:27
+ * @updated: 2018-10-29 15:12:22
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
+3171065087: {},
+997490487312384000: {},
+2547869975: {},
+395961945: {},
 838948425362178048: {},
 3990956009: {},
 1055064379958444032: {},
@@ -910,7 +914,6 @@ var BOT_ACCOUNTS = {
 996716651990147072: {},
 912052465138315270: {},
 2663151246: {},
-399283625: {},
 973272868854423552: {},
 576380779: {},
 2875593592: {},
@@ -1270,7 +1273,6 @@ var BOT_ACCOUNTS = {
 864621706626961413: {},
 489461115: {},
 882915016760074240: {},
-1319013114: {},
 872768006828568576: {},
 461033671: {},
 474597486: {},
@@ -3173,7 +3175,6 @@ var BOT_ACCOUNTS = {
 275464991: {},
 881411511335387138: {},
 909714264675569664: {},
-864674723254464512: {},
 154805643: {},
 162132263: {},
 3439052655: {},
@@ -3676,6 +3677,10 @@ var BOT_ACCOUNTS = {
 167862628: {},
 }
 var SCREEN_NAMES = {
+"alyarose2018": {},
+"Krestonosec2": {},
+"DimZoomZoom": {},
+"Amavocka": {},
 "hohlov_yabu": {},
 "romanponomaryov": {},
 "SWETOK057": {},
@@ -4583,7 +4588,6 @@ var SCREEN_NAMES = {
 "hfpD9j9aVshRvp0": {},
 "ai_hell_cat": {},
 "AndrisUdo": {},
-"Solo_maximus": {},
 "O_McSmith": {},
 "MultiMooncat": {},
 "mixer_bestcat": {},
@@ -4943,7 +4947,6 @@ var SCREEN_NAMES = {
 "KrasavaElGuapo": {},
 "oksanaylia1": {},
 "shulginaknn": {},
-"lucia_morena7": {},
 "surgeypozharsk4": {},
 "galasheg": {},
 "nargizagafurova": {},
@@ -6846,7 +6849,6 @@ var SCREEN_NAMES = {
 "ShimonSeraf": {},
 "sinvb66": {},
 "miledisl75": {},
-"Tarony55": {},
 "mitrofanbelov": {},
 "semi1506": {},
 "Kim_Il_sung_": {},
