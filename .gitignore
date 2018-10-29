@@ -3,4 +3,7 @@ bot_accounts*.csv
 .DS_Store
 for_Chrome_Store/manifest.json
 metabotTwitter.zip
+package-lock.json
+set_chrome_web_store_credentials.sh
 .*
+node_modules/*

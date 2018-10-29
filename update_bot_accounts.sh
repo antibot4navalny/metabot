@@ -61,6 +61,8 @@ else
 	read -n 1 -s
 	git push
 
+	./update_chrome_web_store_version.sh
+
 	mv bot_accounts.csv bot_accounts.previous.csv
 	exit 0
 fi
