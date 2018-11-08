@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-11-08 04:58:50
+ * @updated: 2018-11-08 06:19:59
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -1045,7 +1045,6 @@ var BOT_ACCOUNTS = {
 916780546163904512: {},
 2650761636: {},
 979618528599990273: {},
-615201235: {},
 705723813116428288: {},
 1270792748: {},
 952641051730305024: {},
@@ -4725,7 +4724,6 @@ var SCREEN_NAMES = {
 "Vaganiuc1": {},
 "RossiaInfo": {},
 "ElenChedu": {},
-"orgstruk": {},
 "Olgino_IRA": {},
 "vesti_kpss": {},
 "nataligebriel97": {},
