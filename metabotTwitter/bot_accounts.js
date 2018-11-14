@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-11-14 14:55:56
+ * @updated: 2018-11-14 18:58:45
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -2386,7 +2386,6 @@ var BOT_ACCOUNTS = {
 937323269392420864: {},
 883883742099628032: {},
 3552381916: {},
-879313827682275329: {},
 567240201: {},
 105770995: {},
 924965488014299137: {},
@@ -4118,7 +4117,7 @@ var SCREEN_NAMES = {
 "YustasHard": {},
 "gydvin495": {},
 "tum_tudum": {},
-"lorochkaconovla": {},
+"lorakonov": {},
 "VjzPoIfIF2j9nfd": {},
 "gammakvant": {},
 "kotenev_a_v": {},
@@ -6122,7 +6121,6 @@ var SCREEN_NAMES = {
 "chachababy01": {},
 "viktorij_l": {},
 "georg1364": {},
-"ValentinaShim": {},
 "tocx2121": {},
 "ymneznaika": {},
 "Azapoperlamaza": {},
