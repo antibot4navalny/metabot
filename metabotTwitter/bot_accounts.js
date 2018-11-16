@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-11-16 21:02:12
+ * @updated: 2018-11-16 21:27:49
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -811,7 +811,6 @@ var BOT_ACCOUNTS = {
 1952156004: {},
 3360408922: {},
 972912824518434816: {},
-890614000635006976: {},
 720728818: {},
 722041310: {},
 2342937987: {},
@@ -1593,7 +1592,6 @@ var BOT_ACCOUNTS = {
 819545844: {},
 400072597: {},
 386438418: {},
-760119654304055297: {},
 984793355585454081: {},
 2933289857: {},
 966613543733866496: {},
@@ -2336,7 +2334,6 @@ var BOT_ACCOUNTS = {
 963003192610091008: {},
 790634950584311808: {},
 447849744: {},
-2288597179: {},
 397848244: {},
 321255208: {},
 978150484941864960: {},
@@ -4547,7 +4544,6 @@ var SCREEN_NAMES = {
 "paraskevyshca": {},
 "krot99_83": {},
 "AntonPodosenov": {},
-"DecentScum": {},
 "bandit_Sevas": {},
 "vik46529923": {},
 "nem_lana": {},
@@ -5329,7 +5325,6 @@ var SCREEN_NAMES = {
 "mixail_1973": {},
 "Peheneg": {},
 "oandrianov": {},
-"ygan151": {},
 "Kalinichevserg2": {},
 "marinka3011": {},
 "EcWfaDa4cqRvg0V": {},
@@ -6072,7 +6067,6 @@ var SCREEN_NAMES = {
 "Hohloeb_poutram": {},
 "lora1916051": {},
 "fenixsergey56": {},
-"valeriygarnaga": {},
 "egorof2006": {},
 "kamilk32": {},
 "Arturchek32": {},
