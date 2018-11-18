@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-11-17 23:18:17
+ * @updated: 2018-11-18 07:47:50
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -1074,6 +1074,7 @@ var BOT_ACCOUNTS = {
 996716651990147072: {},
 912052465138315270: {},
 2663151246: {},
+399283625: {},
 973272868854423552: {},
 576380779: {},
 2875593592: {},
@@ -1226,7 +1227,6 @@ var BOT_ACCOUNTS = {
 769877039105138688: {},
 958497335671250944: {},
 2925843539: {},
-968737872: {},
 988838095800823808: {},
 883346106213597190: {},
 4156061698: {},
@@ -3635,7 +3635,6 @@ var BOT_ACCOUNTS = {
 763450902531506177: {},
 389375203: {},
 212080239: {},
-431943417: {},
 928922980238979072: {},
 582413554: {},
 924888102954561537: {},
@@ -4782,6 +4781,7 @@ var SCREEN_NAMES = {
 "hfpD9j9aVshRvp0": {},
 "ai_hell_cat": {},
 "AndrisUdo": {},
+"Solo_maximus": {},
 "O_McSmith": {},
 "MultiMooncat": {},
 "mixer_bestcat": {},
@@ -4934,7 +4934,6 @@ var SCREEN_NAMES = {
 "BannermanElva": {},
 "dewasi_muki": {},
 "lelarka": {},
-"leshamelnikov": {},
 "Vtusahigalstuke": {},
 "nemo19622": {},
 "znamenushka": {},
@@ -7343,7 +7342,6 @@ var SCREEN_NAMES = {
 "ionprotonalfa": {},
 "qazzima46": {},
 "Dontsov_Anton": {},
-"spirik15": {},
 "Dvaukha2": {},
 "KorneevAnatoly": {},
 "Btrlin47": {},
