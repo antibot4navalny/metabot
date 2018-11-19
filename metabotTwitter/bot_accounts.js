@@ -1,8 +1,9 @@
 /**
- * @updated: 2018-11-19 17:58:07
+ * @updated: 2018-11-19 20:05:59
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
+1064045252523245568: {},
 890304348336652289: {},
 3307879504: {},
 549422929: {},
@@ -2028,7 +2029,6 @@ var BOT_ACCOUNTS = {
 976410103158099968: {},
 934839635078938624: {},
 757633115963723777: {},
-483689047: {},
 978385502289219592: {},
 891932386761605120: {},
 2984280094: {},
@@ -3697,6 +3697,7 @@ var BOT_ACCOUNTS = {
 751099695150276610: {},
 }
 var SCREEN_NAMES = {
+"qRJWSJdG0Xld9QI": {},
 "yoursbotik": {},
 "ivan02636150": {},
 "Ghennadii_SPb": {},
@@ -5722,7 +5723,6 @@ var SCREEN_NAMES = {
 "tudayvas": {},
 "wFU6rpM8GujnNG7": {},
 "OIVVT": {},
-"alex_ryabokon": {},
 "Viktor03369801": {},
 "ArtemPopov81": {},
 "dobbivtualete": {},
@@ -6976,7 +6976,7 @@ var SCREEN_NAMES = {
 "_3195405321891": {},
 "Darsay07": {},
 "_RT_RB": {},
-"phishingpage": {},
+"onphishingpage": {},
 "rusokkup": {},
 "Marta_9077": {},
 "karukov1": {},
