@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-11-19 11:56:06
+ * @updated: 2018-11-19 17:58:07
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -188,7 +188,6 @@ var BOT_ACCOUNTS = {
 1269790038: {},
 1058840841022783493: {},
 1031748799545466880: {},
-1057473744531267584: {},
 999306149370449921: {},
 999387042118291456: {},
 1000595963898187776: {},
@@ -3883,7 +3882,6 @@ var SCREEN_NAMES = {
 "shesi59": {},
 "aippLNTb1Ga9dXf": {},
 "l7RPQ1gWYXoxxw2": {},
-"zhuzhin_rot_yob": {},
 "vilkagidnosti2": {},
 "vilkagidnosti3": {},
 "Olga311213": {},
