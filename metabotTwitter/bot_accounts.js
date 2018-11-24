@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-11-23 11:30:20
+ * @updated: 2018-11-24 08:24:18
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -57,7 +57,6 @@ var BOT_ACCOUNTS = {
 2638466016: {},
 761778050: {},
 1058817746698416133: {},
-818978097580146688: {},
 819251793154736128: {},
 989223066008862720: {},
 831184841148358656: {},
@@ -3496,7 +3495,6 @@ var BOT_ACCOUNTS = {
 888156068282499072: {},
 914933085464035328: {},
 596364971: {},
-849283629922562048: {},
 252456853: {},
 900391181040963584: {},
 497204403: {},
@@ -3566,7 +3564,6 @@ var SCREEN_NAMES = {
 "kuboshas": {},
 "donetskpetrovka": {},
 "Vlad_0948": {},
-"SIRIUS_ll": {},
 "Katuds1": {},
 "AsBelov1989": {},
 "VsVs8800": {},
@@ -3817,7 +3814,7 @@ var SCREEN_NAMES = {
 "alex21102018": {},
 "sergio_bb1": {},
 "NSnXLrZlg3dnwE7": {},
-"Doc555D": {},
+"Doc555C": {},
 "burda86_a": {},
 "dLuare": {},
 "kbuYMTGdaLfk3eK": {},
@@ -4132,7 +4129,7 @@ var SCREEN_NAMES = {
 "OllieWeekz": {},
 "anatoly_tliho40": {},
 "vozrozhdenie28": {},
-"khIhKnhjbVd7hTh": {},
+"Nosovigor72": {},
 "Plutoncheg": {},
 "ship19821": {},
 "ChebuRASHka84": {},
@@ -4190,9 +4187,9 @@ var SCREEN_NAMES = {
 "AlexeiSmirnov81": {},
 "Vera_22221": {},
 "martinperer": {},
-"regiiinaaa1": {},
+"NYT_RUS": {},
 "iliyagrig": {},
-"viktor2nikitin": {},
+"_daily_prophet_": {},
 "hyperion_big": {},
 "dari_coffeemaan": {},
 "Dasha_Baran01": {},
@@ -7005,7 +7002,6 @@ var SCREEN_NAMES = {
 "Aw30o": {},
 "MishkaMC34": {},
 "hansolo24M": {},
-"Vlad5871": {},
 "slava_osipov": {},
 "Alex_112222": {},
 "TaramaevKostya": {},
