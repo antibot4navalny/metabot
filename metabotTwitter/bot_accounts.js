@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-11-29 19:03:28
+ * @updated: 2018-11-29 22:52:18
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -1935,7 +1935,6 @@ var BOT_ACCOUNTS = {
 850009803904700416: {},
 380488212: {},
 235633356: {},
-535232959: {},
 254837162: {},
 752437213602906112: {},
 221379821: {},
@@ -5432,7 +5431,6 @@ var SCREEN_NAMES = {
 "AntiLiberastRDB": {},
 "Alll_Bundy": {},
 "LuseinaMiila": {},
-"DA_Frenk_": {},
 "Bei_snegirei": {},
 "FA7IvQhyS7kwFNF": {},
 "cardros": {},
