@@ -1,5 +1,5 @@
 /**
- * @updated: 2018-11-29 22:52:18
+ * @updated: 2018-11-30 11:52:04
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -80,7 +80,6 @@ var BOT_ACCOUNTS = {
 1062305093750546432: {},
 878513712306556928: {},
 1061199532162252800: {},
-1041026077580304391: {},
 1060434719043661825: {},
 2638466016: {},
 761778050: {},
@@ -2063,7 +2062,6 @@ var BOT_ACCOUNTS = {
 3001714613: {},
 940180522596294656: {},
 976758429023965185: {},
-22884228: {},
 300313002: {},
 434364056: {},
 752551309761445888: {},
@@ -3576,7 +3574,6 @@ var SCREEN_NAMES = {
 "IGOR_TARASYUK_": {},
 "IgorKrasnikov80": {},
 "emmik2149": {},
-"Stasninskll": {},
 "14Volodymyr88": {},
 "kuboshas": {},
 "donetskpetrovka": {},
@@ -4210,7 +4207,7 @@ var SCREEN_NAMES = {
 "arena_rus": {},
 "AndonsTLT": {},
 "azbooka18": {},
-"AliceShovkun": {},
+"AliceWNL": {},
 "GrollV": {},
 "Invite001": {},
 "9520070": {},
@@ -5559,7 +5556,6 @@ var SCREEN_NAMES = {
 "protivvv_vseh": {},
 "Alexey270155": {},
 "ShirAlYur73": {},
-"burzoom": {},
 "sarumyn": {},
 "Alivasiv": {},
 "Roman19811122": {},
