@@ -115,7 +115,7 @@ function tick()
 			botAction.role = "presentation"
 
 			botActionLink = document.createElement("a")
-			botActionLink.href = "https://twitter.com/messages/compose?recipient_id=973677193816571905&text=" +
+			botActionLink.href = "https://twitter.com/messages/compose?recipient_id=1067060314884190209&text=" +
 				encodeURIComponent(tweetPermalink + "\n" + dmAction + ", вот почему:\n")
 			botActionLink.target="_blank"
 			botActionLink.textContent=menuAction
