@@ -90,8 +90,8 @@ function tick()
 				tweetTxt=t.querySelector('div.js-tweet-text-container p.tweet-text')
 				tweetTxt.className = 'bot_text ' + tweetTxt.className
 		
-				menuAction = "Предложить реабилитировать"
-				dmAction = "Реабилитировать из ботов"
+				menuAction = "Сообщить об ошибочной подсветке"
+				dmAction = "Это не кремлебот"
 			} else {
 				menuAction = "Сообщить о кремлеботе"
 				dmAction = "В кремлеботы"
