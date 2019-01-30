@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-01-30 11:11:07
+ * @updated: 2019-01-30 23:08:38
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -1879,7 +1879,6 @@ var BOT_ACCOUNTS = {
 3047808563: {},
 3091586596: {},
 519165935: {},
-824645189469933568: {},
 879814470: {},
 356784797: {},
 2895982300: {},
@@ -1896,7 +1895,6 @@ var BOT_ACCOUNTS = {
 971055830: {},
 798311481045618688: {},
 2497707110: {},
-935800407883780097: {},
 372326874: {},
 880655512446140416: {},
 703330477336338432: {},
@@ -2600,7 +2598,6 @@ var BOT_ACCOUNTS = {
 939138774390407168: {},
 434158810: {},
 908912995446779904: {},
-219618044: {},
 937323269392420864: {},
 3552381916: {},
 567240201: {},
@@ -4680,7 +4677,7 @@ var SCREEN_NAMES = {
 "leonid2905": {},
 "jaromirooos": {},
 "egorovih1": {},
-"74sEdf_0iAwQaq": {},
+"CVK_74aK11D0bkl": {},
 "solombala_arh": {},
 "betman_14": {},
 "2g0TavxKZtgVJFZ": {},
@@ -5636,7 +5633,6 @@ var SCREEN_NAMES = {
 "LifeAngel1973": {},
 "SoiaStarigina": {},
 "gmishanin": {},
-"orenb777": {},
 "tvn2884": {},
 "Aquarius62ru": {},
 "g_velieff": {},
@@ -5653,7 +5649,6 @@ var SCREEN_NAMES = {
 "nick88rus": {},
 "KopvinSum": {},
 "fainofan": {},
-"Vozrast100": {},
 "fjmkkk4340": {},
 "AdikKuban": {},
 "IvnastroC": {},
@@ -6357,7 +6352,6 @@ var SCREEN_NAMES = {
 "3Bh8pn8paBtTvTv": {},
 "Mitrich966": {},
 "Yurii_blizko": {},
-"_vecherniycuhes": {},
 "chachababy01": {},
 "georg1364": {},
 "BorisovMi": {},
