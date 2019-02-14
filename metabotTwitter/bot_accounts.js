@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-02-14 11:03:21
+ * @updated: 2019-02-14 20:56:43
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -137,7 +137,6 @@ var BOT_ACCOUNTS = {
 938292293043458048: {},
 1068478316011761665: {},
 881562957934714881: {},
-2471273922: {},
 2844209276: {},
 4868396349: {},
 885355445422096384: {},
@@ -536,7 +535,6 @@ var BOT_ACCOUNTS = {
 971989128865660934: {},
 30499391: {},
 985408356381753344: {},
-134272473: {},
 941426823380037636: {},
 885170246373527552: {},
 909445894801588225: {},
@@ -1113,7 +1111,6 @@ var BOT_ACCOUNTS = {
 1016818612949143552: {},
 996742039705448448: {},
 3365809559: {},
-1224681932: {},
 988096171754381312: {},
 3303038068: {},
 2567847728: {},
@@ -3667,7 +3664,6 @@ var BOT_ACCOUNTS = {
 230223109: {},
 870862412400005120: {},
 473669554: {},
-958780540823441409: {},
 856140109200195584: {},
 944570327471882241: {},
 923593564042547200: {},
@@ -3840,7 +3836,6 @@ var SCREEN_NAMES = {
 "highwaystar971": {},
 "jqPzYeDgnfgpLst": {},
 "Solt2017_": {},
-"harn1972": {},
 "serjik_ku": {},
 "g1bfYbtp4wlsnc3": {},
 "olmND0I98HIHUmT": {},
@@ -3937,7 +3932,7 @@ var SCREEN_NAMES = {
 "DonBandid": {},
 "65Akinak": {},
 "bellomarino": {},
-"RuSturmcallsig": {},
+"Sturmcallsig": {},
 "kavovar80": {},
 "GEORGSHOOTER": {},
 "VVS_2000": {},
@@ -4239,7 +4234,6 @@ var SCREEN_NAMES = {
 "Chomuivan": {},
 "ssurrokk": {},
 "WalterHeisenbe7": {},
-"l00k2010": {},
 "s_vnukov": {},
 "Shumer_": {},
 "sergiybrunak": {},
@@ -4816,7 +4810,6 @@ var SCREEN_NAMES = {
 "1szxqgHEJCjdBKD": {},
 "MU5rLlNxb3qQBUK": {},
 "mag00765": {},
-"Liza_B0yko": {},
 "Maga57235523": {},
 "Gadzo2": {},
 "gggabnis": {},
@@ -7370,7 +7363,6 @@ var SCREEN_NAMES = {
 "bantualam": {},
 "Gxgq7Q4FCfsFpsw": {},
 "Chicheb24": {},
-"mudrsapiens": {},
 "petr_wanin": {},
 "besshabash_1973": {},
 "paleshuk2": {},
