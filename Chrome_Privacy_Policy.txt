@@ -1,0 +1,4 @@
+The Twitter accounts this extension highlights are exactly those blacklisted by Twitter user antibot4navalny, all publicly available at BlockTogether: https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
+
+The blacklist is manually created and maintained in according to this criteria:
+https://twitter.com/antibot4navalny/status/1060437615399354368
