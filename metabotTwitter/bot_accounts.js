@@ -1,8 +1,10 @@
 /**
- * @updated: 2019-02-22 09:58:41
+ * @updated: 2019-02-22 10:59:18
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
+1005004114995171328: {},
+1005067889811120131: {},
 973958323757309953: {},
 973958416682176512: {},
 1005128110289891328: {},
@@ -27,7 +29,6 @@ var BOT_ACCOUNTS = {
 1093131634197622784: {},
 1065909980430303232: {},
 1088417523975024640: {},
-1082275694044950530: {},
 1084404397684207616: {},
 1026580121757655041: {},
 862739611268861952: {},
@@ -3674,6 +3675,8 @@ var BOT_ACCOUNTS = {
 751099695150276610: {},
 }
 var SCREEN_NAMES = {
+"ulya_dylya": {},
+"kXixusYvQoiEnjl": {},
 "boxova5ka": {},
 "cylikovaaad": {},
 "grettel_mikh": {},
@@ -3698,7 +3701,6 @@ var SCREEN_NAMES = {
 "DB7O3JnOlfuBeZt": {},
 "Kontrolenko": {},
 "bznHgop0IEjphHE": {},
-"magnetronnaya": {},
 "SEPAR_18REG_RUS": {},
 "mik_404": {},
 "IGORVAS_RU": {},
