@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-02-22 10:59:18
+ * @updated: 2019-02-22 12:56:33
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -911,7 +911,6 @@ var BOT_ACCOUNTS = {
 828552474: {},
 1028961526751916032: {},
 814875850004975617: {},
-1396677666: {},
 1601762940: {},
 3383058909: {},
 2304167271: {},
@@ -4583,7 +4582,6 @@ var SCREEN_NAMES = {
 "garipova_ow": {},
 "KostenkoVasil": {},
 "sergey_svd": {},
-"Miner142": {},
 "saltekov": {},
 "son0fa9un": {},
 "veprentsov": {},
@@ -5015,7 +5013,7 @@ var SCREEN_NAMES = {
 "MarinaN57009676": {},
 "alekc_mem": {},
 "sovetinform": {},
-"x7oGOWRDOfGTNfE": {},
+"GectorBarbossa": {},
 "goodd_bboy": {},
 "PastelleKrovat": {},
 "4m5hYFtckOy7R9R": {},
