@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-02-28 09:21:30
+ * @updated: 2019-02-28 10:18:28
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -456,7 +456,6 @@ var BOT_ACCOUNTS = {
 483689047: {},
 347780620: {},
 1050306752426708992: {},
-2983683299: {},
 790291108760805376: {},
 1269873762: {},
 397197498: {},
@@ -4118,7 +4117,6 @@ var SCREEN_NAMES = {
 "alex_ryabokon": {},
 "VonInsterburg": {},
 "lost25568155": {},
-"IvanPhilatoff": {},
 "sehnsucht2016": {},
 "NagualHulian": {},
 "0303Marusa": {},
