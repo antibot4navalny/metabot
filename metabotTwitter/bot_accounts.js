@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-03-02 17:38:09
+ * @updated: 2019-03-02 21:41:25
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -2321,7 +2321,6 @@ var BOT_ACCOUNTS = {
 583924315: {},
 2795335398: {},
 707272404578471936: {},
-890209283526336513: {},
 3353625676: {},
 2511473077: {},
 2226544442: {},
@@ -4557,7 +4556,7 @@ var SCREEN_NAMES = {
 "leonid2905": {},
 "jaromirooos": {},
 "egorovih1": {},
-"iljl0jijiljlili": {},
+"jljiljijliilji0": {},
 "solombala_arh": {},
 "betman_14": {},
 "For_comintern": {},
@@ -5978,7 +5977,6 @@ var SCREEN_NAMES = {
 "Aventura2008": {},
 "lenchik371": {},
 "kombaynerov": {},
-"ye8nrie6n2Z3qC7": {},
 "dn_samylkin": {},
 "jackramirezrosa": {},
 "mongol2007": {},
