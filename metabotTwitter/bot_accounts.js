@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-03-06 22:20:18
+ * @updated: 2019-03-06 22:41:29
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -994,7 +994,6 @@ var BOT_ACCOUNTS = {
 2891414723: {},
 1024259423580119040: {},
 983374838944366592: {},
-2762372317: {},
 2917680229: {},
 475447928: {},
 731069420118872065: {},
@@ -1320,7 +1319,6 @@ var BOT_ACCOUNTS = {
 710459415930003456: {},
 489167271: {},
 1007654008780095489: {},
-63461924: {},
 484869243: {},
 477460363: {},
 832838756742873089: {},
@@ -4606,7 +4604,6 @@ var SCREEN_NAMES = {
 "alexis_msk": {},
 "Art_dem_On": {},
 "Vizza535": {},
-"00asket00": {},
 "shrek_aka": {},
 "ViktoriyaDombro": {},
 "DrSchultc": {},
@@ -4932,7 +4929,6 @@ var SCREEN_NAMES = {
 "ElectroStalin79": {},
 "Yushinufficiale": {},
 "1wfhAd924WOpsuU": {},
-"alexplazma": {},
 "uporot": {},
 "ermak1973": {},
 "AshaS_Uralmasha": {},
