@@ -1,8 +1,10 @@
 /**
- * @updated: 2019-03-17 18:20:58
+ * @updated: 2019-03-18 12:20:26
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
+1106849493662814208: {},
+1106923268299202560: {},
 1088104484646125568: {},
 968058649041088512: {},
 4850390392: {},
@@ -318,7 +320,6 @@ var BOT_ACCOUNTS = {
 786201339533680640: {},
 2924514859: {},
 3079986923: {},
-1032527658406621184: {},
 405541404: {},
 1884530911: {},
 761628791315820544: {},
@@ -378,7 +379,6 @@ var BOT_ACCOUNTS = {
 949554533335748608: {},
 810385776: {},
 892482403: {},
-1069842901746749440: {},
 4052276956: {},
 1070268803731349507: {},
 306521707: {},
@@ -675,7 +675,6 @@ var BOT_ACCOUNTS = {
 792416919542456321: {},
 989347864613617665: {},
 2404577257: {},
-868801349613494272: {},
 1037690268093501442: {},
 2208344506: {},
 47299844: {},
@@ -1098,7 +1097,6 @@ var BOT_ACCOUNTS = {
 215738949: {},
 1464175884: {},
 978939042321653761: {},
-301423174: {},
 49022917: {},
 1013821553916641280: {},
 3843609623: {},
@@ -1140,7 +1138,6 @@ var BOT_ACCOUNTS = {
 2342937987: {},
 584141080: {},
 1012294159007404032: {},
-355346562: {},
 85785606: {},
 275502561: {},
 942161725662617600: {},
@@ -3255,7 +3252,6 @@ var BOT_ACCOUNTS = {
 147880017: {},
 2902172128: {},
 905160508831141892: {},
-515823185: {},
 792351010568151040: {},
 974956468519792640: {},
 719481474496507904: {},
@@ -3494,6 +3490,8 @@ var BOT_ACCOUNTS = {
 751099695150276610: {},
 }
 var SCREEN_NAMES = {
+"ukYKDMMR1mY9SUX": {},
+"agrafenechka": {},
 "NikonNikonorov": {},
 "yunoninauso": {},
 "DeWieKat": {},
@@ -3809,7 +3807,6 @@ var SCREEN_NAMES = {
 "serzh_shumilov": {},
 "sania22spartak1": {},
 "rlz_the_kraken": {},
-"AEtype": {},
 "Askvadera": {},
 "A_Hausauer": {},
 "JustBalast": {},
@@ -4165,7 +4162,6 @@ var SCREEN_NAMES = {
 "jomoneytrue": {},
 "Putinteam2018": {},
 "Bakssi80": {},
-"FtNYBdZHkRBoZFr": {},
 "7jqfG1e6q4PMCFR": {},
 "MKudimoff": {},
 "Vkorotenko": {},
@@ -4588,7 +4584,6 @@ var SCREEN_NAMES = {
 "skrepman_show": {},
 "ubiquitous____": {},
 "Evgeny5726794": {},
-"Andrushka31": {},
 "kalinin_76": {},
 "staszaya36": {},
 "ssu_64": {},
@@ -4630,7 +4625,6 @@ var SCREEN_NAMES = {
 "nem_lana": {},
 "KorchaginSA": {},
 "OtokadateSerhio": {},
-"LiuHongshengs": {},
 "Vosirob": {},
 "erimeevk": {},
 "PrizmSystem": {},
@@ -6745,7 +6739,6 @@ var SCREEN_NAMES = {
 "DinSolto": {},
 "GlebSlav": {},
 "chitaiusam": {},
-"mike_tiz": {},
 "7Gvt5N3Git6SNNX": {},
 "MordingtonProst": {},
 "DedTihon1": {},
