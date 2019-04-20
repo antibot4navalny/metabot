@@ -11,3 +11,4 @@ node_modules/*
 web-ext-xpmt
 web-ext-artifacts
 Firefox_tmp
+unused/*
