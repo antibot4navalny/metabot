@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-04-21 22:05:05
+ * @updated: 2019-04-22 19:48:57
  * @source  https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
 */
 var BOT_ACCOUNTS = {
@@ -531,7 +531,6 @@ var BOT_ACCOUNTS = {
 3997007915: {},
 1043078936194965505: {},
 963702896759107585: {},
-719795773588815873: {},
 1009569809066020864: {},
 750236594876059648: {},
 2475644238: {},
@@ -639,7 +638,6 @@ var BOT_ACCOUNTS = {
 404156045: {},
 468633275: {},
 630991305: {},
-919996486707970049: {},
 3345707339: {},
 3040461724: {},
 603574026: {},
@@ -1695,7 +1693,6 @@ var BOT_ACCOUNTS = {
 2982581189: {},
 707285438390771712: {},
 919940671674441728: {},
-3664611496: {},
 2791102251: {},
 286723495: {},
 844145288017272833: {},
@@ -3130,7 +3127,6 @@ var BOT_ACCOUNTS = {
 969746560757256193: {},
 853740277202288640: {},
 2361915010: {},
-304949161: {},
 169836795: {},
 182493965: {},
 972681743512821760: {},
@@ -3856,7 +3852,6 @@ var SCREEN_NAMES = {
 "usa1877": {},
 "RonWilReagan1": {},
 "george_incense": {},
-"Semyon_Semenych": {},
 "DeutscherStaat1": {},
 "CovalevSer": {},
 "novat64": {},
@@ -3964,7 +3959,6 @@ var SCREEN_NAMES = {
 "ivolkonitskiy": {},
 "ranger7373": {},
 "Larisa6699": {},
-"samiznaetekto37": {},
 "prosralpolimer": {},
 "HmoObama": {},
 "GuruDim": {},
@@ -5020,7 +5014,6 @@ var SCREEN_NAMES = {
 "andreyprostoi": {},
 "z3OWAhM7ERvYqVu": {},
 "m82NWgygX6hACer": {},
-"igelgrey": {},
 "nestronger93": {},
 "ohotnikovd": {},
 "SPECTR_1": {},
@@ -6455,7 +6448,6 @@ var SCREEN_NAMES = {
 "Chernyi_Russkii": {},
 "popishoo": {},
 "DelovoiNep4ik": {},
-"yaskiy": {},
 "OsBagatar": {},
 "MasterGreat": {},
 "cOmGgn6N23JlYo9": {},
