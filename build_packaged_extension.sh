@@ -20,8 +20,6 @@
 
 	mv bot_accounts.js metabotTwitter
 
-	. ./set_version.sh
-
 	sed -E "s/VVVVVV/$version/" manifest.template.json > MetabotTwitter/manifest.json
 	sed -E "s/VVVVVV/$version/" updates.template.xml > updates.xml
 
