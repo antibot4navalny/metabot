@@ -6,6 +6,7 @@ metabotTwitter.zip
 package-lock.json
 set_chrome_web_store_credentials.sh
 set_mozilla_AMO_credentials.sh
+set_local_source_for_validated_bots.sh
 .*
 node_modules/*
 web-ext-xpmt
