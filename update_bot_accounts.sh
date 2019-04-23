@@ -13,6 +13,7 @@ else
 # 	read -n 1 -s
 
 	./build_packaged_extension.sh
+	./increment_extension_version.sh
 
 	./update_git_version.sh
 	./update_chrome_web_store_version.sh

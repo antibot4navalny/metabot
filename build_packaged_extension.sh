@@ -36,4 +36,3 @@
 	rm metabotTwitter.zip
 	zip --recurse-paths metabotTwitter.zip metabotTwitter for_Chrome_Store --exclude "metabotTwitter/manifest.json" --exclude "*/.DS_Store" --junk-paths
 
-	./increment_extension_version.sh
