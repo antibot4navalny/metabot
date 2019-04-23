@@ -1,5 +1,5 @@
 SCRIPTPATH=$(dirname "$0")
-echo "Switching to script folder:""$SCRIPTPATH"
+echo "Switching to script folder:""$SCRIPTPATH" >&2
 cd "$SCRIPTPATH"
 
 csv_db_URL="https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3"
@@ -11,11 +11,11 @@ while
 do :; done
 
 if cmp --quiet bot_accounts.csv bot_accounts.previous.csv; then
-	echo "No changes in DB to push"
+	echo "No changes in DB to push" >&2
 	exit 1
 else
-	echo "DB changes detected, preparing to push them."
-# 	echo Sounds right?"
+	echo "DB changes detected, preparing to push them." >&2
+# 	echo Sounds right?" >&2
 # 	read -n 1 -s
 
 	echo "/**" > bot_accounts.js
@@ -34,8 +34,8 @@ else
 		>> bot_accounts.js
 	echo "}" >> bot_accounts.js
 	
-	echo "DB updated."
-# 	echo "Ready to continue?"
+	echo "DB updated." >&2
+# 	echo "Ready to continue?" >&2
 # 	read -n 1 -s	
 
 	mv bot_accounts.js metabotTwitter
@@ -63,8 +63,8 @@ else
 	git add metabotTwitter.crx updates.xml next_version.txt metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
 
 	git commit -m "$version: update bot list from blocktogether"
-	echo "About to push DB changes."
-# 	echo "Sounds good?"
+	echo "About to push DB changes." >&2
+# 	echo "Sounds good?" >&2
 # 	read -n 1 -s
 	git push
 
