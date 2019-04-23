@@ -14,7 +14,7 @@ else
 
 	. ./set_version.sh
 	. ./build_packaged_extension.sh
-	./increment_extension_version.sh
+	. ./increment_extension_version.sh
 
 	. ./update_git_version.sh
 	./update_chrome_web_store_version.sh
