@@ -15,15 +15,6 @@ else
 	./build_packaged_extension.sh
 
 	./update_git_version.sh
-
-	git add metabotTwitter.crx updates.xml next_version.txt metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
-
-	git commit -m "$version: update bot list from blocktogether"
-	echo "About to push DB changes." >&2
-# 	echo "Sounds good?" >&2
-# 	read -n 1 -s
-	git push
-
 	./update_chrome_web_store_version.sh
 	./update_mozilla_addons_version.sh
 
