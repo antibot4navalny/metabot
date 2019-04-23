@@ -14,6 +14,8 @@ else
 
 	./build_packaged_extension.sh
 
+	./update_git_version.sh
+
 	git add metabotTwitter.crx updates.xml next_version.txt metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
 
 	git commit -m "$version: update bot list from blocktogether"
