@@ -1,6 +1,9 @@
 	echo "/**" > bot_accounts.js
 	date -u "+ * @updated: %Y-%m-%d %H:%M:%S" >> bot_accounts.js
-	echo " * @source " $csv_db_URL >> bot_accounts.js
+
+	if [ ! -z ${csv_db_URL+x} ];	# if variable set
+		echo " * @source " "$csv_db_URL" >> bot_accounts.js
+	fi
 	echo "*/" >> bot_accounts.js
 
 	echo "var BOT_ACCOUNTS = {" >> bot_accounts.js
@@ -32,4 +35,3 @@
 	grep --invert-match '"update_url":' metabotTwitter/manifest.json > "for_Chrome_Store/manifest.json"
 	rm metabotTwitter.zip
 	zip --recurse-paths metabotTwitter.zip metabotTwitter for_Chrome_Store --exclude "metabotTwitter/manifest.json" --exclude "*/.DS_Store" --junk-paths
-
