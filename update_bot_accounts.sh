@@ -13,7 +13,6 @@ else
 # 	echo Sounds right?" >&2
 # 	read -n 1 -s
 
-	. ./set_version.sh
 	. ./build_bot_accounts_js.sh
 	. ./build_packaged_extension.sh
 	. ./increment_extension_version.sh
