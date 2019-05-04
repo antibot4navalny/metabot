@@ -14,10 +14,10 @@ else
 # 	read -n 1 -s
 
 	. ./build_bot_accounts_js.sh
-	. ./build_packaged_extension.sh
-	. ./increment_extension_version.sh
+	./build_packaged_extension.sh
+	./increment_extension_version.sh
 
-	. ./update_git_version.sh
+	./update_git_version.sh
 	./update_chrome_web_store_version.sh
 	./update_mozilla_addons_version.sh
 
