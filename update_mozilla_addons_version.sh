@@ -17,7 +17,7 @@ echo "webext signing:" >&2
 # 	--api-secret="$JWT_secret" \
 # 	--id="{$extension_ID}"
 
-## Original: Summits successfully but also reports stacktrace 
+## Original: Submits successfully but also reports stacktrace 
 node_modules/.bin/webext sign \
 	--source-dir="metabotTwitter" \
 	--api-key="$JWT_user" \
