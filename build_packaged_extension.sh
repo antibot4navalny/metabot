@@ -1,5 +1,3 @@
-	. ./build_bot_accounts_js.sh
-
 	sed -E "s/VVVVVV/$version/" manifest.template.json > MetabotTwitter/manifest.json
 	sed -E "s/VVVVVV/$version/" updates.template.xml > updates.xml
 
