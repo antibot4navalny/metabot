@@ -1,7 +1,3 @@
-// каждые 3 секунды на странице помечаются твиты от ботов, не помеченные ранее
-setInterval(tick, 3000)
-
-
 // добавляем стили для пометки ботов
 
 var d = document.createElement('div')
@@ -126,4 +122,8 @@ function tick()
 			// Mark tweet as processed to skip in subsequent passes
 			a[i].dataset.mt_is_upd = 1
 		}
+	// каждые 3 секунды на странице помечаются твиты от ботов, не помеченные ранее
+	setTimeout(tick, 3000);
 }
+
+tick();
