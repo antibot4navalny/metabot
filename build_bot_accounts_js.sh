@@ -1,7 +1,7 @@
 	echo "/**" > bot_accounts.js
 	date -u "+ * @updated: %Y-%m-%d %H:%M:%S" >> bot_accounts.js
 
-	if [ ! -z ${csv_db_URL+x} ];	# if variable set
+	if [ ! -z ${csv_db_URL+x} ]; then	# if variable set
 		echo " * @source " "$csv_db_URL" >> bot_accounts.js
 	fi
 	echo "*/" >> bot_accounts.js
