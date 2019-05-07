@@ -26,12 +26,13 @@
 
 Установка:
 ### Способ попроще
-1. Устанавливаем и запускаем браузер Opera
-2. Устанавливаем расширение [Install Chrome Extensions](https://addons.opera.com/en/extensions/details/install-chrome-extensions/)
-3. Заходим на страницу [расширения Metabot for Twitter](https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi) в магазине расширений для Chrome
-4. Нажимаем Add to Opera
-5. Нажимаем OK в ответ на "Install Chrome Extensions: To complete installation, go to extensions manager and confirm installation by clicking install button."
-6. На открывшейся новой вкладке с расширениями (Extensions):
+1. [[Скачиваем и устанавливаем](https://www.opera.com/download) браузер Opera, если он ещё не установлен]
+2. Запускаем браузер Opera
+3. Устанавливаем расширение [Install Chrome Extensions](https://addons.opera.com/en/extensions/details/install-chrome-extensions/)
+4. Заходим на страницу [расширения Metabot for Twitter](https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi) в магазине расширений для Chrome
+5. Нажимаем Add to Opera
+6. Нажимаем OK в ответ на "Install Chrome Extensions: To complete installation, go to extensions manager and confirm installation by clicking install button."
+7. На открывшейся новой вкладке с расширениями (Extensions):
    - находим Metabot for Twitter
    - нажимаем справа от него Install
    - подтверждаем установку: Yes, Install
