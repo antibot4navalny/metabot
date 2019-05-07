@@ -1,6 +1,5 @@
 /**
- * @updated: 2019-04-26 10:24:03
- * @source 
+ * @updated: 2019-05-07 18:47:18
 */
 var BOT_ACCOUNTS = {
 1001170190162329601: {},
@@ -92,7 +91,6 @@ var SCREEN_NAMES = {
 "V_ad_1m": {},
 "Motya93600656": {},
 "Olga_Cont": {},
-"w1deb0y": {},
 "jackdo70": {},
 "NailFlyJet": {},
 "Vlad_39_RUS": {},
