@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-05-07 18:58:35
+ * @updated: 2019-05-14 11:20:42
 */
 var BOT_ACCOUNTS = {
 1001170190162329601: {},
@@ -43,6 +43,7 @@ var BOT_ACCOUNTS = {
 3456105556: {},
 385403922: {},
 4696527666: {},
+491227446: {},
 540034550: {},
 577783814: {},
 760385536313917440: {},
@@ -74,7 +75,6 @@ var SCREEN_NAMES = {
 "NailFlyJet_3": {},
 "BornInUkrraine": {},
 "GrateKirill": {},
-"moscallll_ural": {},
 "Antonthemasta": {},
 "ElenAthefrolova": {},
 "Ekaterina_Sink": {},
@@ -97,6 +97,7 @@ var SCREEN_NAMES = {
 "kbil11": {},
 "web_dominator": {},
 "RovatoTawney": {},
+"moscester": {},
 "Shinohararus": {},
 "nttn2": {},
 "innazayczewa": {},
