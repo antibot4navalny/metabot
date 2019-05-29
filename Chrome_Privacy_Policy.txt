@@ -1,4 +1,11 @@
-The Twitter accounts this extension highlights are exactly those blacklisted by Twitter user antibot4navalny, all publicly available at BlockTogether: https://blocktogether.org/show-blocks/SiJai3FyVmodO0XxkL2r-pezIK_oahHRwqv9I6U3
+The Twitter accounts this extension highlights are exactly those selected by Twitter user @antibot4navalny as likely Kremlin bots (Russian orchestrated crowd of human trolls for hire), as publicly listed at BlockTogether:
+https://blocktogether.org/show-blocks/HYZ_Qq1P1xyxcDDbgLQ3l8OhhFLAolDZvpUqHP3A
 
-The blacklist is manually created and maintained in according to this criteria:
+The list is manually created and maintained according to these criteria:
 https://twitter.com/antibot4navalny/status/1060437615399354368
+
+Your Twitter username may be pre-filled into:
+1) both "new likely bot" and "consider unlisting" reports when they are sent via Google Forms;
+2) into extension's "uninstall survey" Google Form.
+
+You can manually remove your Twitter username before submitting either of the Google Forms, thus choosing to stay anonymous.
