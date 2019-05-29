@@ -1,6 +1,6 @@
 	. ./set_version.sh
 
-	sed -E "s/VVVVVV/$version/" manifest.template.json > MetabotTwitter/manifest.json
+	sed -E "s/VVVVVV/$version/" manifest.template.json > metabotTwitter/manifest.json
 	sed -E "s/VVVVVV/$version/" updates.template.xml > updates.xml
 
 	extensionator -o ./metabotTwitter.crx -i metabotTwitter.pem -d metabotTwitter -e .DS_Store
