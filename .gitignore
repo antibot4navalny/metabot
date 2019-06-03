@@ -1,16 +1,28 @@
-*.pem
-bot_accounts*.csv
-.DS_Store
+!.gitignore
+
+### No value to store, intermediary files
+
 for_Chrome_Store/manifest.json
 metabotTwitter.zip
+.DS_Store
+Firefox_tmp
+bot_accounts*.csv
+.*
+
 package-lock.json
+node_modules/*
+
+
+
+# For private repository only
+
+unused/*
+
+
+
+#  Private credentials, for no repository whatsoever
+
 set_chrome_web_store_credentials.sh
 set_mozilla_AMO_credentials.sh
 set_local_source_for_validated_bots.sh
-node_modules/*
-web-ext-xpmt
-web-ext-artifacts
-Firefox_tmp
-unused/*
-.*
-!.gitignore
+*.pem
