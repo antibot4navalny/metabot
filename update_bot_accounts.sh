@@ -2,8 +2,8 @@ SCRIPTPATH=$(dirname "$0")
 echo "Switching to script folder:""$SCRIPTPATH" >&2
 cd "$SCRIPTPATH"
 
-# ./download_current_blocktogether_blacklist.sh
-./get_bots_locally.sh
+./download_current_blocktogether_blacklist.sh
+# ./get_bots_locally.sh
 
 if cmp --quiet bot_accounts.csv bot_accounts.previous.csv; then
 	echo "No changes in DB to push" >&2
