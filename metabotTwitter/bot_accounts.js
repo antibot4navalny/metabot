@@ -1,7 +1,8 @@
 /**
- * @updated: 2019-07-06 18:01:08
+ * @updated: 2019-07-08 18:07:53
 */
 var BOT_ACCOUNTS = {
+1141598719374168064: {},
 1145965580685627392: {},
 1111299008419586049: {},
 1115487693629272066: {},
@@ -63,6 +64,7 @@ var BOT_ACCOUNTS = {
 385403922: {},
 }
 var SCREEN_NAMES = {
+"Kyeva_Okraina": {},
 "mrchildintime6": {},
 "Tern1i1nMyhead": {},
 "SaVe1iam": {},
