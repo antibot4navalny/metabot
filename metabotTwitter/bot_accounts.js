@@ -1,7 +1,12 @@
 /**
- * @updated: 2019-07-11 17:11:26
+ * @updated: 2019-07-14 19:58:33
 */
 var BOT_ACCOUNTS = {
+2231599885: {},
+2617492669: {},
+831152934813650945: {},
+49599609: {},
+1149919173780353025: {},
 1115482195756486656: {},
 973957121065869312: {},
 1115485573995692033: {},
@@ -77,6 +82,11 @@ var BOT_ACCOUNTS = {
 385403922: {},
 }
 var SCREEN_NAMES = {
+"borisenkodmitr": {},
+"SERG__ROTENBERG": {},
+"ajbolit_limpopo": {},
+"Kartoshka_Kofe": {},
+"fcBNtByB1Bhts7I": {},
 "Man_of_night9": {},
 "golyzi8": {},
 "Sere6a": {},
