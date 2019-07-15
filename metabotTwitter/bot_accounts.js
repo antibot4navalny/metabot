@@ -1,7 +1,8 @@
 /**
- * @updated: 2019-07-14 19:58:33
+ * @updated: 2019-07-15 21:36:44
 */
 var BOT_ACCOUNTS = {
+1139634182475399168: {},
 2231599885: {},
 2617492669: {},
 831152934813650945: {},
@@ -21,7 +22,6 @@ var BOT_ACCOUNTS = {
 1147807130856173573: {},
 1115493002976407552: {},
 1141598719374168064: {},
-1145965580685627392: {},
 1111299008419586049: {},
 1115487693629272066: {},
 1116752156189655040: {},
@@ -82,6 +82,7 @@ var BOT_ACCOUNTS = {
 385403922: {},
 }
 var SCREEN_NAMES = {
+"WTF18248595": {},
 "borisenkodmitr": {},
 "SERG__ROTENBERG": {},
 "ajbolit_limpopo": {},
@@ -101,7 +102,6 @@ var SCREEN_NAMES = {
 "Peremoga_404": {},
 "iron_Barney": {},
 "Kyeva_Okraina": {},
-"mrchildintime6": {},
 "Tern1i1nMyhead": {},
 "SaVe1iam": {},
 "mHiZTSB176cBuyC": {},
