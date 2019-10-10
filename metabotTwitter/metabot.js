@@ -1,129 +1,390 @@
-// добавляем стили для пометки ботов
+// import { fillTemplate } from './common.js';
 
-var d = document.createElement('div')
 
-// стиль для пометки красноватым фоном твитов от ботов
-
-if (document.querySelector('#init-data') === null ||	// вероятно, мобильный режим
-	!JSON.parse(document.querySelector('#init-data').value)["night_mode_activated"])
-	var s = '.bot_tweet_highlight { background: #FEE !important; }'		// light
-else
-	var s = '.bot_tweet_highlight { background: #4b3333 !important; }'	// dark
-
- 	
-// стиль для пометки блёклым текста твитов от ботов
- s += '.bot_tweet_highlight .bot_text { color: #808080; }'
-
- d.innerHTML = '<style>'+s+'</style>'
- document.body.appendChild(d)
- 
-
-function tick()
+function setStyle(divElement, style)
 {
-	var a=document.querySelectorAll('#permalink-overlay div.tweet')
-	var m=document.querySelectorAll('div[data-testid=tweet], article[data-testid=tweetDetail]')
-
-	var i, x, t
-
-	// мобильная версия: выделяем все твиты, показанные на странице
-	for (i = 0; i < m.length; i++)
-		if (!m[i].dataset.mt_is_upd)
-		{
-			x=m[i].querySelector('a[href]').getAttribute('href').substring(1)
-			t=m[i]
-
-			if (SCREEN_NAMES[x]) /// здесь должна быть проверка "является ботом?"
-			{
-				// подсвечиваем весь твит стилем bot_tweet_highlight
-				t.parentNode.className+=" bot_tweet_highlight"
-					/// ^^^ Убедиться, когда заработает проверка "является ботом?",
-					/// что не покрашивается сразу всё вместо единственного твита.
-				
-				// дописываем "БОТ: " перед именем автора твита
-
-///				// Неудавшаяся попытка встроиться над аватаром
-///				fullNm=t.querySelectorAll('a[href]')[0].parentNode
-///				fullNm.innerHTML = "БОТ:<BR>" + fullNm.innerHTML
-				
-				// Над full name
-				fullNm=t.querySelectorAll('a[href]')[1].parentNode
-
-				botCaption = document.createElement("div")
-				botCaption.innerHTML="(БОТ)"
-				botCaption.style.color = 'red'
-
-				fullNm.appendChild(botCaption)
-			}
-			m[i].dataset.mt_is_upd = 1
-		}
-
-	// десктопная версия: выделяем все твиты, показанные на странице
-	for (i = 0; i < a.length; i++)
-		if (!a[i].dataset.mt_is_upd)
-		{
-			x=Number(a[i].getAttribute("data-user-id"))
-			var actionName=""
-	
-			t = a[i]
-	
-			// проверяем, есть ли пользователь в списке известных ботов
-			if (BOT_ACCOUNTS[x])
-			{
-				// подсвечиваем весь твит стилем bot_tweet_highlight
-				t.className += ' bot_tweet_highlight'
-		
-				// дописываем "БОТ: " перед именем автора твита
-				fullNm=t.querySelector('span.FullNameGroup')
-
-				botCaption = document.createElement("div")
-				botCaption.innerHTML="БОТ:&nbsp;"
-				botCaption.style.color = 'red'
-
-				fullNm.prepend(botCaption)
-
-
-				// делаем текст твита более блёклым
-				tweetTxt=t.querySelector('div.js-tweet-text-container p.tweet-text')
-				tweetTxt.className = 'bot_text ' + tweetTxt.className
-		
-				menuAction = "Сообщить об ошибочной подсветке"
-				dmAction = "Это не кремлебот"
-			} else {
-				menuAction = "Сообщить о кремлеботе"
-				dmAction = "В кремлеботы"
-			}
-			// добавляем пункт меню "Пожаловаться" / "Реабилитировать" 
-			twtBtn=t.querySelector('div.ProfileTweet-action div.dropdown-menu ul')
-
-			tweetPermalink=DOMPurify.sanitize(
-				(new URL(t.getAttribute("data-permalink-path") , document.location)).href
-			)
-			// screenName=t.getAttribute("data-screen-name")
-			// fullName=t.getAttribute("data-name")
-
-
-			dropdownDivider=document.createElement("li")
-			dropdownDivider.class="dropdown-divider"
-			dropdownDivider.role="presentation"
-			twtBtn.appendChild(dropdownDivider)
-
-			botAction = document.createElement("li")
-			botAction.role = "presentation"
-
-			botActionLink = document.createElement("a")
-			botActionLink.href = "https://twitter.com/messages/compose?recipient_id=1067060314884190209&text=" +
-				encodeURIComponent(tweetPermalink + "\n" + dmAction + ", вот почему:\n")
-			botActionLink.target="_blank"
-			botActionLink.textContent=menuAction
-			
-			botAction.appendChild(botActionLink)
-			twtBtn.appendChild(botAction)			
-	
-			// Mark tweet as processed to skip in subsequent passes
-			a[i].dataset.mt_is_upd = 1
-		}
-	// каждые 3 секунды на странице помечаются твиты от ботов, не помеченные ранее
-	setTimeout(tick, 3000);
+	divElement.innerHTML = '<style>'+style+'</style>'
 }
 
-tick();
+function addStyle(s)
+{
+	var d = document.createElement('div')
+	
+	if(s) setStyle(d,s)
+	
+	return document.body.appendChild(d)
+}
+
+
+
+// добавляем стили для пометки ботов
+
+// reduced-contrast style for tweet bodies posted by bots
+s = '.bot_tweet_highlight .bot_text { color: #808080; }'
+addStyle(s)
+
+
+// стиль для пометки красноватым фоном твитов от ботов
+tweetBackgroundStyle=addStyle()
+
+function defineTweetBackgroundStyle()
+{
+	if (document.querySelector('#init-data') === null) // likely mobile mode / new design
+		// dark mode: <meta name="theme-color" content="#1C2938">
+		// light mode: <meta name="theme-color" content="#FFFFFF">
+		dark_mode = ! (document.querySelector(
+			":root > head > meta[name=theme-color]")
+			.getAttribute("content").toUpperCase() == "#FFFFFF")
+	else  // likely desktop mode, old design
+		dark_mode = getInitData()["night_mode_activated"] ? true : false
+
+	if (dark_mode)
+		var s = '.bot_tweet_highlight { background: #4b3333 !important; }'	// dark
+	else
+		var s = '.bot_tweet_highlight { background: #FEE !important; }'		// light
+
+	setStyle(tweetBackgroundStyle, s)
+}
+
+ 
+
+function reportTweetCaption(isBot)
+{
+	return isBot?
+		"Сообщить о нехарактерном для бота" :	// "Untypical for bot"
+		"Сообщить о кремлеботе";		// "Possibly a bot"
+}
+
+function normalizedPathname()
+{
+	// normalize '/username/[with_replies]' to 'username'
+	loc=document.location
+	return (loc.pathname+loc.search).substring(1).replace("/with_replies","")
+}
+
+function isStatusView()
+{
+	path=document.location.pathname
+	return path.includes("/status/") &&
+ 		(document.location.search=="") 	// Enable comments as cgi params
+}
+
+function isProfileView()
+{
+	pathWithRepliesRemoved=normalizedPathname()
+	userNameMatch=pathWithRepliesRemoved
+		.match(screennameRegex)
+
+	return (document.location.search=="") && 
+		(! pathWithRepliesRemoved.includes("/")) &&
+		(userNameMatch) &&
+		(userNameMatch[0]==pathWithRepliesRemoved)
+}
+
+
+function buildNewDesignMenuAction(
+			actionToCloneBefore,
+			menuItemCaption,
+			template, parameters)
+{
+
+	reportingUser=extractExtensionUserFromBodyScript()
+	
+	clonedAction=actionToCloneBefore.cloneNode(true)
+
+	fillInMenuItem (
+		clonedAction,
+		clonedAction.querySelector("span"),
+		template, parameters,
+		reportingUser,
+		menuItemCaption)
+
+	actionToCloneBefore.before(clonedAction)
+}
+
+function buildTweetDropdownAction(
+	actionToCloneBefore,
+	blockUserAction,
+	reportTweetAction,
+	userProfileHeadingScreenName)
+{	
+	tweetAuthor=blockUserAction.querySelector("span")
+		.textContent
+		.match('@'+screennameRegex)[0]
+		.substring(1)
+
+	reportedUser=isProfileView() ?
+		// top of the screen profile heading
+		userProfileHeadingScreenName.innerText.substring(1) :
+		tweetAuthor
+	
+	tweetID=reportTweetAction.getAttribute('href').split("/").pop()
+
+	tweetInvokedFrom=encodeURIComponent(
+		"https://twitter.com/"+tweetAuthor+"/status/"+tweetID)
+	
+	isBot = SCREEN_NAMES[reportedUser]
+
+	template=isBot ?
+		templateReportUntypicalTweetUrl :
+		templateReportTweetUrl
+
+	var parameters = {
+		reportedAccount: reportedUser, 
+		tweetInvokedFrom: tweetInvokedFrom}
+
+	
+	buildNewDesignMenuAction(
+		actionToCloneBefore,
+		reportTweetCaption(isBot),
+		template, parameters)
+}
+
+
+function expandDetachedDropdownMenu(
+	dropdownMenuPath, 
+	profileHeadingScreennamePath)
+	
+{
+	dropdownMenu=document.querySelector(dropdownMenuPath)
+	if(dropdownMenu)  if (! dropdownMenu.dataset.metabotActionAdded)
+	{
+		dropdownFirstElement=dropdownMenu.children[0]
+		
+		if(dropdownFirstElement)
+		{
+			// It's most unlikely that user dropdown menu contains tweet report 
+			// Therefore, if tweet report item is present, assume it's tweet dropdown
+			if (dropdownMenu.querySelector(
+				'a[href^="/i/report/status"]') )
+			{
+				isTweetDropdown=true
+				isUserDropdown=false
+			// if tweet report item is not present, but user report item is,
+			// assume it's a user dropdown
+			} else if (dropdownMenu.querySelector(
+				'a[href^="/i/report/user/"]') )
+			{
+				isTweetDropdown=false
+				isUserDropdown=true
+			} else
+			// Otherwise assume we should keep the menu intact
+			{
+				isTweetDropdown=false
+				isUserDropdown=false
+			}
+
+			if (isTweetDropdown || isUserDropdown)
+			{
+				menuItems = dropdownMenu.querySelectorAll(
+					":scope > "+
+					"[role=menuitem]:not(.r-1awozwy)"+
+					// exclude Cancel non-actionable menu item
+					// (occurs in mobile design only)
+					":not([href$='/hidden'])")
+					// exclude "Show hidden replies" 
+					// which are '<a>' nodes matching href '/.../status/.../hidden'
+ 
+				reportUserOrTweetMenuItem=
+					dropdownMenu.querySelector(
+						'a[href^="/i/report"]')
+			
+				userProfileHeadingScreenName=
+					document.querySelector(
+						profileHeadingScreennamePath)
+			}
+			
+			if (isUserDropdown)
+			{
+//				userID=reportUserOrTweetMenuItem
+//						.getAttribute('href').split("/").pop()
+ 					// tested in DesktopNewDesign only
+					// currently not used; can be used to use different menu item captions and/or different forms
+
+
+			} else if (isTweetDropdown)
+				buildTweetDropdownAction(
+					reportUserOrTweetMenuItem,
+					menuItems[menuItems.length-2],
+						// "Block [ @username ]" is expected at this position
+
+					reportUserOrTweetMenuItem,
+					userProfileHeadingScreenName)
+
+			dropdownMenu.dataset.metabotActionAdded=true
+		}
+	}
+}
+
+
+function expandDynamicallyAppearingDropdownMenu()
+{
+	// desktop, new design
+	expandDetachedDropdownMenu (
+		"div [role=menu] div div.css-1dbjc4n div.css-1dbjc4n",
+		"div.r-1g94qm0"+
+			" div div div.r-1wbh5a2 span")
+
+	// mobile, new and old Twitter design
+	expandDetachedDropdownMenu (
+		"div.r-pm9dpa.r-1rnoaur",
+//LATER:
+		"div.css-1dbjc4n.r-1g94qm0 "+
+			"div.css-1dbjc4n.r-18u37iz.r-1wbh5a2"+
+			" span")
+//EARLIER:		"div.r-1cad53l.r-1b9bua6 div.r-1g594qm0"+
+//			" div.r-18u37iz.r-1wbh5a2 span")
+
+	setTimeout(expandDynamicallyAppearingDropdownMenu, 1000);
+}
+
+
+function markTweets()
+{
+	if (isStatusView() || isProfileView() )
+	{
+		defineTweetBackgroundStyle()
+
+		var a=document.querySelectorAll('#permalink-overlay div.tweet')
+			// get all tweets on tweet focus page for old design, desktop
+	
+		if (a.length>0)
+		{
+			mobile_mode=false
+			highlight_tweets=true
+		}
+		else
+		{
+			var a=document.querySelectorAll('div.stream div.tweet')
+				// get all tweets on user profile page for old design, desktop
+			mobile_mode=false
+			highlight_tweets=false
+		}
+		if (a.length==0)
+		{
+			mobile_mode=true
+			a=document.querySelectorAll('article[role=article]');
+			// In conversation view, works both for focused tweet and
+			// for parent / child replies of the focused tweet.
+				
+			highlight_tweets=isStatusView()
+		}
+	
+
+		var i, x, t
+	
+		for (i = 0; i < a.length; i++)
+
+			// process only tweets not processed in earlier passes			
+			if (!a[i].dataset.mt_is_upd)
+			{
+				t = a[i]
+		
+				x=mobile_mode ?
+					a[i].querySelector('a[href]').getAttribute('href').substring(1) :						
+					(isStatusView() ?
+						a[i].getAttribute("data-user-id") :
+						document.querySelector("div.ProfileNav")
+							.getAttribute("data-user-id") )
+						// getInitData()["profile_user"]["id_str"]
+			
+		
+				isBot= (SCREEN_NAMES[x] || BOT_ACCOUNTS[x])
+		
+				if (isBot && highlight_tweets)
+				{
+					// highlight all tweets shown on the page
+					botCaption = document.createElement("span")
+					botCaption.innerHTML="БОТ:&nbsp;"
+					botCaption.style.color = 'red'
+
+					// дописываем "БОТ: " перед именем автора твита
+					fullname=t.querySelector(mobile_mode?
+						"span" :
+						'span.FullNameGroup')
+
+					fullname.prepend(botCaption)
+		
+					elementToHightlight=mobile_mode ?
+						t.parentNode :
+						t
+
+					if (elementToHightlight.
+						querySelector(
+						":scope > article > div > div")
+						.innerText=="" )
+					// Highlight tweets only if they are not retweeted-by, no matter who retweeted or who posted the original tweet.
+					{
+						// подсвечиваем весь твит стилем bot_tweet_highlight
+						elementToHightlight.className+=" bot_tweet_highlight"
+
+						// reduce contrast for tweet text
+						tweetTextselector = mobile_mode ?
+							// - for focused tweet:
+							':scope > div > div > span' + ', ' +
+							// - for parent / child replies of the focused tweet
+							':scope > div > div > div > div > span'
+							:
+							// for desktop, old design
+							'div.js-tweet-text-container p.tweet-text'
+
+						tweetTxts = t.querySelectorAll(tweetTextselector)
+						tweetTxts.forEach(
+							function(element) {
+								element.className='bot_text ' + element.className;
+							});						
+					}			
+				}
+		
+		
+				if (! mobile_mode)
+				{
+					// old design, desktop:
+					menuAction = reportTweetCaption(isBot)
+
+					// inject custom menu item: "Tweet non/typical for a bot"
+					 
+					tweetPermalink=DOMPurify.sanitize(
+						(new URL(t.getAttribute("data-permalink-path"),
+							document.location)).href
+					)
+
+					reportedAccount=
+						isStatusView() ?
+							t.getAttribute("data-screen-name") :
+						isProfileView() ?
+							normalizedPathname() :
+							""
+//							getInitData()["profile_user"]["screen_name"]
+							// ^^ not ready as of initial load of user profile page
+
+					var parameters = {
+						reportedAccount: reportedAccount, 
+						tweetInvokedFrom:
+							encodeURIComponent(tweetPermalink)}
+
+
+					template = isBot ?
+						templateReportUntypicalTweetUrl :
+						templateReportTweetUrl
+
+					addOldDesignMenuItemSeparted(
+						t,
+						template,
+						parameters,
+						menuAction,
+						false)
+				}
+
+				// Mark tweet as processed to skip in subsequent passes
+				a[i].dataset.mt_is_upd = 1
+			}
+	}
+	// repeat every 3 seconds
+	setTimeout(markTweets, 3000);
+}
+
+
+
+expandDynamicallyAppearingDropdownMenu();
+markTweets();

@@ -55,25 +55,16 @@ ACCESS_TOKEN=`jq -r '.access_token' "$access_tokens"`
 node_modules/.bin/webstore \
 	upload \
 	--source "metabotTwitter.zip" \
-	--extension-id cooadmmiojjmmfifkcainbnmhghfcbfi \
+	--extension-id "$extension_ID" \
 	--client-id $CLIENT_ID \
 	--client-secret $CLIENT_SECRET \
 	--refresh-token $ACCESS_TOKEN
 
 
-## Original: needs auth on every run:
 
-# node_modules/.bin/webstore \
-# 	upload \
-# 	--source "metabotTwitter.zip" \
-# 	--extension-id cooadmmiojjmmfifkcainbnmhghfcbfi \
-# 	--client-id $CLIENT_ID \
-# 	--client-secret $CLIENT_SECRET \
-# 	--refresh-token $refresh_token
-# 
 node_modules/.bin/webstore \
 	publish \
-	--extension-id cooadmmiojjmmfifkcainbnmhghfcbfi \
+	--extension-id "$extension_ID" \
 	--client-id $CLIENT_ID \
 	--client-secret $CLIENT_SECRET \
 	--refresh-token $ACCESS_TOKEN

@@ -7,7 +7,7 @@
 	echo "*/" >> bot_accounts.js
 
 	echo "var BOT_ACCOUNTS = {" >> bot_accounts.js
-	sed -e 's/$/: {},/' bot_accounts.csv >> bot_accounts.js
+	awk '{printf "\"%s\": {},\n", $0}' bot_accounts.csv >> bot_accounts.js
 	echo "}" >> bot_accounts.js
 
 	echo "var SCREEN_NAMES = {" >> bot_accounts.js

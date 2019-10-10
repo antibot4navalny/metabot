@@ -2,8 +2,11 @@
 
 ### No value to store, intermediary files
 
+metabotTwitter/manifest.json
 for_Chrome_Store/manifest.json
+TMP_for_Chrome_Store/
 metabotTwitter.zip
+Firefox.zip
 .DS_Store
 Firefox_tmp
 bot_accounts*.csv
@@ -14,13 +17,13 @@ node_modules/*
 
 
 
-# For private repository only
+### For private repository only
 
 unused/*
 
 
 
-#  Private credentials, for no repository whatsoever
+###  Private credentials, for no repository whatsoever
 
 set_chrome_web_store_credentials.sh
 set_mozilla_AMO_credentials.sh
