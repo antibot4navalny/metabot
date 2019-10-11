@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "MetaBot for Twitter",
-	"version": "0.5.16",
+	"version": "0.5.17",
 	"description": "Highlight known Kremlin bots on Twitter.",
 	"author": "antibot4navalny",
 	"update_url": "https://raw.githubusercontent.com/antibot4navalny/metabot/master/updates.xml",
@@ -22,6 +22,8 @@
 	    "persistent": false
 	},
 	
+	"browser_specific_settings": { "gecko": { "id": "bots_commenting_navalny@protonmail.com", "strict_min_version": "66.0"} },
+
 	"permissions": [
 		"storage"
 	]
