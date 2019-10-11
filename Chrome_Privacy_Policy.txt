@@ -5,7 +5,7 @@ The list is manually created and maintained according to these criteria:
 https://twitter.com/antibot4navalny/status/1060437615399354368
 
 Your Twitter username may be pre-filled into:
-1) both "new likely bot" and "consider unlisting" reports when they are sent via Google Forms;
+1) both "new likely bot" and "consider unlisting" reports when they are sent via Google Forms and/or Twitter private messages to @antibot_inbox;
 2) into extension's "uninstall survey" Google Form.
 
 You can manually remove your Twitter username before submitting either of the Google Forms, thus choosing to stay anonymous.
