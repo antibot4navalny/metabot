@@ -1,10 +1,9 @@
 {
 	"manifest_version": 2,
 	"name": "MetaBot for Twitter",
-	"version": "0.5.18",
+	"version": "0.5.20",
 	"description": "Highlight known Kremlin bots on Twitter.",
 	"author": "antibot4navalny",
-	"update_url": "https://raw.githubusercontent.com/antibot4navalny/metabot/master/updates.xml",
 	"content_scripts": [
 	  {
 		"matches": ["https://*.twitter.com/*"],
@@ -22,6 +21,7 @@
 	    "persistent": false
 	},
 	
+
 	"permissions": [
 		"storage"
 	]
