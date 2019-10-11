@@ -1,4 +1,5 @@
-	git add metabotTwitter.crx updates.xml next_version.txt metabotTwitter/manifest.json metabotTwitter/bot_accounts.js
+	git add metabotTwitter.crx updates.xml next_version.txt metabotTwitter/bot_accounts.js
+		# metabotTwitter/manifest.json
 
 	git commit -m "update list of known bots"
 	echo "About to push DB changes." >&2

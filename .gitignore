@@ -3,12 +3,10 @@
 ### No value to store, intermediary files
 
 metabotTwitter/manifest.json
-for_Chrome_Store/manifest.json
-TMP_for_Chrome_Store/
 metabotTwitter.zip
+Firefox_readonly_copy
 Firefox.zip
 .DS_Store
-Firefox_tmp
 bot_accounts*.csv
 .*
 

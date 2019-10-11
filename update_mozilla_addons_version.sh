@@ -19,7 +19,7 @@ echo "webext signing:" >&2
 
 ## Original: Submits successfully but also reports stacktrace 
 node_modules/.bin/webext sign \
-	--source-dir="metabotTwitter" \
+	--source-dir="Firefox_readonly_copy" \
 	--api-key="$JWT_user" \
 	--api-secret="$JWT_secret" \
 	--id="{$extension_ID}"
