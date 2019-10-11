@@ -1,7 +1,9 @@
 /**
- * @updated: 2019-10-11 21:47:02
+ * @updated: 2019-10-11 21:51:59
 */
 var BOT_ACCOUNTS = {
+"1168566949288325120": {},
+"1168553541683875840": {},
 "1166623548187795457": {},
 "973962011007684610": {},
 "1160956099132035083": {},
@@ -105,6 +107,8 @@ var BOT_ACCOUNTS = {
 "385403922": {},
 }
 var SCREEN_NAMES = {
+"mensur_castillo": {},
+"ChoiceRothstei5": {},
 "Dasha_NaVa228": {},
 "ShmiraKirmlsh": {},
 "LobosVobul": {},
