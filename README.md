@@ -15,6 +15,16 @@
 
 Устанавливается из магазина расширений (Chrome Store): https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
 
+## Microsoft Edge
+Проверялось только на компьютере.
+
+Установка:
+1. перейти по ссылке [edge://extensions/](edge://extensions/)
+2. включить переключатель "Разрешить расширения из других магазинов" (Allow extensions from other stores)
+3. открыть страницу Метабота для Google Chrome: https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
+4. нажать "Установить" (Add To Chrome) > "Добавить расширение" (Add Extension)
+
+
 ## Яндекс.Браузер
 Работает на компьютере и на смартфонах Android.
 
