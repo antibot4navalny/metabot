@@ -3,7 +3,8 @@
 ### No value to store, intermediary files
 
 metabotTwitter.zip
-Firefox_readonly_copy
+Firefox_readonly_copy/*
+ChromeOpera_readonly_copy/*
 Firefox.zip
 .DS_Store
 bot_accounts*.csv

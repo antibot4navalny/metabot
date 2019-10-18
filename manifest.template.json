@@ -18,8 +18,13 @@
 	  }
 	],
 	"background": {
-	    "scripts": ["url_templates.js", "common.js", "background.js", "hot-reload.js"],
-	    "persistent": false
+		"scripts": [
+			"url_templates.js",
+			"common.js",
+			"hot-reload.js",
+			"background.js",
+		],
+		"persistent": false
 	},
 	
 	"browser_specific_settings": { "gecko": { "id": "{d20acea6-2744-4763-bb1c-f62924e40073}", "strict_min_version": "66.0"} },
