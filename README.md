@@ -15,10 +15,11 @@
 
 Устанавливается из магазина расширений (Chrome Store): https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
 
-## Microsoft Edge
+## Microsoft Edge (пока только Beta)
 Проверялось только на компьютере.
 
 Установка:
+1. [[Скачиваем и устанавливаем]() бета-версию браузера MS Edge (Insider Beta Channel), если она ещё не установлена] (Beta ставится рядом с обычным Edge, удалять его не нужно)
 1. Переходим по ссылке [edge://extensions/](edge://extensions/)
 2. Включаем переключатель "Разрешить расширения из других магазинов" (Allow extensions from other stores)
 3. Открываем страницу Метабота для Google Chrome: https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
