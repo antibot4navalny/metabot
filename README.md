@@ -62,5 +62,10 @@
     - нажимаем справа от него Install
     - подтверждаем установку
 
+## TOR
+Работает на компьютере.
+
+Устанавливается из магазина расширений Firefox Addons: https://addons.mozilla.org/en-US/firefox/addon/metabot-for-twitter/
+
 ----
 Создано на базе и благодаря расширению [Metabot для Youtube](https://github.com/CupIvan/metabot) (c) [CupIvan](https://github.com/CupIvan).
