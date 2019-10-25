@@ -9,8 +9,11 @@
 	grep --invert-match \
 		--regexp='"update_url":' \
 		--regexp='"hot-reload.js",' \
+		--regexp='"persistent": false' \
+		--regexp='"flags.js"' \
 		"metabotTwitter/manifest.json" > \
 		"Firefox_readonly_copy/manifest.json"
+	rm FirefoxTestBuild.zip
 	zip FirefoxTestBuild.zip Firefox_readonly_copy/* --junk-paths
 
 

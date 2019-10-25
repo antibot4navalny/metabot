@@ -1,13 +1,18 @@
 function saveUsageTelemetry()
 {
 	// likely new design
-	extensionUser = extractExtensionUserFromBodyScript()
-
-	if (! extensionUser)
-		// likely old design desktop
-		extensionUser=extractExtensionUserFromInitData()
-
-	else if (! extensionUser)
+	if (prefillGoogleForms())
+	{
+		extensionUser = extractExtensionUserFromBodyScript()
+	
+		if (! extensionUser)
+			// likely old design desktop
+			extensionUser=extractExtensionUserFromInitData()
+	
+		else if (! extensionUser)
+			extensionUser=""
+	}
+	else
 		extensionUser=""
 
 	if(chrome.storage) if (chrome.storage.sync)

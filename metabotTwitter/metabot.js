@@ -88,7 +88,7 @@ function buildNewDesignMenuAction(
 			template, parameters)
 {
 
-	reportingUser=extractExtensionUserFromBodyScript()
+	reportingUser=prefillGoogleForms() ? extractExtensionUserFromBodyScript() : ""
 	
 	clonedAction=actionToCloneBefore.cloneNode(true)
 

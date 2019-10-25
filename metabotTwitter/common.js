@@ -5,6 +5,13 @@ function fillTemplate(templateString, templateVars)
 	return func(...Object.values(templateVars));
 }
 
+function prefillGoogleForms()
+{
+	if ((typeof flagPrefillGoogleForms !== 'undefined') && (flagPrefillGoogleForms == true))
+		return true;
+	else
+		return false;
+}
 
 function changeToTimezone(date,IanaTZ)
 // source: https://stackoverflow.com/a/53652131/10085368
@@ -202,7 +209,7 @@ function addOldDesignMenuItemSeparted(
 			.querySelector(
 				'div.dropdown-menu ul')
 	
-	reportingUser=extractExtensionUserFromInitData()
+	reportingUser=prefillGoogleForms() ? extractExtensionUserFromInitData() : ""
 
 	dropdownDivider = document.createElement("li")
 	dropdownDivider.className=
