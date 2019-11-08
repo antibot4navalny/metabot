@@ -1,7 +1,8 @@
 /**
- * @updated: 2019-11-07 12:52:58
+ * @updated: 2019-11-08 13:46:20
 */
 var BOT_ACCOUNTS = {
+"1081658791677100033": {},
 "1083521495840813056": {},
 "1083496990917443590": {},
 "1083467218007007233": {},
@@ -213,6 +214,7 @@ var BOT_ACCOUNTS = {
 "385403922": {},
 }
 var SCREEN_NAMES = {
+"AlexandrSavic": {},
 "KostadinBoriso4": {},
 "MrKiril": {},
 "elizabe4709578": {},
@@ -231,14 +233,14 @@ var SCREEN_NAMES = {
 "TimurSokolov5": {},
 "BassariT": {},
 "volconka": {},
-"Fillip49368657": {},
+"Nikolskiy2": {},
 "Targakov": {},
 "NVukina": {},
 "loookteva": {},
 "grigorash___": {},
 "StepaRozin": {},
 "super__in": {},
-"KyPOVCoBYhU1nlC": {},
+"matvey_elizarov": {},
 "_Violeta___": {},
 "korobova1990": {},
 "KusMilenna": {},
@@ -247,7 +249,7 @@ var SCREEN_NAMES = {
 "KizimaMary": {},
 "EdwarioliP": {},
 "RomanKoddes": {},
-"evdokimalex": {},
+"Egor_Martunov": {},
 "yarkaya34": {},
 "VadimRamzin": {},
 "septunk2": {},
