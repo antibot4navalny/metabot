@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-11-30 19:55:39
+ * @updated: 2019-11-30 20:12:27
 */
 var BOT_ACCOUNTS = {
 "1186612674907594752": {},
@@ -186,7 +186,6 @@ var BOT_ACCOUNTS = {
 "1115823637007876096": {},
 "1134546874466275330": {},
 "1144729547516063744": {},
-"2231599885": {},
 "2617492669": {},
 "831152934813650945": {},
 "49599609": {},
@@ -418,7 +417,6 @@ var SCREEN_NAMES = {
 "5OE86r6kUsBwnUV": {},
 "kot__official": {},
 "568vHtY0qTfWeWQ": {},
-"borisenkodmitr": {},
 "SERG__ROTENBERG": {},
 "ajbolit_limpopo": {},
 "Kartoshka_Kofe": {},
