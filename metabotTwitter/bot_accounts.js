@@ -1,5 +1,5 @@
 /**
- * @updated: 2019-12-05 13:05:28
+ * @updated: 2019-12-09 12:56:10
 */
 var BOT_ACCOUNTS = {
 "1201608909448007680": {},
@@ -192,7 +192,6 @@ var BOT_ACCOUNTS = {
 "320325719": {},
 "1148546078020657153": {},
 "1153333838803865600": {},
-"1151183891815964673": {},
 "1115823637007876096": {},
 "1134546874466275330": {},
 "1144729547516063744": {},
@@ -243,7 +242,7 @@ var BOT_ACCOUNTS = {
 "385403922": {},
 }
 var SCREEN_NAMES = {
-"gandjib1975": {},
+"agndjib1975": {},
 "Oksana19870606": {},
 "severanocka": {},
 "eiuJMzIvdqGVtkX": {},
@@ -289,7 +288,7 @@ var SCREEN_NAMES = {
 "Ghennadii_SPb": {},
 "RadioStydoba": {},
 "Urgv_razvedka": {},
-"subb_zzero": {},
+"subb_zeero": {},
 "spacelordrock": {},
 "3eUS3g7xpSUZZ2y": {},
 "Malis0ne2": {},
@@ -433,7 +432,6 @@ var SCREEN_NAMES = {
 "avtoprima": {},
 "OMYgDitsNstyBoy": {},
 "ZergUssr": {},
-"hachapuryi": {},
 "5OE86r6kUsBwnUV": {},
 "kot__official": {},
 "568vHtY0qTfWeWQ": {},
