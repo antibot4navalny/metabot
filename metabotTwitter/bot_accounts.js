@@ -1,7 +1,8 @@
 /**
- * @updated: 2019-12-12 16:22:18
+ * @updated: 2019-12-12 18:48:56
 */
 var BOT_ACCOUNTS = {
+"2239367641": {},
 "900510050627850241": {},
 "1189264965938466816": {},
 "1201594931535630337": {},
@@ -212,6 +213,7 @@ var BOT_ACCOUNTS = {
 "1111299008419586049": {},
 "1116752156189655040": {},
 "1115497113478103041": {},
+"1135487463839928320": {},
 "1139445390590304257": {},
 "1139560835368607744": {},
 "1115489471431172097": {},
@@ -244,6 +246,7 @@ var BOT_ACCOUNTS = {
 "385403922": {},
 }
 var SCREEN_NAMES = {
+"maxxlobv": {},
 "frunzik_frunz": {},
 "perelompopiro2": {},
 "xoxlystukachi": {},
@@ -454,6 +457,7 @@ var SCREEN_NAMES = {
 "Tern1i1nMyhead": {},
 "mHiZTSB176cBuyC": {},
 "Don_Orleone": {},
+"SheckelMoysha": {},
 "U2yRwy0pCDyYBEe": {},
 "GRfnNsLZRLuY6TJ": {},
 "JeemboWorm": {},
