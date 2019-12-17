@@ -1,7 +1,8 @@
 /**
- * @updated: 2019-12-16 14:40:31
+ * @updated: 2019-12-17 06:47:06
 */
 var BOT_ACCOUNTS = {
+"1204295241660010496": {},
 "561405326": {},
 "280952298": {},
 "1187471546312380418": {},
@@ -255,6 +256,7 @@ var BOT_ACCOUNTS = {
 "385403922": {},
 }
 var SCREEN_NAMES = {
+"t_felgass": {},
 "lady_Katz": {},
 "voinsveta1984": {},
 "Andrey__5": {},
@@ -440,7 +442,6 @@ var SCREEN_NAMES = {
 "AljieFra": {},
 "R0manEmelov": {},
 "Dasha_NaVa228": {},
-"LobosVobul": {},
 "ZadovaTann": {},
 "probybnist": {},
 "ElenaPut17": {},
