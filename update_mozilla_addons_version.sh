@@ -18,6 +18,10 @@ echo "webext signing:" >&2
 # 	--id="{$extension_ID}"
 
 ## Original: Submits successfully but also reports stacktrace 
+
+	# TODO: Try using https://github.com/fregante/web-ext-submit to avoid misleading error message
+	# ...until this issue is fixed: https://github.com/mozilla/web-ext/issues/804
+
 node_modules/.bin/webext sign \
 	--source-dir="Firefox_readonly_copy" \
 	--api-key="$JWT_user" \
