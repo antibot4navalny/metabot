@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-02-02 16:01:36
+ * @updated: 2020-02-08 17:56:53
 */
 var BOT_ACCOUNTS = {
 "1161303232813117441": {},
@@ -208,7 +208,7 @@ var SCREEN_NAMES = {
 "LobusVobol": {},
 "Uralmosclaud": {},
 "liijljilliljjll": {},
-"Sanchel_X": {},
+"Sanchel_10": {},
 "irkagolubeva": {},
 "coolrussianarmy": {},
 "irkagolubeva91": {},
@@ -229,7 +229,7 @@ var SCREEN_NAMES = {
 "12121212le": {},
 "n8GcYpLVvPpCc": {},
 "Sandrrrraaaaa_a": {},
-"_Andrey_iafow": {},
+"_Andrey_iafowdr": {},
 "Saloboy33": {},
 "IwZcd": {},
 "mona_grin": {},
@@ -372,10 +372,10 @@ var SCREEN_NAMES = {
 "ElenaPut17": {},
 "nortigon": {},
 "avtoprima": {},
-"Zerg_Ussr": {},
+"Z_erg_Ussr": {},
 "kot__official": {},
 "SERG__ROTENBERG": {},
-"Kartoshka_Kofe": {},
+"Kartoshka_kofe": {},
 "SheckelMoysha": {},
 "GRfnNsLZRLuY6TJ": {},
 "moscester": {},
