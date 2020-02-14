@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-02-14 12:40:04
+ * @updated: 2020-02-14 19:29:07
 */
 var BOT_ACCOUNTS = {
 "1001170190162329601": {},
@@ -349,7 +349,6 @@ var SCREEN_NAMES = {
 "ABELL_1689": {},
 "dnrpress": {},
 "AnatolyVlasov87": {},
-"LobusVobol": {},
 "spacelordrock": {},
 "SERG__ROTENBERG": {},
 "D_Artanian_M": {},
@@ -360,7 +359,7 @@ var SCREEN_NAMES = {
 "avtoprima": {},
 "kbil11": {},
 "bushminnvv": {},
-"Urgv_razvedka": {},
+"UrgvRazvedka": {},
 "bordelpoetov": {},
 "probudnist": {},
 "mona_grin": {},
