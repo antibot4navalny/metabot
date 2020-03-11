@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-03-10 15:54:10
+ * @updated: 2020-03-11 15:09:24
 */
 var BOT_ACCOUNTS = {
 "1232515006853459969": {},
@@ -206,9 +206,7 @@ var SCREEN_NAMES = {
 "HIDDEN_TE3KA": {},
 "Chebura66817659": {},
 "Indigo_T17": {},
-"Uralmosclaud": {},
 "liijljilliljjll": {},
-"irkagolubeva": {},
 "irkagolubeva91": {},
 "sexydasharussia": {},
 "probudnist": {},
