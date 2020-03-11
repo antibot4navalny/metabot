@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-03-11 15:09:24
+ * @updated: 2020-03-11 21:40:57
 */
 var BOT_ACCOUNTS = {
 "1232515006853459969": {},
@@ -327,7 +327,7 @@ var SCREEN_NAMES = {
 "bushminnvv": {},
 "iNcheqnWiAj2hxX": {},
 "SZniUpAorBuo3th": {},
-"Cosmoteftelya": {},
+"Vover90": {},
 "ZadovaTann": {},
 "ElenaPut17": {},
 "nortigon": {},
