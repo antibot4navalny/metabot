@@ -1,7 +1,8 @@
 /**
- * @updated: 2020-03-11 23:01:11
+ * @updated: 2020-03-12 16:51:06
 */
 var BOT_ACCOUNTS = {
+"990191679616573441": {},
 "1139573739744632832": {},
 "1232515006853459969": {},
 "1150791940109230081": {},
@@ -178,6 +179,7 @@ var BOT_ACCOUNTS = {
 "577783814": {},
 }
 var SCREEN_NAMES = {
+"KrylovCrylow": {},
 "gNWaL28ojuJVYct": {},
 "uralmosclaudi": {},
 "RevonenkoSOphie": {},
