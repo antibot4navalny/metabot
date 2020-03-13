@@ -1,7 +1,12 @@
 /**
- * @updated: 2020-03-12 16:51:06
+ * @updated: 2020-03-13 15:11:41
 */
 var BOT_ACCOUNTS = {
+"1217326300626661376": {},
+"1225852468292177922": {},
+"1143469114406649856": {},
+"1235740154498813952": {},
+"105918283": {},
 "990191679616573441": {},
 "1139573739744632832": {},
 "1232515006853459969": {},
@@ -179,6 +184,11 @@ var BOT_ACCOUNTS = {
 "577783814": {},
 }
 var SCREEN_NAMES = {
+"maxvite01": {},
+"MxVite1": {},
+"kampuchi": {},
+"__ru_194": {},
+"Alekzzzzz": {},
 "KrylovCrylow": {},
 "gNWaL28ojuJVYct": {},
 "uralmosclaudi": {},
@@ -336,7 +346,7 @@ var SCREEN_NAMES = {
 "ElenaPut17": {},
 "nortigon": {},
 "avtoprima": {},
-"Ze_rg_U_ssr": {},
+"Zer_gU_ssr": {},
 "kot__official": {},
 "SERG__ROTENBERG": {},
 "Kartoshka_kofe": {},
