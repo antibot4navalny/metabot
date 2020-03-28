@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-03-27 16:39:26
+ * @updated: 2020-03-28 00:01:14
 */
 var BOT_ACCOUNTS = {
 "1189934229297205249": {},
@@ -164,7 +164,6 @@ var SCREEN_NAMES = {
 "TheETOCABA": {},
 "Aleksii_not": {},
 "Sanchel_16": {},
-"TOJ9equ8JayJq5K": {},
 "6LvFue6RqR4pdJ3": {},
 "4e28350970": {},
 "klitorsklintonI": {},
@@ -189,7 +188,7 @@ var SCREEN_NAMES = {
 "OXXXbLDqYjmfy5E": {},
 "Lenkarylit": {},
 "Chebura66817659": {},
-"liijljilliljjil": {},
+"liijljilliljiil": {},
 "dashasexyrussia": {},
 "probudnist": {},
 "albatsmandeI": {},
@@ -206,7 +205,7 @@ var SCREEN_NAMES = {
 "NataliTorban": {},
 "Wladimir95539": {},
 "ABELL_1689": {},
-"x34mod1": {},
+"x34_mod1": {},
 "jarilo2": {},
 "RussiansForward": {},
 "putin_cize": {},
