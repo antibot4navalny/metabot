@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-03-28 19:22:37
+ * @updated: 2020-03-30 02:38:12
 */
 var BOT_ACCOUNTS = {
 "1070653252360900608": {},
@@ -156,16 +156,16 @@ var BOT_ACCOUNTS = {
 "577783814": {},
 }
 var SCREEN_NAMES = {
-"dibart1": {},
+"dibart21": {},
 "Maksimka198477": {},
-"__Andrey__versi": {},
+"__Andrey__ver": {},
 "NashaCana0a": {},
 "nKj69i2k89x5Km0": {},
 "Nataliaaa_aaaa": {},
 "iAFCNzktk7cPBdo": {},
 "Moysha_Sheckel": {},
 "i97249672": {},
-"Chif_v_Abramse": {},
+"Chif_vn_Abramse": {},
 "WoId39112264": {},
 "TheETOCABA": {},
 "Aleksii_not": {},
@@ -193,7 +193,7 @@ var SCREEN_NAMES = {
 "OXXXbLDqYjmfy5E": {},
 "Lenkarylit": {},
 "Chebura66817659": {},
-"liijljilliljiil": {},
+"lijiljiljiliili": {},
 "dashasexyrussia": {},
 "probudnist": {},
 "albatsmandeI": {},
@@ -221,7 +221,7 @@ var SCREEN_NAMES = {
 "zheleznyj_baron": {},
 "_munchhausen_": {},
 "_Flagman_": {},
-"VatnikVII": {},
+"VatnikVIII": {},
 "gonduras1972": {},
 "russiaspeaks": {},
 "kompolk": {},
