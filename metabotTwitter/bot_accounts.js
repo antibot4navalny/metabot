@@ -1,7 +1,10 @@
 /**
- * @updated: 2020-04-03 01:26:17
+ * @updated: 2020-04-04 20:01:08
 */
 var BOT_ACCOUNTS = {
+"1244871276470173696": {},
+"1245389381004820481": {},
+"872009162871492608": {},
 "970405920151830529": {},
 "836542939111260160": {},
 "1245391019778232326": {},
@@ -118,7 +121,6 @@ var BOT_ACCOUNTS = {
 "919550487724281862": {},
 "1145641139766214656": {},
 "1110509493325045761": {},
-"1108891483908780033": {},
 "1139610307041665031": {},
 "1108771662403694592": {},
 "1139569249826070533": {},
@@ -133,7 +135,6 @@ var BOT_ACCOUNTS = {
 "1121647606797520897": {},
 "729304152770252800": {},
 "1118198890791088129": {},
-"1119240710178451456": {},
 "1139613710710910977": {},
 "1118197095163465729": {},
 "1139573235153068034": {},
@@ -142,7 +143,6 @@ var BOT_ACCOUNTS = {
 "361741122": {},
 "1182880276785041410": {},
 "906217798891954179": {},
-"1166156904344801281": {},
 "1687715678": {},
 "320325719": {},
 "2617492669": {},
@@ -156,7 +156,10 @@ var BOT_ACCOUNTS = {
 "577783814": {},
 }
 var SCREEN_NAMES = {
-"doktor_dlee": {},
+"mosgester": {},
+"PNR33842924": {},
+"BSKrupp": {},
+"doktor_dlii": {},
 "_Andrew_v4": {},
 "W9jx4AZ8aw511xk": {},
 "MasterFlight__": {},
@@ -210,7 +213,7 @@ var SCREEN_NAMES = {
 "NataliTorban": {},
 "Wladimir95539": {},
 "ABELL_1689": {},
-"x34_mod1": {},
+"_Xmod1_xx": {},
 "jarilo2": {},
 "RussiansForward": {},
 "putin_cize": {},
@@ -272,7 +275,6 @@ var SCREEN_NAMES = {
 "ganna824": {},
 "siskiNavalnogo": {},
 "buryimedvedd": {},
-"Dasuslina": {},
 "lemazzell": {},
 "Skorobogatykhh": {},
 "gonzalezzmm": {},
@@ -287,7 +289,6 @@ var SCREEN_NAMES = {
 "centralboyy": {},
 "6xoffer": {},
 "urmasshaa": {},
-"fedoseevaoo": {},
 "kerimovvaary": {},
 "lyolyabb": {},
 "ooyarovaya": {},
@@ -296,7 +297,6 @@ var SCREEN_NAMES = {
 "bushminnvv": {},
 "SZniUpAorBuo3th": {},
 "Vover90": {},
-"ZadovaTann": {},
 "ElenaPutina1": {},
 "avtoprima": {},
 "SERG__ROTENBERG": {},
