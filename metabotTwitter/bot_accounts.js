@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-04-21 18:39:21
+ * @updated: 2020-04-22 19:25:42
 */
 var BOT_ACCOUNTS = {
 "1250002289282166785": {},
@@ -175,7 +175,6 @@ var SCREEN_NAMES = {
 "4eksit": {},
 "klitorsklinton2": {},
 "sigma4880": {},
-"pudelotsobol": {},
 "Alekzzzzz": {},
 "KrylovCrylow": {},
 "RevonenkoSOphie": {},
@@ -186,7 +185,7 @@ var SCREEN_NAMES = {
 "katMotja": {},
 "ingchenkoo": {},
 "Jo_Lenen": {},
-"_PoLovetsian_": {},
+"__PeCheneGs__": {},
 "zdrav_budem": {},
 "GEb2aXOln5u1KMa": {},
 "D_Artaniyan_M": {},
