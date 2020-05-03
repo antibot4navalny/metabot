@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-04-30 15:45:02
+ * @updated: 2020-05-03 17:45:39
 */
 var BOT_ACCOUNTS = {
 "1243206656575582208": {},
@@ -55,9 +55,7 @@ var BOT_ACCOUNTS = {
 "1204328936123125761": {},
 "1204295241660010496": {},
 "561405326": {},
-"280952298": {},
 "835786872987258880": {},
-"1202896671107112961": {},
 "1187314610686353408": {},
 "900510050627850241": {},
 "1189264965938466816": {},
@@ -94,7 +92,6 @@ var BOT_ACCOUNTS = {
 "1269072715": {},
 "1140570617382690816": {},
 "861946004043706373": {},
-"1159797600989720577": {},
 "1060466637139296256": {},
 "1061973735371096065": {},
 "1060221664095547393": {},
@@ -164,7 +161,7 @@ var SCREEN_NAMES = {
 "irkagolubeva91": {},
 "Malisone6": {},
 "LenaIvanova43": {},
-"c7h16fo2_PFMP": {},
+"_C11H26NO2PS__": {},
 "mosgester": {},
 "PNRALASKA": {},
 "BSKrupp": {},
@@ -207,9 +204,7 @@ var SCREEN_NAMES = {
 "SorosChildren": {},
 "t_felgass": {},
 "lady_Katz": {},
-"voinsveta4891": {},
 "12dcat": {},
-"n8GcYpLVvPpCc1": {},
 "Sandrrrraaaaa_a": {},
 "_frunzikfrrr": {},
 "perelompopiro2": {},
@@ -246,7 +241,6 @@ var SCREEN_NAMES = {
 "EgorNefedkin": {},
 "pPnL4kJ8I0Fipfc": {},
 "sn130587": {},
-"GirrlVanillaa": {},
 "stilllavinv": {},
 "RomanSolomatin": {},
 "papamiar": {},
