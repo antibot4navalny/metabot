@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-05-14 22:20:36
+ * @updated: 2020-05-19 18:25:28
 */
 var BOT_ACCOUNTS = {
 "1251065909608841216": {},
@@ -185,7 +185,6 @@ var SCREEN_NAMES = {
 "iAFCNzktk7cPBdo": {},
 "6LvFue6RqR4pdJ3": {},
 "4eksit": {},
-"klitorsklinton2": {},
 "sigma4880": {},
 "Alekzzzzz": {},
 "KrylovCrylow": {},
@@ -203,7 +202,7 @@ var SCREEN_NAMES = {
 "D_Artaniyan_M": {},
 "NaEMKcpieafeqtq": {},
 "hR1Ij54rGIBsPeC": {},
-"OXXXXXDqYjmfy5X": {},
+"OXXXXXDXYjmfy5X": {},
 "Lenkarylit": {},
 "lijiljiljililli": {},
 "probudnist": {},
@@ -233,7 +232,6 @@ var SCREEN_NAMES = {
 "_munchhausen_": {},
 "_Flagman_": {},
 "VatnikVIII": {},
-"gonduras1972": {},
 "russiaspeaks": {},
 "kompolk": {},
 "PaveIShehtman": {},
@@ -280,7 +278,6 @@ var SCREEN_NAMES = {
 "sveta__gubina": {},
 "MaryBucharova": {},
 "ganna824": {},
-"siskiNavalnogo": {},
 "lemazzell": {},
 "Skorobogatykhh": {},
 "gonzalezzmm": {},
