@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-05-19 18:25:28
+ * @updated: 2020-05-21 15:16:08
 */
 var BOT_ACCOUNTS = {
 "1251065909608841216": {},
@@ -197,7 +197,7 @@ var SCREEN_NAMES = {
 "ingchenkoo": {},
 "Ajbolit_Genesis": {},
 "Jo_Lenen": {},
-"andrej_ab_spb": {},
+"_andreij_av_spb": {},
 "GEb2aXOln5u1KMa": {},
 "D_Artaniyan_M": {},
 "NaEMKcpieafeqtq": {},
