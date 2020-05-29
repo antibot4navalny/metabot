@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-05-28 19:45:01
+ * @updated: 2020-05-29 18:07:27
 */
 var BOT_ACCOUNTS = {
 "1265375590275846144": {},
@@ -183,7 +183,6 @@ var BOT_ACCOUNTS = {
 var SCREEN_NAMES = {
 "VZcTs8BitursRbz": {},
 "eWNo6NEG9bjWnXD": {},
-"T5sn3IOLRT5pz29": {},
 "22RKYcxzGOBCMqS": {},
 "MMeeS3xLwKQ13LI": {},
 "zX8QVOdLuoT2HiG": {},
@@ -194,7 +193,7 @@ var SCREEN_NAMES = {
 "Uc2B9qMZYiBIFgI": {},
 "54FkxLGI2VaoWUT": {},
 "Sanchel_18": {},
-"natserG76": {},
+"natserG05": {},
 "Nashaya_Dasha": {},
 "qbp61Y5e3ews9sK": {},
 "d5SayyUAL0rLSBL": {},
@@ -234,7 +233,6 @@ var SCREEN_NAMES = {
 "RevonenkoSOphie": {},
 "Kolyambus1104": {},
 "ru30563345": {},
-"_no_login_": {},
 "Tasyaponovar": {},
 "katMotja": {},
 "ingchenkoo": {},
@@ -249,7 +247,6 @@ var SCREEN_NAMES = {
 "Lenkarylit": {},
 "lijiljiljililli": {},
 "gis080391": {},
-"probudnist": {},
 "albatsmandeI": {},
 "g0o1t03zxdq": {},
 "SorosChildren": {},
