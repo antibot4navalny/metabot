@@ -1,7 +1,8 @@
 /**
- * @updated: 2020-06-06 01:53:31
+ * @updated: 2020-06-08 10:37:01
 */
 var BOT_ACCOUNTS = {
+"1247824308531068935": {},
 "1261616721233936384": {},
 "1259830883395276800": {},
 "1208159577247756293": {},
@@ -189,13 +190,14 @@ var BOT_ACCOUNTS = {
 "577783814": {},
 }
 var SCREEN_NAMES = {
+"_ura_blya_200_": {},
 "Lobasha231": {},
 "AlexAbr39023405": {},
 "MarkUrbanist": {},
 "Enchanteressse": {},
 "llobasha111": {},
 "SevcenkoPanas": {},
-"55bTXCvRe6xxkIX": {},
+"25bCv": {},
 "BdCEU4mvVLtmD4h": {},
 "sjxnjddjdnxjdx": {},
 "fff64mmm": {},
@@ -286,7 +288,7 @@ var SCREEN_NAMES = {
 "NataliTorban": {},
 "Wladimir95539": {},
 "ABELL_1689": {},
-"_mod3x": {},
+"3modizz": {},
 "jarilo2": {},
 "RussiansForward": {},
 "putin_cize": {},
