@@ -1,5 +1,5 @@
 /**
- * @updated: 2020-06-08 10:37:01
+ * @updated: 2020-06-10 03:35:46
 */
 var BOT_ACCOUNTS = {
 "1247824308531068935": {},
@@ -271,7 +271,7 @@ var SCREEN_NAMES = {
 "Lenkarylit": {},
 "lijiljiljililli": {},
 "gis080391": {},
-"albatsmandeI": {},
+"AlbatsManda": {},
 "g0o1t03zxdq": {},
 "SorosChildren": {},
 "t_felgass": {},
