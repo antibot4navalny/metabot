@@ -1,7 +1,8 @@
 /**
- * @updated: 2020-06-29 11:41:16
+ * @updated: 2020-06-29 11:48:56
 */
 var BOT_ACCOUNTS = {
+"950324400527695872": {},
 "984271495001264128": {},
 "989901145836531712": {},
 "991532212918128641": {},
@@ -176,6 +177,7 @@ var BOT_ACCOUNTS = {
 "577783814": {},
 }
 var SCREEN_NAMES = {
+"efffteeva": {},
 "Mmerzlyakovaas": {},
 "KrKruglovaa": {},
 "Kacharovskayaa": {},
