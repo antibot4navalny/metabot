@@ -9,6 +9,7 @@ FirefoxTestBuild.zip
 .DS_Store
 bot_accounts*.csv
 .*
+twarc.log
 
 package-lock.json
 node_modules/*
