@@ -11,7 +11,11 @@
 	echo "}" >> bot_accounts.js
 
 	echo "var SCREEN_NAMES = {" >> bot_accounts.js
-	tt-users-get-hydrated --user-ids bot_accounts.csv |
+
+	ids=$(
+		gpaste --delimiters=',' --serial bot_accounts.csv 
+	)
+	twarc users "$ids" |
 		jq '. | .screen_name' |
 		sed -e 's/$/: {},/' \
 		>> bot_accounts.js
