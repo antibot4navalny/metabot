@@ -18,7 +18,7 @@
 
 
 # For Chrome and Opera, strip unsupported feild
-	cp metabotTwitter/* ChromeOpera_readonly_copy
+	cp -p metabotTwitter/* ChromeOpera_readonly_copy
 	grep --invert-match --regexp='"browser_specific_settings":' "metabotTwitter/manifest.json" > "ChromeOpera_readonly_copy/manifest.json"
 
 # For Opera self-distribution of CRX via GitHub
