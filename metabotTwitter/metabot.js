@@ -1,6 +1,26 @@
 // import { fillTemplate } from './common.js';
 
 
+
+var labels={};
+
+
+function loadLabels()
+{
+
+  var rUrl = chrome.runtime.getURL('labels.json');
+  
+  fetch(rUrl).then((response) => {
+    return response.json();
+  })
+  .then((fileContent) => {
+    labels=fileContent;
+  }
+  )
+  .catch((cause) => console.log(cause));
+}
+
+
 function setStyle(divElement, style)
 {
 	divElement.innerHTML = '<style>'+style+'</style>'
@@ -289,13 +309,17 @@ function markTweets()
 						// getInitData()["profile_user"]["id_str"]
 			
 		
-				isBot= (SCREEN_NAMES[x] || BOT_ACCOUNTS[x])
+				isRed = (labels[x]=='red')
+				
+				isYellow = (labels[x]=='yellow')
 		
-				if (isBot && highlight_tweets)
+				if ((isRed || isYellow) && highlight_tweets)
 				{
+				  label=isRed?"БОТ:" :isYellow?"⚠️":""
+				  
 					// highlight all tweets shown on the page
 					botCaption = document.createElement("span")
-					botCaption.innerHTML="БОТ:&nbsp;"
+					botCaption.innerHTML=label+"&nbsp;"
 					botCaption.style.color = 'red'
 
 					// дописываем "БОТ: " перед именем автора твита
@@ -340,7 +364,7 @@ function markTweets()
 				if (! mobile_mode)
 				{
 					// old design, desktop:
-					menuAction = reportTweetCaption(isBot)
+					menuAction = reportTweetCaption(isRed)
 
 					// inject custom menu item: "Tweet non/typical for a bot"
 					 
@@ -364,7 +388,7 @@ function markTweets()
 							encodeURIComponent(tweetPermalink)}
 
 
-					template = isBot ?
+					template = isRed ?
 						templateReportUntypicalTweetUrl :
 						templateReportTweetUrl
 
@@ -384,7 +408,6 @@ function markTweets()
 	setTimeout(markTweets, 3000);
 }
 
-
-
+loadLabels();
 expandDynamicallyAppearingDropdownMenu();
 markTweets();
