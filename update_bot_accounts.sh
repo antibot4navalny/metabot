@@ -17,9 +17,9 @@ else
 	./build_packaged_extension.sh
 	./increment_extension_version.sh
 
-	./update_git_version.sh
-	./update_chrome_web_store_version.sh
-	./update_mozilla_addons_version.sh
+# 	./update_git_version.sh
+# 	./update_chrome_web_store_version.sh
+# 	./update_mozilla_addons_version.sh
 
 	cp metabotTwitter/labels.json labels.previous.json
 	exit 0
