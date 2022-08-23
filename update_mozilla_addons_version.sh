@@ -1,4 +1,5 @@
 . ./credentials/set_mozilla_AMO_credentials.sh
+. ./channel_specific/set_firefox_extension_ID.sh
 
 echo "webext signing:" >&2
 
