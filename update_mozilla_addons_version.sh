@@ -1,5 +1,6 @@
 . ./credentials/set_mozilla_AMO_credentials.sh
 . ./channel_specific/set_firefox_extension_ID.sh
+. ./channel_specific/set_firefox_channel_option.sh
 
 echo "webext signing:" >&2
 
@@ -23,7 +24,8 @@ echo "webext signing:" >&2
 	# TODO: Try using https://github.com/fregante/web-ext-submit to avoid misleading error message
 	# ...until this issue is fixed: https://github.com/mozilla/web-ext/issues/804
 
-node_modules/.bin/webext sign \
+web-ext sign \
+	"$channel_option" \
 	--source-dir="Firefox_readonly_copy" \
 	--api-key="$JWT_user" \
 	--api-secret="$JWT_secret" \
