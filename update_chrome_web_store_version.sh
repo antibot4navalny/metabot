@@ -1,5 +1,6 @@
 . ./credentials/set_chrome_web_store_credentials.sh
 . ./channel_specific/set_chrome_extension_ID.sh
+. ./set_machine_specific_locations.sh
 
 access_tokens=$(mktemp).json || exit 1
 trap "rm -f \"$access_tokens\"" EXIT
@@ -52,8 +53,10 @@ ACCESS_TOKEN=`jq -r '.access_token' "$access_tokens"`
 # echo "Ready to proceed?"
 # read -n 1 -s < /dev/tty
 
-## Experimental
-node_modules/.bin/webstore \
+### Experimental (installed from:
+###   https://github.com/fregante/chrome-webstore-upload-cli )
+
+"$node_modules_location/chrome-webstore-upload" \
 	upload \
 	--source "metabotTwitter.zip" \
 	--extension-id "$extension_ID" \
@@ -63,7 +66,7 @@ node_modules/.bin/webstore \
 
 
 
-node_modules/.bin/webstore \
+"$node_modules_location/chrome-webstore-upload" \
 	publish \
 	--extension-id "$extension_ID" \
 	--client-id $CLIENT_ID \
