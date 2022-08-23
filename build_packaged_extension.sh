@@ -23,9 +23,9 @@
 
 # For Opera self-distribution of CRX via GitHub
 	rm metabotTwitter.crx
-	extensionator -o ./metabotTwitter.crx -i metabotTwitter.pem -d ChromeOpera_readonly_copy -e .DS_Store -e .web-extension-id
+	extensionator -o ./metabotTwitter.crx -i "credentials/metabotTwitter.pem" -d ChromeOpera_readonly_copy -e .DS_Store -e .web-extension-id
 #	 Previously:
-# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=metabotTwitter --pack-extension-key=metabotTwitter.pem --profile-directory="Profile 12"
+# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=metabotTwitter --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
 
 
 # For Chrome, remove update_url which is only necessary for Opera self-hosting

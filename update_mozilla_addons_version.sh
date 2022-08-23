@@ -1,4 +1,4 @@
-. ./set_mozilla_AMO_credentials.sh
+. ./credentials/set_mozilla_AMO_credentials.sh
 
 echo "webext signing:" >&2
 
