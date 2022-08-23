@@ -1,5 +1,6 @@
 . ./credentials/set_chrome_web_store_credentials.sh
 . ./channel_specific/set_chrome_extension_ID.sh
+. ./channel_specific/set_chrome_trusted_testers_option.sh
 . ./set_machine_specific_locations.sh
 
 access_tokens=$(mktemp).json || exit 1
@@ -71,4 +72,5 @@ ACCESS_TOKEN=`jq -r '.access_token' "$access_tokens"`
 	--extension-id "$extension_ID" \
 	--client-id $CLIENT_ID \
 	--client-secret $CLIENT_SECRET \
-	--refresh-token $ACCESS_TOKEN
+	--refresh-token $ACCESS_TOKEN \
+	"$testers_option"
