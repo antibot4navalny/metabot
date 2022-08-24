@@ -1,8 +1,14 @@
+  #!/bin/bash
 	. ./set_version.sh
 
 # For all browsers
 	sed -E "s/VVVVVV/$version/" manifest.template.json > metabotTwitter/manifest.json
-	sed -E "s/VVVVVV/$version/" updates.template.xml > updates.xml
+	
+  # If file exists and not empty
+	if [[ -s "channel_specific/updates.template.xml" ]]
+  then
+    sed -E "s/VVVVVV/$version/" "channel_specific/updates.template.xml" > "channel_specific/updates.xml"
+  fi
 
 # For Firefox, save a copy with full manifest
 	cp metabotTwitter/* Firefox_readonly_copy
