@@ -4,7 +4,8 @@
 # For all browsers
 	sed -E "s/VVVVVV/$version/" manifest.template.json > metabotTwitter/manifest.json
 	
-  # If file exists and not empty
+  # If file exists and not empty--
+  # updates.xml make sense only for public self-hosted releases.
 	if [[ -s "channel_specific/updates.template.xml" ]]
   then
     sed -E "s/VVVVVV/$version/" "channel_specific/updates.template.xml" > "channel_specific/updates.xml"
