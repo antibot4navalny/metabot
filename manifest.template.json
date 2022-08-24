@@ -26,6 +26,7 @@
 		"run_at": "document_end"
 	  }
 	],
+	
 	"background": {
 		"persistent": false,
 		"scripts": [
@@ -36,13 +37,14 @@
 			"background.js"
 		]
 	},
+
   "web_accessible_resources": [
       "labels.json"
   ],
 	
-	"browser_specific_settings": { "gecko": { "id": "{d20acea6-2744-4763-bb1c-f62924e40073}", "strict_min_version": "66.0"} },
-
 	"permissions": [
 		"storage"
-	]
+	],
+
+	"browser_specific_settings": { "gecko": { "id": "{d20acea6-2744-4763-bb1c-f62924e40073}", "strict_min_version": "66.0"} }
 }
