@@ -26,7 +26,8 @@ echo "webext signing:" >&2
 
 web-ext sign \
 	"$channel_option" \
-	--source-dir="Firefox_readonly_copy" \
+	--source-dir="releases/Firefox_readonly_copy" \
+	--artifacts-dir="releases" \
 	--api-key="$JWT_user" \
 	--api-secret="$JWT_secret" \
 	--id="{$extension_ID}"

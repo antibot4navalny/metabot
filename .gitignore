@@ -7,10 +7,10 @@ labels.previous.json
 
 ### No value to store, intermediary files
 
-metabotTwitter.zip
-Firefox_readonly_copy/*
-ChromeOpera_readonly_copy/*
-FirefoxTestBuild.zip
+releases/metabotTwitter.zip
+releases/Firefox_readonly_copy/*
+releases/ChromeOpera_readonly_copy/*
+releases/FirefoxTestBuild.zip
 .DS_Store
 bot_accounts*.csv
 twarc.log
