@@ -1,6 +1,6 @@
-. ./credentials/set_mozilla_AMO_credentials.sh
-. ./channel_specific/set_firefox_extension_ID.sh
-. ./channel_specific/set_firefox_channel_option.sh
+. credentials/set_mozilla_AMO_credentials.sh
+. channel_specific/set_firefox_extension_ID.sh
+. channel_specific/set_firefox_channel_option.sh
 
 echo "webext signing:" >&2
 
@@ -34,7 +34,7 @@ web-ext sign \
 
 
 echo "Generating JWN Auth token:" >&2
-JWT_auth_token=`./generate_JWT_auth_token.sh "$JWT_user" "$JWT_secret"`
+JWT_auth_token=`./build_scripts/generate_JWT_auth_token.sh "$JWT_user" "$JWT_secret"`
 
 # echo "Uploading the updated extension:" >&2
 # # !! Works to update specifically the already-listed:

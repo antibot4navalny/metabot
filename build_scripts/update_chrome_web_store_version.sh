@@ -1,6 +1,6 @@
-. ./credentials/set_chrome_web_store_credentials.sh
-. ./channel_specific/set_chrome_extension_ID.sh
-. ./channel_specific/set_chrome_trusted_testers_option.sh
+. credentials/set_chrome_web_store_credentials.sh
+. channel_specific/set_chrome_extension_ID.sh
+. channel_specific/set_chrome_trusted_testers_option.sh
 
 access_tokens=$(mktemp).json || exit 1
 trap "rm -f \"$access_tokens\"" EXIT

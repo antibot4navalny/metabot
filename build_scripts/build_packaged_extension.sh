@@ -1,5 +1,5 @@
   #!/bin/bash
-	. ./set_version.sh
+	. build_scripts/set_version.sh
 
 # For all browsers
 	sed -E "s/VVVVVV/$version/" manifest.template.json > metabotTwitter/manifest.json
