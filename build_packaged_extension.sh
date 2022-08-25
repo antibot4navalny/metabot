@@ -30,7 +30,7 @@
 
 # For Opera self-distribution of CRX via GitHub
 	rm metabotTwitter.crx
-	extensionator -o ./metabotTwitter.crx -i "credentials/metabotTwitter.pem" -d ChromeOpera_readonly_copy -e .DS_Store -e .web-extension-id
+	extensionator -o ./metabotTwitter.crx -i "credentials/metabotTwitter.pem" -d ChromeOpera_readonly_copy -e .DS_Store 
 #	 Previously:
 # 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=metabotTwitter --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
 
@@ -41,4 +41,4 @@
 
 # For Chrome
 	rm metabotTwitter.zip
-	zip --recurse-paths metabotTwitter.zip ChromeOpera_readonly_copy --exclude "*/.DS_Store" --exclude "ChromeOpera_readonly_copy/.web-extension-id" --junk-paths
+	zip --recurse-paths metabotTwitter.zip ChromeOpera_readonly_copy --exclude "*/.DS_Store" --junk-paths
