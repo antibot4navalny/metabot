@@ -80,7 +80,7 @@
 				\
 				`# trailing '/': copy the contents of this directory,` \
 				`# as opposed to "copy the directory by name":` \
-				"metabotTwitter/" \
+				"sources/" \
 				\
 				"$destination"
 			 # ^^ Whole directories should be specified:
@@ -138,7 +138,7 @@
 	rm releases/metabotTwitter.crx
 	extensionator -o releases/metabotTwitter.crx -i "credentials/metabotTwitter.pem" -d releases/ChromeOpera_readonly_copy -e .DS_Store 
 #	 Previously:
-# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=metabotTwitter --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
+# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=sources --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
 
 
 # For Chrome, remove update_url which is only necessary for Opera self-hosting

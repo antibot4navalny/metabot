@@ -4,17 +4,17 @@
 
 echo "webext signing:" >&2
 
-#cd "metabotTwitter"
+#cd "sources"
 
 ### Not required at the moment:
 # WEB_EXT_API_KEY="$JWT_user"
 # WEB_EXT_API_SECRET="$JWT_secret"
 # WEB_EXT_ID="{$extension_ID}"
-# WEB_EXT_SOURCE_DIR="metabotTwitter"
+# WEB_EXT_SOURCE_DIR="sources"
 
 ### Reports "The WebExtension could not be signed" but actually successfully submits for review:
 # node_modules/.bin/webext submit \
-# 	--source-dir="metabotTwitter" \
+# 	--source-dir="sources" \
 # 	--api-key="$JWT_user" \
 # 	--api-secret="$JWT_secret" \
 # 	--id="{$extension_ID}"
