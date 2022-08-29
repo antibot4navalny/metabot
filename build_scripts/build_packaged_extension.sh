@@ -132,12 +132,7 @@
 	manifest2template_for_channel |
 	remove_manifest_fields '
 		.update_url,
-		.background.persistent' |
-
-	grep --invert-match \
-		--regexp='"hot-reload.js",' \
-		--regexp='"flags.js"' \
-
+		.background.persistent' \
 		> "releases/forFirefoxAMO/manifest.json"
 		
 	zip_folder_to \

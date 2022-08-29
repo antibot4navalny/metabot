@@ -9,9 +9,6 @@
 	  {
 		"matches": ["https://*.twitter.com/*"],
 		"js": [
-			"purify.min.js",
-			"flags.js",
-			"url_templates.js",
 			"common.js",
 			"metabot.js"],
 		"run_at": "document_idle"
@@ -19,10 +16,7 @@
 	  {
 		"matches": ["https://*.twitter.com/*"],
 		"js": [
-			"url_templates.js",
-			"flags.js",
-			"common.js",
-			"save_usage_telemetry.js"],
+			"common.js"],
 		"run_at": "document_end"
 	  }
 	],
@@ -30,8 +24,6 @@
 	"background": {
 		"persistent": false,
 		"scripts": [
-			"url_templates.js",
-			"flags.js",
 			"common.js",
 			"hot-reload.js",
 			"background.js"
