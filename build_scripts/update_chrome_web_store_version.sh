@@ -3,7 +3,6 @@
 . channel_specific/set_chrome_trusted_testers_option.sh
 
 
-
 ### Use only earlier AUTH_CODE expired:
 ### (refer to these guides if anything goes wrong:
 ### 1: official
@@ -66,16 +65,16 @@ chrome-webstore-upload \
 	upload \
 	--source "releases/forChromeWebStore.zip" \
 	--extension-id "$extension_ID" \
-	--client-id $CLIENT_ID \
-	--client-secret $CLIENT_SECRET \
-	--refresh-token $ACCESS_TOKEN
+	--client-id "$CLIENT_ID" \
+	--client-secret "$CLIENT_SECRET" \
+	--refresh-token "$ACCESS_TOKEN"
 
 
 
 chrome-webstore-upload \
 	publish \
 	--extension-id "$extension_ID" \
-	--client-id $CLIENT_ID \
-	--client-secret $CLIENT_SECRET \
-	--refresh-token $ACCESS_TOKEN \
+	--client-id "$CLIENT_ID" \
+	--client-secret "$CLIENT_SECRET" \
+	--refresh-token "$ACCESS_TOKEN" \
 	"$testers_option"
