@@ -45,14 +45,11 @@ tweetBackgroundStyle=addStyle()
 
 function defineTweetBackgroundStyle()
 {
-	if (document.querySelector('#init-data') === null) // likely mobile mode / new design
 		// dark mode: <meta name="theme-color" content="#1C2938">
 		// light mode: <meta name="theme-color" content="#FFFFFF">
 		dark_mode = ! (document.querySelector(
 			":root > head > meta[name=theme-color]")
 			.getAttribute("content").toUpperCase() == "#FFFFFF")
-	else  // likely desktop mode, old design
-		dark_mode = getInitData()["night_mode_activated"] ? true : false
 
 	if (dark_mode)
 		var s = '.bot_tweet_highlight { background: #4b3333 !important; }'	// dark
@@ -99,30 +96,11 @@ function markTweets()
 	{
 		defineTweetBackgroundStyle()
 
-		var a=document.querySelectorAll('#permalink-overlay div.tweet')
-			// get all tweets on tweet focus page for old design, desktop
-	
-		if (a.length>0)
-		{
-			mobile_mode=false
-			highlight_tweets=true
-		}
-		else
-		{
-			var a=document.querySelectorAll('div.stream div.tweet')
-				// get all tweets on user profile page for old design, desktop
-			mobile_mode=false
-			highlight_tweets=false
-		}
-		if (a.length==0)
-		{
-			mobile_mode=true
-			a=document.querySelectorAll('article[role=article]');
+			var a=document.querySelectorAll('article[role=article]');
 			// In conversation view, works both for focused tweet and
 			// for parent / child replies of the focused tweet.
 				
 			highlight_tweets=isStatusView()
-		}
 	
 
 		var i, x, t
@@ -134,13 +112,7 @@ function markTweets()
 			{
 				t = a[i]
 		
-				x=mobile_mode ?
-					a[i].querySelector('a[href]').getAttribute('href').substring(1) :						
-					(isStatusView() ?
-						a[i].getAttribute("data-user-id") :
-						document.querySelector("div.ProfileNav")
-							.getAttribute("data-user-id") )
-						// getInitData()["profile_user"]["id_str"]
+				x=a[i].querySelector('a[href]').getAttribute('href').substring(1)
 			
 		
 				isRed = (labels[x]=='red')
@@ -157,15 +129,11 @@ function markTweets()
 					botCaption.style.color = 'red'
 
 					// дописываем "БОТ: " перед именем автора твита
-					fullname=t.querySelector(mobile_mode?
-						"span" :
-						'span.FullNameGroup')
+					fullname=t.querySelector("span")
 
 					fullname.prepend(botCaption)
 		
-					elementToHightlight=mobile_mode ?
-						t.parentNode :
-						t
+					elementToHightlight = t.parentNode
 
 					if (elementToHightlight.
 						querySelector(
@@ -177,14 +145,11 @@ function markTweets()
 						elementToHightlight.className+=" bot_tweet_highlight"
 
 						// reduce contrast for tweet text
-						tweetTextselector = mobile_mode ?
+						tweetTextselector =
 							// - for focused tweet:
 							':scope > div > div > span' + ', ' +
 							// - for parent / child replies of the focused tweet
 							':scope > div > div > div > div > span'
-							:
-							// for desktop, old design
-							'div.js-tweet-text-container p.tweet-text'
 
 						tweetTxts = t.querySelectorAll(tweetTextselector)
 						tweetTxts.forEach(
@@ -194,46 +159,6 @@ function markTweets()
 					}			
 				}
 		
-		
-				if (! mobile_mode)
-				{
-					// old design, desktop:
-					menuAction = reportTweetCaption(isRed)
-
-					// inject custom menu item: "Tweet non/typical for a bot"
-					 
-					tweetPermalink=DOMPurify.sanitize(
-						(new URL(t.getAttribute("data-permalink-path"),
-							document.location)).href
-					)
-
-					reportedAccount=
-						isStatusView() ?
-							t.getAttribute("data-screen-name") :
-						isProfileView() ?
-							normalizedPathname() :
-							""
-//							getInitData()["profile_user"]["screen_name"]
-							// ^^ not ready as of initial load of user profile page
-
-					var parameters = {
-						reportedAccount: reportedAccount, 
-						tweetInvokedFrom:
-							encodeURIComponent(tweetPermalink)}
-
-
-					template = isRed ?
-						templateReportUntypicalTweetUrl :
-						templateReportTweetUrl
-
-					addOldDesignMenuItemSeparted(
-						t,
-						template,
-						parameters,
-						menuAction,
-						false)
-				}
-
 				// Mark tweet as processed to skip in subsequent passes
 				a[i].dataset.mt_is_upd = 1
 			}
