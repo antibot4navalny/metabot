@@ -171,7 +171,8 @@
 	> "releases/ChromeOpera_debug_and_WebStore/manifest.json"
 
 
-# For Chrome
+# For Chrome, ZIP is used in update_chrome_web_store_version.sh
+# to publish to Chrome Web Store
 	zip_folder_to \
 		"releases/ChromeOpera_debug_and_WebStore" \
 		"releases/forChromeWebStore.zip"
