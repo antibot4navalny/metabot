@@ -1,11 +1,7 @@
-The Twitter accounts this extension highlights are exactly those selected by Twitter user @antibot4navalny as likely Kremlin bots (Russian orchestrated crowd of human trolls for hire), as publicly listed at BlockTogether:
-https://blocktogether.org/show-blocks/HYZ_Qq1P1xyxcDDbgLQ3l8OhhFLAolDZvpUqHP3A
+No data *of extension users* whatsoever is collected, used or shared by the extension.
 
-The list is manually created and maintained according to these criteria:
-https://twitter.com/antibot4navalny/status/1060437615399354368
+In order to highlight tweets of previously identified "Russian orchestrated human trolls for hire", account names and IDs *of those trolls* are *received* by the extension from a public web-hosted file on GitHub (https://github.com/antibot4navalny/accounts_labelled/blob/main/labels.json) and stored in browser's local storage.
 
-Your Twitter username may be pre-filled into:
-1) both "new likely bot" and "consider unlisting" reports when they are sent via Google Forms and/or Twitter private messages to @antibot_inbox;
-2) into extension's "uninstall survey" Google Form.
+No data of *other Twitter users* is scraped, collected or transmitted by the extension.
 
-You can manually remove your Twitter username before submitting either of the Google Forms, thus choosing to stay anonymous.
+The extension does *not* handle user-related data in any other way.
