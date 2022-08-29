@@ -4,17 +4,15 @@
 
 echo "webext signing:" >&2
 
-#cd "sources"
-
 ### Not required at the moment:
 # WEB_EXT_API_KEY="$JWT_user"
 # WEB_EXT_API_SECRET="$JWT_secret"
 # WEB_EXT_ID="{$extension_ID}"
-# WEB_EXT_SOURCE_DIR="sources"
+# WEB_EXT_SOURCE_DIR="releases/forFirefoxAMO"
 
 ### Reports "The WebExtension could not be signed" but actually successfully submits for review:
 # node_modules/.bin/webext submit \
-# 	--source-dir="sources" \
+# 	--source-dir="releases/forFirefoxAMO" \
 # 	--api-key="$JWT_user" \
 # 	--api-secret="$JWT_secret" \
 # 	--id="{$extension_ID}"
@@ -29,13 +27,13 @@ web-ext sign \
 	--source-dir="releases/forFirefoxAMO" \
 	--artifacts-dir="releases" \
 	--api-key="$JWT_user" \
-	--api-secret="$JWT_secret" \
-	--id="{$extension_ID}"
+	--api-secret="$JWT_secret"
+	# --id={...} -- is not permitted if specified in manifest.json
 
 
-
-echo "Generating JWN Auth token:" >&2
-JWT_auth_token=`./build_scripts/generate_JWT_auth_token.sh "$JWT_user" "$JWT_secret"`
+### Not used any more:
+# echo "Generating JWN Auth token:" >&2
+# JWT_auth_token=`./build_scripts/generate_JWT_auth_token.sh "$JWT_user" "$JWT_secret"`
 
 # echo "Uploading the updated extension:" >&2
 # # !! Works to update specifically the already-listed:
