@@ -42,6 +42,58 @@
       'del('"$fields"')'
   }
   
+	clone_ext_contents_to_folder()
+	{
+		destination="$1"
+
+		if script_argument_not_supplied destination; then
+			echo "clone_ext_body_to_folder: ERROR: Destination folder is not specified" >&2
+			exit 1
+		else
+		
+			# Overall design:
+			# - no recursion, copy immediate childs only
+			# - sync: remove in destination what's not in source;
+			# - don't copy what not changed
+			# - create destination folder if not exists
+			rsync \
+				\
+				`# transfer directories without recursing` \
+				--dirs \
+				\
+				`# preserve times, executability` \
+				--times --executability \
+				\
+				`# Delete that files from the receiving side` \
+				`# that arent on the sending side.` \
+				`# Files that are excluded from transfer are also excluded` \
+				`# from being deleted ` \
+				--delete \
+				\
+				`# dont delete $destination/assets/labels.json,` \
+				`# $destinaton/manifest.json` \
+				--exclude assets/ \
+				--exclude manifest.json \
+				\
+				`# don't copy 'unused' extension scripts to destination` \
+				--exclude unused/ \
+				\
+				`# trailing '/': copy the contents of this directory,` \
+				`# as opposed to "copy the directory by name":` \
+				"metabotTwitter/" \
+				\
+				"$destination"
+			 # ^^ Whole directories should be specified:
+			 #  'dir' or 'dir/',
+			 # not wildcards: 'dir/*'
+
+		
+			rsync \
+				--times --executability \
+				"assets/labels.json" \
+				"$destination/assets/"
+		fi  
+	}
 
 	. build_scripts/set_version.sh
 
@@ -55,7 +107,7 @@
   fi
 
 # For Firefox, save a copy with full manifest
-	cp metabotTwitter/* releases/Firefox_readonly_copy
+	clone_ext_contents_to_folder "releases/Firefox_readonly_copy"
 
 	manifest2template_for_channel |
 	remove_manifest_fields '
@@ -75,7 +127,7 @@
 
 
 # For Chrome and Opera, strip unsupported feild
-	cp -p metabotTwitter/* releases/ChromeOpera_readonly_copy
+	clone_ext_contents_to_folder "releases/ChromeOpera_readonly_copy"
 
 	manifest2template_for_channel |
 	remove_manifest_fields '
