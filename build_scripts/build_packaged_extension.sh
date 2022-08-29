@@ -157,7 +157,7 @@
 	rm releases/ChromeOpera_self_distribution.crx
 	extensionator -o releases/ChromeOpera_self_distribution.crx -i "credentials/metabotTwitter.pem" -d releases/ChromeOpera_debug_and_WebStore -e .DS_Store 
 #	 Previously:
-# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=ChromeOpera_debug_and_WebStore --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
+# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension="releases/ChromeOpera_debug_and_WebStore" --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
 
 
 # For Chrome, remove update_url which is only necessary for Opera self-hosting
