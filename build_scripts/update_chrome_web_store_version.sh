@@ -7,6 +7,12 @@ trap "rm -f \"$access_tokens\"" EXIT
 
 
 ### Use only earlier AUTH_CODE expired:
+### (refer to these guides if anything goes wrong:
+### 1: official
+### https://developer.chrome.com/docs/webstore/using_webstore_api/
+### 
+### 2: unofficial
+### https://github.com/fregante/chrome-webstore-upload/blob/main/How%20to%20generate%20Google%20API%20keys.md )
 
 # echo "Open your browser and get auth key at this URL:"
 # echo
