@@ -1,7 +1,3 @@
-// import { fillTemplate } from './common.js';
-
-
-
 var labels={};
 
 
@@ -68,13 +64,6 @@ function defineTweetBackgroundStyle()
 
  
 
-function reportTweetCaption(isBot)
-{
-	return isBot?
-		"Сообщить о нехарактерном для бота" :	// "Untypical for bot"
-		"Сообщить о кремлеботе";		// "Possibly a bot"
-}
-
 function normalizedPathname()
 {
 	// normalize '/username/[with_replies]' to 'username'
@@ -102,161 +91,6 @@ function isProfileView()
 }
 
 
-function buildNewDesignMenuAction(
-			actionToCloneBefore,
-			menuItemCaption,
-			template, parameters)
-{
-
-	reportingUser=prefillGoogleForms() ? extractExtensionUserFromBodyScript() : ""
-	
-	clonedAction=actionToCloneBefore.cloneNode(true)
-
-	fillInMenuItem (
-		clonedAction,
-		clonedAction.querySelector("span"),
-		template, parameters,
-		reportingUser,
-		menuItemCaption)
-
-	actionToCloneBefore.before(clonedAction)
-}
-
-function buildTweetDropdownAction(
-	actionToCloneBefore,
-	blockUserAction,
-	reportTweetAction,
-	userProfileHeadingScreenName)
-{	
-	tweetAuthor=blockUserAction.querySelector("span")
-		.textContent
-		.match('@'+screennameRegex)[0]
-		.substring(1)
-
-	reportedUser=isProfileView() ?
-		// top of the screen profile heading
-		userProfileHeadingScreenName.innerText.substring(1) :
-		tweetAuthor
-	
-	tweetID=reportTweetAction.getAttribute('href').split("/").pop()
-
-	tweetInvokedFrom=encodeURIComponent(
-		"https://twitter.com/"+tweetAuthor+"/status/"+tweetID)
-	
-	isBot = SCREEN_NAMES[reportedUser]
-
-	template=isBot ?
-		templateReportUntypicalTweetUrl :
-		templateReportTweetUrl
-
-	var parameters = {
-		reportedAccount: reportedUser, 
-		tweetInvokedFrom: tweetInvokedFrom}
-
-	
-	buildNewDesignMenuAction(
-		actionToCloneBefore,
-		reportTweetCaption(isBot),
-		template, parameters)
-}
-
-
-function expandDetachedDropdownMenu(
-	dropdownMenuPath, 
-	profileHeadingScreennamePath)
-	
-{
-	dropdownMenu=document.querySelector(dropdownMenuPath)
-	if(dropdownMenu)  if (! dropdownMenu.dataset.metabotActionAdded)
-	{
-		dropdownFirstElement=dropdownMenu.children[0]
-		
-		if(dropdownFirstElement)
-		{
-			// It's most unlikely that user dropdown menu contains tweet report 
-			// Therefore, if tweet report item is present, assume it's tweet dropdown
-			if (dropdownMenu.querySelector(
-				'a[href^="/i/report/status"]') )
-			{
-				isTweetDropdown=true
-				isUserDropdown=false
-			// if tweet report item is not present, but user report item is,
-			// assume it's a user dropdown
-			} else if (dropdownMenu.querySelector(
-				'a[href^="/i/report/user/"]') )
-			{
-				isTweetDropdown=false
-				isUserDropdown=true
-			} else
-			// Otherwise assume we should keep the menu intact
-			{
-				isTweetDropdown=false
-				isUserDropdown=false
-			}
-
-			if (isTweetDropdown || isUserDropdown)
-			{
-				menuItems = dropdownMenu.querySelectorAll(
-					":scope > "+
-					"[role=menuitem]:not(.r-1awozwy)"+
-					// exclude Cancel non-actionable menu item
-					// (occurs in mobile design only)
-					":not([href$='/hidden'])")
-					// exclude "Show hidden replies" 
-					// which are '<a>' nodes matching href '/.../status/.../hidden'
- 
-				reportUserOrTweetMenuItem=
-					dropdownMenu.querySelector(
-						'a[href^="/i/report"]')
-			
-				userProfileHeadingScreenName=
-					document.querySelector(
-						profileHeadingScreennamePath)
-			}
-			
-			if (isUserDropdown)
-			{
-//				userID=reportUserOrTweetMenuItem
-//						.getAttribute('href').split("/").pop()
- 					// tested in DesktopNewDesign only
-					// currently not used; can be used to use different menu item captions and/or different forms
-
-
-			} else if (isTweetDropdown)
-				buildTweetDropdownAction(
-					reportUserOrTweetMenuItem,
-					menuItems[menuItems.length-2],
-						// "Block [ @username ]" is expected at this position
-
-					reportUserOrTweetMenuItem,
-					userProfileHeadingScreenName)
-
-			dropdownMenu.dataset.metabotActionAdded=true
-		}
-	}
-}
-
-
-function expandDynamicallyAppearingDropdownMenu()
-{
-	// desktop, new design
-	expandDetachedDropdownMenu (
-		"div [role=menu] div div.css-1dbjc4n div.css-1dbjc4n",
-		"div.r-1g94qm0"+
-			" div div div.r-1wbh5a2 span")
-
-	// mobile, new and old Twitter design
-	expandDetachedDropdownMenu (
-		"div.r-pm9dpa.r-1rnoaur",
-//LATER:
-		"div.css-1dbjc4n.r-1g94qm0 "+
-			"div.css-1dbjc4n.r-18u37iz.r-1wbh5a2"+
-			" span")
-//EARLIER:		"div.r-1cad53l.r-1b9bua6 div.r-1g594qm0"+
-//			" div.r-18u37iz.r-1wbh5a2 span")
-
-	setTimeout(expandDynamicallyAppearingDropdownMenu, 1000);
-}
 
 
 function markTweets()
@@ -409,5 +243,4 @@ function markTweets()
 }
 
 loadLabels();
-expandDynamicallyAppearingDropdownMenu();
 markTweets();
