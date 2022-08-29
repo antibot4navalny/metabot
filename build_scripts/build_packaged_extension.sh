@@ -95,6 +95,26 @@
 		fi  
 	}
 
+	zip_folder_to()
+	{
+		original_location="$(pwd)"
+		source_folder="$1"
+		destination_zip="$original_location/$2"
+		
+		cd "$source_folder"
+		
+		zip \
+ 			--recurse-paths \
+			--filesync \
+			"$destination_zip" \
+			\
+			`# Current folder (and its subfolders):` \
+			. \
+			--exclude ".DS_Store"
+
+		cd "$original_location"
+	}
+
 	. build_scripts/set_version.sh
 
 # For all browsers
@@ -120,10 +140,9 @@
 
 		> "releases/forFirefoxAMO/manifest.json"
 		
-	rm releases/Firefox_local_debug.zip
-	zip releases/Firefox_local_debug.zip \
-	  releases/forFirefoxAMO/* \
-	  --junk-paths
+	zip_folder_to \
+		"releases/forFirefoxAMO" \
+		"releases/Firefox_local_debug.zip"
 
 
 # For Chrome and Opera, strip unsupported feild
@@ -148,5 +167,6 @@
 
 
 # For Chrome
-	rm releases/forChromeWebStore.zip
-	zip --recurse-paths releases/forChromeWebStore.zip releases/ChromeOpera_debug_and_WebStore --exclude "*/.DS_Store" --junk-paths
+	zip_folder_to \
+		"releases/ChromeOpera_debug_and_WebStore" \
+		"releases/forChromeWebStore.zip"
