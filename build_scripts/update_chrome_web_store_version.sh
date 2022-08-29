@@ -58,7 +58,7 @@ ACCESS_TOKEN=`jq -r '.access_token' "$access_tokens"`
 
 chrome-webstore-upload \
 	upload \
-	--source "releases/metabotTwitter.zip" \
+	--source "releases/forChromeWebStore.zip" \
 	--extension-id "$extension_ID" \
 	--client-id $CLIENT_ID \
 	--client-secret $CLIENT_SECRET \

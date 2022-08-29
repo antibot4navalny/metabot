@@ -52,7 +52,7 @@
 ### Способ посложнее
 1. [[Скачиваем и устанавливаем](https://www.opera.com/download) браузер Opera, если он ещё не установлен]
 2. Запускаем браузер Opera
-3. Скачиваем и сохраняем на диск файл по этой ссылке: [metabotTwitter.crx](https://raw.githubusercontent.com/antibot4navalny/metabot/master/metabotTwitter.crx)
+3. Скачиваем и сохраняем на диск файл по этой ссылке: [ChromeOpera_self_distribution.crx](https://raw.githubusercontent.com/antibot4navalny/metabot/master/ChromeOpera_self_distribution.crx)
 4. Открываем этот файл браузером Opera
     - в MacOS: Open With > Opera
 5. В верхней части окна появляется "The extension was disabled because it is from an unknown source...."

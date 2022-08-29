@@ -4,10 +4,10 @@
 
 ### No value to store, intermediary files
 
-releases/metabotTwitter.zip
-releases/Firefox_readonly_copy/*
-releases/ChromeOpera_readonly_copy/*
-releases/FirefoxTestBuild.zip
+releases/forChromeWebStore.zip
+releases/forFirefoxAMO/*
+releases/ChromeOpera_debug_and_WebStore/*
+releases/Firefox_local_debug.zip
 .DS_Store
 bot_accounts*.csv
 twarc.log

@@ -107,7 +107,7 @@
   fi
 
 # For Firefox, save a copy with full manifest
-	clone_ext_contents_to_folder "releases/Firefox_readonly_copy"
+	clone_ext_contents_to_folder "releases/forFirefoxAMO"
 
 	manifest2template_for_channel |
 	remove_manifest_fields '
@@ -118,35 +118,35 @@
 		--regexp='"hot-reload.js",' \
 		--regexp='"flags.js"' \
 
-		> "releases/Firefox_readonly_copy/manifest.json"
+		> "releases/forFirefoxAMO/manifest.json"
 		
-	rm releases/FirefoxTestBuild.zip
-	zip releases/FirefoxTestBuild.zip \
-	  releases/Firefox_readonly_copy/* \
+	rm releases/Firefox_local_debug.zip
+	zip releases/Firefox_local_debug.zip \
+	  releases/forFirefoxAMO/* \
 	  --junk-paths
 
 
 # For Chrome and Opera, strip unsupported feild
-	clone_ext_contents_to_folder "releases/ChromeOpera_readonly_copy"
+	clone_ext_contents_to_folder "releases/ChromeOpera_debug_and_WebStore"
 
 	manifest2template_for_channel |
 	remove_manifest_fields '
 		.browser_specific_settings'	 \
-	> "releases/ChromeOpera_readonly_copy/manifest.json"
+	> "releases/ChromeOpera_debug_and_WebStore/manifest.json"
 
 # For Opera self-distribution of CRX via GitHub
-	rm releases/metabotTwitter.crx
-	extensionator -o releases/metabotTwitter.crx -i "credentials/metabotTwitter.pem" -d releases/ChromeOpera_readonly_copy -e .DS_Store 
+	rm releases/ChromeOpera_self_distribution.crx
+	extensionator -o releases/ChromeOpera_self_distribution.crx -i "credentials/metabotTwitter.pem" -d releases/ChromeOpera_debug_and_WebStore -e .DS_Store 
 #	 Previously:
-# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=sources --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
+# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension=ChromeOpera_debug_and_WebStore --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
 
 
 # For Chrome, remove update_url which is only necessary for Opera self-hosting
 	manifest2template_for_channel |
 	remove_manifest_fields '.update_url, .browser_specific_settings' \
-	> "releases/ChromeOpera_readonly_copy/manifest.json"
+	> "releases/ChromeOpera_debug_and_WebStore/manifest.json"
 
 
 # For Chrome
-	rm releases/metabotTwitter.zip
-	zip --recurse-paths releases/metabotTwitter.zip releases/ChromeOpera_readonly_copy --exclude "*/.DS_Store" --junk-paths
+	rm releases/forChromeWebStore.zip
+	zip --recurse-paths releases/forChromeWebStore.zip releases/ChromeOpera_debug_and_WebStore --exclude "*/.DS_Store" --junk-paths
