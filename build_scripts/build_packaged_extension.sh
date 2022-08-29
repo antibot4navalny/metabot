@@ -154,8 +154,13 @@
 	> "releases/ChromeOpera_debug_and_WebStore/manifest.json"
 
 # For Opera self-distribution of CRX via GitHub
-	rm releases/ChromeOpera_self_distribution.crx
-	extensionator -o releases/ChromeOpera_self_distribution.crx -i "credentials/metabotTwitter.pem" -d releases/ChromeOpera_debug_and_WebStore -e .DS_Store 
+
+	crx pack \
+		--crx-version 3 \
+		-o "releases/ChromeOpera_self_distribution.crx" \
+		-p "credentials/metabotTwitter.pem" \
+		"releases/ChromeOpera_debug_and_WebStore"
+
 #	 Previously:
 # 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension="releases/ChromeOpera_debug_and_WebStore" --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
 
