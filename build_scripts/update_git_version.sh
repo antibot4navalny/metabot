@@ -1,4 +1,4 @@
-	git add releases/metabotTwitter.crx "channel_specific/updates.xml" next_version.txt metabotTwitter/labels.json metabotTwitter/manifest.json
+	git add releases/metabotTwitter.crx "channel_specific/updates.xml" next_version.txt metabotTwitter/labels.json
 
 	git commit -m "update list of known bots"
 	echo "About to push DB changes." >&2
