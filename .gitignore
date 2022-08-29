@@ -18,9 +18,9 @@ node_modules/*
 
 
 
-### For private repository only
+### Ignore in public repository only
+### Ignore in private repository only
 
-unused/*
 
 
 
