@@ -1,7 +1,7 @@
-var labels={};
+var prepackaged_labels={};
 
 
-function loadLabels()
+function loadPrepackagedLabels()
 {
 
   var rUrl = chrome.runtime.getURL('assets/labels.json');
@@ -10,7 +10,7 @@ function loadLabels()
     return response.json();
   })
   .then((fileContent) => {
-    labels=fileContent;
+    prepackaged_labels=fileContent;
   }
   )
   .catch((cause) => console.log(cause));
@@ -115,9 +115,9 @@ function markTweets()
 				x=a[i].querySelector('a[href]').getAttribute('href').substring(1)
 			
 		
-				isRed = (labels[x]=='red')
+				isRed = (prepackaged_labels[x]=='red')
 				
-				isYellow = (labels[x]=='yellow')
+				isYellow = (prepackaged_labels[x]=='yellow')
 		
 				if ((isRed || isYellow) && highlight_tweets)
 				{
@@ -167,5 +167,5 @@ function markTweets()
 	setTimeout(markTweets, 3000);
 }
 
-loadLabels();
+loadPrepackagedLabels();
 markTweets();
