@@ -39,7 +39,7 @@
 	},
 
   "web_accessible_resources": [
-      "labels.json"
+      "assets/labels.json"
   ],
 	
 	"permissions": [

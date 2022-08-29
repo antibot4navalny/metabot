@@ -1,9 +1,6 @@
 .git*
 !.gitignore
 
-### Pending release
-metabotTwitter/labels.json
-labels.previous.json
 
 ### No value to store, intermediary files
 

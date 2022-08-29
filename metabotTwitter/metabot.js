@@ -8,7 +8,7 @@ var labels={};
 function loadLabels()
 {
 
-  var rUrl = chrome.runtime.getURL('labels.json');
+  var rUrl = chrome.runtime.getURL('assets/labels.json');
   
   fetch(rUrl).then((response) => {
     return response.json();
