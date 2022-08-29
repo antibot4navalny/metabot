@@ -2,8 +2,6 @@
 . channel_specific/set_chrome_extension_ID.sh
 . channel_specific/set_chrome_trusted_testers_option.sh
 
-access_tokens=$(mktemp).json || exit 1
-trap "rm -f \"$access_tokens\"" EXIT
 
 
 ### Use only earlier AUTH_CODE expired:
@@ -13,6 +11,7 @@ trap "rm -f \"$access_tokens\"" EXIT
 ### 
 ### 2: unofficial
 ### https://github.com/fregante/chrome-webstore-upload/blob/main/How%20to%20generate%20Google%20API%20keys.md )
+
 
 # echo "Open your browser and get auth key at this URL:"
 # echo
@@ -52,9 +51,10 @@ trap "rm -f \"$access_tokens\"" EXIT
 
 
 # echo Access tokens based on refresh token:
-curl "https://accounts.google.com/o/oauth2/token" -d "client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&refresh_token=$refresh_token&grant_type=refresh_token&redirect_uri=urn:ietf:wg:oauth:2.0:oob" > "$access_tokens"
-# cat "$access_tokens"
-ACCESS_TOKEN=`jq -r '.access_token' "$access_tokens"`
+ACCESS_TOKEN=$(
+	curl "https://accounts.google.com/o/oauth2/token" -d "client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&refresh_token=$refresh_token&grant_type=refresh_token&redirect_uri=urn:ietf:wg:oauth:2.0:oob" |
+	jq -r '.access_token'
+)
 
 # echo "Ready to proceed?"
 # read -n 1 -s < /dev/tty
