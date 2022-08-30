@@ -160,7 +160,7 @@ function markTweets()
 			highlight_tweets=isStatusView()
 	
 
-		var i, x, t
+		var i, x, t, linksInsideTweet
 	
 		for (i = 0; i < a.length; i++)
 
@@ -168,63 +168,71 @@ function markTweets()
 			if (!a[i].dataset.mt_is_upd)
 			{
 				t = a[i]
-		
-				x=a[i].querySelector('a[href]').getAttribute('href').substring(1)
-			
-						
-				isRed = ((webHostedLabelsCached[x]=='red') ||
-									(prepackaged_labels[x]=='red'))
+				// But don't mark it as processed if it contains no link:
+				// e.g. if tweet is under extra click:
+				// "Show additional replies" or similar
+				linksInsideTweet = t.querySelector('a[href]')
 
-				isYellow = ((webHostedLabelsCached[x]=='yellow') ||
+				if (!(linksInsideTweet === null))
+				{
+					
+					x = linksInsideTweet.getAttribute('href').substring(1)
+					
+					
+					isRed = ((webHostedLabelsCached[x]=='red') ||
+										(prepackaged_labels[x]=='red'))
+					
+					isYellow = ((webHostedLabelsCached[x]=='yellow') ||
 										(prepackaged_labels[x]=='yellow'))
 
-				if ((isRed || isYellow) && highlight_tweets)
-				{
-					label=isRed?"БОТ:" :isYellow?"⚠️":""
-					
-					// highlight all tweets shown on the page
-					botCaption = document.createElement("span")
-					botCaption.innerHTML=label+"&nbsp;"
-					botCaption.style.color = 'red'
-
-					// дописываем "БОТ: " перед именем автора твита
-					fullname=t.querySelector("span")
-
-					fullname.prepend(botCaption)
-		
-					elementToHighlight = t.parentNode
-
-					//// "Highlight tweets only if they are not retweeted-by,
-					//// no matter who retweeted or who posted the original tweet."
-					////
-					//// In case of retweet, only username of retweeting user
-					//// is prepended, not username of original tweet's author.
-					if (isRed && (elementToHighlight.
-					  //// "Username retweeted" caption above original tweet is empty
-						querySelector(
-						":scope > article > div > div > div > div")
-						.innerText=="" ))
+					if ((isRed || isYellow) && highlight_tweets)
 					{
-						// подсвечиваем весь твит стилем bot_tweet_highlight
-						elementToHighlight.className+=" bot_tweet_highlight"
+						label=isRed?"БОТ:" :isYellow?"⚠️":""
+					
+						// highlight all tweets shown on the page
+						botCaption = document.createElement("span")
+						botCaption.innerHTML=label+"&nbsp;"
+						botCaption.style.color = 'red'
 
-						// reduce contrast for tweet text
-						tweetTextselector =
-							// - for focused tweet:
-							':scope > div > div > span' + ', ' +
-							// - for parent / child replies of the focused tweet
-							':scope > div > div > div > div > span'
+						// дописываем "БОТ: " перед именем автора твита
+						fullname=t.querySelector("span")
 
-						tweetTxts = t.querySelectorAll(tweetTextselector)
-						tweetTxts.forEach(
-							function(element) {
-								element.className='bot_text ' + element.className;
-							});						
-					}			
+						fullname.prepend(botCaption)
+						
+						elementToHighlight = t.parentNode
+
+						//// "Highlight tweets only if they are not retweeted-by,
+						//// no matter who retweeted or who posted the original tweet."
+						////
+						//// In case of retweet, only username of retweeting user
+						//// is prepended, not username of original tweet's author.
+						if (isRed && (elementToHighlight.
+							//// "Username retweeted" caption above original tweet is empty
+							querySelector(
+							":scope > article > div > div > div > div")
+							.innerText=="" ))
+						{
+							// подсвечиваем весь твит стилем bot_tweet_highlight
+							elementToHighlight.className+=" bot_tweet_highlight"
+
+							// reduce contrast for tweet text
+							tweetTextselector =
+								// - for focused tweet:
+								':scope > div > div > span' + ', ' +
+								// - for parent / child replies of the focused tweet
+								':scope > div > div > div > div > span'
+							
+							tweetTxts = t.querySelectorAll(tweetTextselector)
+							tweetTxts.forEach(
+								function(element) {
+									element.className='bot_text ' + element.className;
+								});
+						}
+					}
+					
+					// Mark tweet as processed to skip in subsequent passes
+					t.dataset.mt_is_upd = 1
 				}
-		
-				// Mark tweet as processed to skip in subsequent passes
-				a[i].dataset.mt_is_upd = 1
 			}
 	}
 	// repeat every 0.1 seconds
