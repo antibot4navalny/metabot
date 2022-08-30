@@ -2,10 +2,9 @@
 !.gitignore
 
 
-### No value to store, intermediary files
 
+### No value to store, intermediary files
 releases/*
-!releases/*.crx
 
 
 **/.DS_Store
@@ -18,9 +17,18 @@ node_modules/*
 
 
 ### Ignore in public repository only
+
 ### Ignore in private repository only
+##### Only exists in private repository
+experiments/**/*.crx
+experiments/**/*.zip
+experiments/**/*.xpi
+store_listing/screenshots/drafts/*
 
 
+
+### Keep in public repository only
+!releases/*.crx
 
 
 ###  Private credentials, for no repository whatsoever
