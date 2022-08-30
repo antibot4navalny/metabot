@@ -1,4 +1,61 @@
+async function commonImporter()
+{
+	return await import((chrome.runtime.getURL || chrome.extension.getURL)("common_impex.js"));
+}
+
 var prepackaged_labels={};
+
+var webHostedLabelsCached = {};
+
+async function retrieveLabelsFromStorage()
+{
+	retrievedLabels=await (await commonImporter()).retrieveItemFromStorage('webHostedLabels', {});
+
+	return retrievedLabels;
+}
+
+
+async function initializeCachedLabelsFromStorage()
+{
+	const labelsFromStorage = await retrieveLabelsFromStorage();
+	webHostedLabelsCached = Object.assign({}, labelsFromStorage);
+}
+
+async function updateCachedLabelsOnStorageChange(changes, area) {
+
+  const changedItems = Object.keys(changes);
+
+	if ((area == "local") &&
+		(Object.keys(changes).includes('webHostedLabels')))
+	{
+		console.log("Local changes in Labels:");
+
+// 		const newLabels = await retrieveWebHostedLabels();
+		const newLabels = changes['webHostedLabels'].newValue;
+				
+		webHostedLabelsCached = Object.assign({}, newLabels);
+	}
+
+	//// Debug-only output:
+	// for (const item of changedItems) {
+	// 	console.log(`${item} has changed:`);
+	// 	console.log("Old value: ", changes[item].oldValue);
+	// 	console.log("New value: ", changes[item].newValue);
+	// }
+}
+
+chrome.storage.onChanged.addListener(updateCachedLabelsOnStorageChange);
+
+
+
+async function markUponStorageReady()
+{
+	await initializeCachedLabelsFromStorage();
+/////	console.log("Storage ready, proceeding to marking tweets")
+
+	markTweets();
+}
+
 
 
 function loadPrepackagedLabels()
@@ -114,15 +171,17 @@ function markTweets()
 		
 				x=a[i].querySelector('a[href]').getAttribute('href').substring(1)
 			
-		
-				isRed = (prepackaged_labels[x]=='red')
-				
-				isYellow = (prepackaged_labels[x]=='yellow')
-		
+						
+				isRed = ((webHostedLabelsCached[x]=='red') ||
+									(prepackaged_labels[x]=='red'))
+
+				isYellow = ((webHostedLabelsCached[x]=='yellow') ||
+										(prepackaged_labels[x]=='yellow'))
+
 				if ((isRed || isYellow) && highlight_tweets)
 				{
-				  label=isRed?"БОТ:" :isYellow?"⚠️":""
-				  
+					label=isRed?"БОТ:" :isYellow?"⚠️":""
+					
 					// highlight all tweets shown on the page
 					botCaption = document.createElement("span")
 					botCaption.innerHTML=label+"&nbsp;"
@@ -167,5 +226,23 @@ function markTweets()
 	setTimeout(markTweets, 3000);
 }
 
+function requestLabels()
+{
+	// 1. Send the background a message requesting the user's data
+	chrome.runtime.sendMessage('getLabels', (response) => {
+		// 2. Got an asynchronous response with the data from the background
+////		console.log('metabot received response: ', response);
+	})
+	
+////// Production-time delay:
+	setTimeout(requestLabels, 60*1000);
+	
+////// Debug-time delay:
+// 	setTimeout(requestLabels, 15*1000);
+}
+
+requestLabels();
+
 loadPrepackagedLabels();
-markTweets();
+
+markUponStorageReady();

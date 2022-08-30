@@ -32,12 +32,8 @@
 	],
 	
 	"background": {
-		"persistent": false,
-		"scripts": [
-			"common.js",
-			"hot-reload.js",
-			"background.js"
-		]
+		"page": "background.html",
+		"persistent": false
 	},
 
 	"web_accessible_resources": [
