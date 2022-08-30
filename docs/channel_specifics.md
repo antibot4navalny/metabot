@@ -4,6 +4,7 @@ The following is currently only used in Stable, not in Early Access (maybe it wi
 
 Only in Early Access:
 - `experiments/`: has (limited) value for development team only
+- `store_listings/screenshots/drafts`: only used to prepare screenshots for extension stores
 
 
 TODO: decide and document whether `next_version.txt` counters should (not) be related between Stable and Early Access.
