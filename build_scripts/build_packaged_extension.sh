@@ -181,11 +181,11 @@
 	crx pack \
 		--crx-version 3 \
 		-o "releases/ChromeOpera_self_distribution.crx" \
-		-p "credentials/metabotTwitter.pem" \
+		-p "credentials/channel_specific/ChromeOpera_selfdistribution_CRX_signing_key.pem" \
 		"releases/ChromeOpera_debug_and_WebStore"
 
 #	 Previously:
-# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension="releases/ChromeOpera_debug_and_WebStore" --pack-extension-key="credentials/metabotTwitter.pem" --profile-directory="Profile 12"
+# 	 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --pack-extension="releases/ChromeOpera_debug_and_WebStore" --pack-extension-key="credentials/channel_specific/ChromeOpera_selfdistribution_CRX_signing_key.pem" --profile-directory="Profile 12"
 
 
 # For Chrome, remove update_url which is only necessary for Opera self-hosting
