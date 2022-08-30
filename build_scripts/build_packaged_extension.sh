@@ -1,6 +1,7 @@
   #!/bin/bash
   . ../../common/sh/utils/common_funcs.sh
 
+
   cat_arg_or_stdin()
   {
     arg="$1"
@@ -100,7 +101,7 @@
 				"$destination/assets/"
 		fi  
 	}
-
+	
 	zip_folder_to()
 	{
 		original_location="$(pwd)"
@@ -134,7 +135,7 @@
 
 # For Firefox, save a copy with full manifest
 	clone_ext_contents_to_folder "releases/forFirefoxAMO"
-
+	
 	manifest2template_for_channel |
 	remove_manifest_fields '
 		.update_url,
@@ -167,12 +168,12 @@
 		"releases/Firefox_manifestV3_local_debug.zip"
 
 
-# For Chrome and Opera, strip unsupported feild
+# For Chrome and Opera, strip unsupported field
 	clone_ext_contents_to_folder "releases/ChromeOpera_debug_and_WebStore"
-
+	
 	manifest3template_for_channel |
-	remove_manifest_fields '
-		.browser_specific_settings'	 \
+	remove_manifest_fields \
+	  '.browser_specific_settings'	 \
 	> "releases/ChromeOpera_debug_and_WebStore/manifest.json"
 
 # For Opera self-distribution of CRX via GitHub
