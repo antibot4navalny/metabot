@@ -156,11 +156,11 @@ function markTweets()
 	{
 		defineTweetBackgroundStyle()
 
-			var a=document.querySelectorAll('article[role=article]');
-			// In conversation view, works both for focused tweet and
-			// for parent / child replies of the focused tweet.
-				
-			highlight_tweets=isStatusView()
+		var a=document.querySelectorAll('article[role=article]');
+		// In conversation view, works both for focused tweet and
+		// for parent / child replies of the focused tweet.
+			
+		highlight_tweets=isStatusView()
 	
 
 		var i, x, t, linksInsideTweet
