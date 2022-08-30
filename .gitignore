@@ -4,17 +4,11 @@
 
 ### No value to store, intermediary files
 
-releases/forChromeWebStore.zip
-releases/*.xpi
-releases/forFirefoxAMO/*
-releases/forFirefoxAMO_manifestV3/*
-releases/ChromeOpera_debug_and_WebStore/*
-releases/Firefox_local_debug.zip
-releases/Firefox_manifestV3_local_debug.zip
+releases/*
+!releases/*.crx
 
 
-
-.DS_Store
+**/.DS_Store
 bot_accounts*.csv
 twarc.log
 
