@@ -199,11 +199,11 @@ function markTweets()
 					////
 					//// In case of retweet, only username of retweeting user
 					//// is prepended, not username of original tweet's author.
-					if (elementToHighlight.
+					if (isRed && (elementToHighlight.
 					  //// "Username retweeted" caption above original tweet is empty
 						querySelector(
 						":scope > article > div > div > div > div")
-						.innerText=="" )
+						.innerText=="" ))
 					{
 						// подсвечиваем весь твит стилем bot_tweet_highlight
 						elementToHighlight.className+=" bot_tweet_highlight"
