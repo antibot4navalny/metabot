@@ -1,3 +1,6 @@
+var screennameRegex="[A-Za-z0-9_]+"
+
+
 async function commonImporter()
 {
 	return await import((chrome.runtime.getURL || chrome.extension.getURL)("common_impex.js"));

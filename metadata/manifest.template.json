@@ -19,15 +19,8 @@
 	  {
 		"matches": ["https://*.twitter.com/*"],
 		"js": [
-			"common.js",
 			"metabot.js"],
 		"run_at": "document_idle"
-	  },
-	  {
-		"matches": ["https://*.twitter.com/*"],
-		"js": [
-			"common.js"],
-		"run_at": "document_end"
 	  }
 	],
 	

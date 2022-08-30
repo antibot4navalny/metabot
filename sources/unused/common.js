@@ -7,5 +7,3 @@ function getInitData()
 	else
 		return null
 }
-
-var screennameRegex="[A-Za-z0-9_]+"
