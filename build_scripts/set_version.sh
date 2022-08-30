@@ -1,1 +1,1 @@
-	version=`cat assets/next_version.txt`
+	version=$(cat assets/next_version.txt)
