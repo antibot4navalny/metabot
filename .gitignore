@@ -19,11 +19,12 @@ node_modules/*
 ### Ignore in public repository only
 
 ### Ignore in private repository only
-##### Only exists in private repository
+###### Only exists in private repository
+store_listing/screenshots/drafts/*
+######### No value to store, intermediary files
 experiments/**/*.crx
 experiments/**/*.zip
 experiments/**/*.xpi
-store_listing/screenshots/drafts/*
 
 
 
