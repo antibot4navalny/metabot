@@ -1,0 +1,58 @@
+{
+	"manifest_version": 3,
+
+	"name.channel_dependent": {
+	  "stable": "MetaBot for Twitter",
+	  "early": "MetaBot for Twitter (Early Access)"
+	},
+
+	"version": "VVVVVV",
+	"description": "Highlight known Kremlin bots on Twitter.",
+	"author": "antibot4navalny",
+
+  // Chrome, _public_ self-hosted releases
+	"update_url.channel_dependent": {
+	  "stable": "https://raw.githubusercontent.com/antibot4navalny/metabot/master/updates.xml"
+	},
+
+	"content_scripts": [
+	  {
+		"matches": ["https://*.twitter.com/*"],
+		"js": [
+			"common.js",
+			"metabot.js"],
+		"run_at": "document_idle"
+	  }
+	],
+	
+	"host_permissions": [
+	  "https://api.github.com/"
+	],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "permissions": [
+    "storage"
+  ],
+
+  // Firefox only
+	"browser_specific_settings": {
+	  "gecko": {
+	    "id.channel_dependent": {
+	      "stable": "{d20acea6-2744-4763-bb1c-f62924e40073}",
+	      "early": "{b4ab8398-6a60-41a2-91e2-09eb79a5d153}"
+	    },
+	    "strict_min_version": "66.0"
+	  }
+	},
+	
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/labels.json", "common_impex.js"],
+      "matches": ["https://*.twitter.com/*"]
+    }
+  ]
+}

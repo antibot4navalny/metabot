@@ -34,6 +34,12 @@
     manifest_for_channel "metadata/manifest.template.json"
   }
 
+  manifest3template_for_channel()
+  {
+    manifest_for_channel "metadata/manifest3.template.json"
+  }
+
+
   remove_manifest_fields()
   {
     fields="$1"
@@ -140,10 +146,31 @@
 		"releases/Firefox_local_debug.zip"
 
 
+# Firefox Manifest3 version
+	clone_ext_contents_to_folder "releases/forFirefoxAMO_manifestV3"
+	rm "releases/forFirefoxAMO_manifestV3/background.html"
+
+#   "background": {
+#     "service_worker": "background.js", // Chrome
+#     "scripts": ["background.js"]  // Firefox
+#   }
+
+	manifest2template_for_channel |
+	jq '.background.scripts=[.background.service_worker] ' |
+  remove_manifest_fields '
+    .update_url,
+    .background.service_worker'	 \
+	  > "releases/forFirefoxAMO_manifestV3/manifest.json"
+
+	zip_folder_to \
+		"releases/forFirefoxAMO_manifestV3" \
+		"releases/Firefox_manifestV3_local_debug.zip"
+
+
 # For Chrome and Opera, strip unsupported feild
 	clone_ext_contents_to_folder "releases/ChromeOpera_debug_and_WebStore"
 
-	manifest2template_for_channel |
+	manifest3template_for_channel |
 	remove_manifest_fields '
 		.browser_specific_settings'	 \
 	> "releases/ChromeOpera_debug_and_WebStore/manifest.json"
@@ -161,7 +188,7 @@
 
 
 # For Chrome, remove update_url which is only necessary for Opera self-hosting
-	manifest2template_for_channel |
+	manifest3template_for_channel |
 	remove_manifest_fields '.update_url, .browser_specific_settings' \
 	> "releases/ChromeOpera_debug_and_WebStore/manifest.json"
 
