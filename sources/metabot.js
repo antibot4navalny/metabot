@@ -206,6 +206,20 @@ function markTweets()
 						////
 						//// In case of retweet, only username of retweeting user
 						//// is prepended, not username of original tweet's author.
+						////
+						//// How it should ideally work:
+						//// - instead of parent node, two child nodes should be highlighted:
+						////   (1) username,
+						////   (2) tweet body
+						////
+						//// - bot/not bot should be determined based on node always containing
+						////   username of original tweet's author
+						////
+						//// - it is much more important to highlight when the original
+						////   tweet's author is bot, not when the account retweeted it is
+						//// 
+						//// - the above logic will also highlight bot-created pinned tweet
+
 						if (isRed && (elementToHighlight.
 							//// "Username retweeted" caption above original tweet is empty
 							querySelector(
