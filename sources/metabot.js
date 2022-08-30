@@ -102,11 +102,11 @@ tweetBackgroundStyle=addStyle()
 
 function defineTweetBackgroundStyle()
 {
-		// dark mode: <meta name="theme-color" content="#1C2938">
-		// light mode: <meta name="theme-color" content="#FFFFFF">
-		dark_mode = ! (document.querySelector(
-			":root > head > meta[name=theme-color]")
-			.getAttribute("content").toUpperCase() == "#FFFFFF")
+	// dark mode: <meta name="theme-color" content="#1C2938">
+	// light mode: <meta name="theme-color" content="#FFFFFF">
+	dark_mode = ! (document.querySelector(
+		":root > head > meta[name=theme-color]")
+		.getAttribute("content").toUpperCase() == "#FFFFFF")
 
 	if (dark_mode)
 		var s = '.bot_tweet_highlight { background: #4b3333 !important; }'	// dark
