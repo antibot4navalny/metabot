@@ -222,8 +222,8 @@ function markTweets()
 				a[i].dataset.mt_is_upd = 1
 			}
 	}
-	// repeat every 3 seconds
-	setTimeout(markTweets, 3000);
+	// repeat every 0.1 seconds
+	setTimeout(markTweets, 100);
 }
 
 function requestLabels()
