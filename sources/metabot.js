@@ -192,16 +192,16 @@ function markTweets()
 
 					fullname.prepend(botCaption)
 		
-					elementToHightlight = t.parentNode
+					elementToHighlight = t.parentNode
 
-					if (elementToHightlight.
+					if (elementToHighlight.
 						querySelector(
 						":scope > article > div > div")
 						.innerText=="" )
 					// Highlight tweets only if they are not retweeted-by, no matter who retweeted or who posted the original tweet.
 					{
 						// подсвечиваем весь твит стилем bot_tweet_highlight
-						elementToHightlight.className+=" bot_tweet_highlight"
+						elementToHighlight.className+=" bot_tweet_highlight"
 
 						// reduce contrast for tweet text
 						tweetTextselector =
