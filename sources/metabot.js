@@ -194,11 +194,16 @@ function markTweets()
 		
 					elementToHighlight = t.parentNode
 
+					//// "Highlight tweets only if they are not retweeted-by,
+					//// no matter who retweeted or who posted the original tweet."
+					////
+					//// In case of retweet, only username of retweeting user
+					//// is prepended, not username of original tweet's author.
 					if (elementToHighlight.
+					  //// "Username retweeted" caption above original tweet is empty
 						querySelector(
-						":scope > article > div > div")
+						":scope > article > div > div > div > div")
 						.innerText=="" )
-					// Highlight tweets only if they are not retweeted-by, no matter who retweeted or who posted the original tweet.
 					{
 						// подсвечиваем весь твит стилем bot_tweet_highlight
 						elementToHighlight.className+=" bot_tweet_highlight"
