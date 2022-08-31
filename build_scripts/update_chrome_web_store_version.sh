@@ -1,6 +1,9 @@
-. credentials/set_chrome_web_store_credentials.sh
-. channel_specific/set_chrome_extension_ID.sh
-. channel_specific/set_chrome_trusted_testers_option.sh
+#!/bin/bash
+. ../../common/sh/utils/common_funcs.sh
+
+. credentials/set_chrome_web_store_credentials.sh &&
+. channel_specific/set_chrome_extension_ID.sh &&
+. channel_specific/set_chrome_trusted_testers_option.sh &&
 
 
 ### Use only earlier AUTH_CODE expired:
@@ -53,7 +56,7 @@
 ACCESS_TOKEN=$(
 	curl "https://accounts.google.com/o/oauth2/token" -d "client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&refresh_token=$refresh_token&grant_type=refresh_token&redirect_uri=urn:ietf:wg:oauth:2.0:oob" |
 	jq -r '.access_token'
-)
+) &&
 
 # echo "Ready to proceed?"
 # read -n 1 -s < /dev/tty
@@ -61,20 +64,21 @@ ACCESS_TOKEN=$(
 ### Experimental (installed from:
 ###   https://github.com/fregante/chrome-webstore-upload-cli )
 
-chrome-webstore-upload \
-	upload \
-	--source "releases/forChromeWebStore.zip" \
+webstore_arguments=(
 	--extension-id "$extension_ID" \
 	--client-id "$CLIENT_ID" \
 	--client-secret "$CLIENT_SECRET" \
 	--refresh-token "$ACCESS_TOKEN"
-
-
+) &&
 
 chrome-webstore-upload \
-	publish \
-	--extension-id "$extension_ID" \
-	--client-id "$CLIENT_ID" \
-	--client-secret "$CLIENT_SECRET" \
-	--refresh-token "$ACCESS_TOKEN" \
-	"$testers_option"
+	upload \
+	--source "releases/forChromeWebStore.zip" \
+  "${webstore_arguments[@]}"
+
+if var_is_set chrome_testers_option; then
+    webstore_arguments+=("$chrome_testers_option")
+fi &&
+
+chrome-webstore-upload \
+  publish "${webstore_arguments[@]}"

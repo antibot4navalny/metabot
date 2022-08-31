@@ -1,2 +1,5 @@
+### Stable channel
+unset chrome_testers_option
+
 ### Early Access only:
-# testers_option="--trusted-testers"
+# chrome_testers_option="--trusted-testers"
