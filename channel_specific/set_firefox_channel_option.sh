@@ -1,2 +1,6 @@
+# Stable:
+unset firefox_channel_option
+
+
 ### Early Access only:
-# channel_option="--channel=unlisted"
+# firefox_channel_option="--channel=unlisted"

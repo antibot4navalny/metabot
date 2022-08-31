@@ -1,8 +1,12 @@
-. credentials/set_mozilla_AMO_credentials.sh
-. channel_specific/set_firefox_extension_ID.sh
-. channel_specific/set_firefox_channel_option.sh
+#!/bin/bash
 
-echo "webext signing:" >&2
+. ../../common/sh/utils/common_funcs.sh
+
+. credentials/set_mozilla_AMO_credentials.sh &&
+. channel_specific/set_firefox_extension_ID.sh &&
+. channel_specific/set_firefox_channel_option.sh &&
+
+echo "webext signing:" >&2 &&
 
 ### Not required at the moment:
 # WEB_EXT_API_KEY="$JWT_user"
@@ -22,13 +26,22 @@ echo "webext signing:" >&2
 	# TODO: Try using https://github.com/fregante/web-ext-submit to avoid misleading error message
 	# ...until this issue is fixed: https://github.com/mozilla/web-ext/issues/804
 
-web-ext sign \
-	"$channel_option" \
-	--source-dir="releases/forFirefoxAMO" \
-	--artifacts-dir="releases" \
-	--api-key="$JWT_user" \
+webext_arguments=(
+  --source-dir="releases/forFirefoxAMO"
+	--artifacts-dir="releases"
+	--api-key="$JWT_user"
 	--api-secret="$JWT_secret"
 	# --id={...} -- is not permitted if specified in manifest.json
+) &&
+
+if var_is_set firefox_channel_option; then
+    webext_arguments+=("$firefox_channel_option")
+fi &&
+
+# web-ext-submit \
+
+web-ext sign \
+	"${webext_arguments[@]}"
 
 
 ### Not used any more:
