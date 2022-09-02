@@ -138,8 +138,7 @@
 	
 	manifest2template_for_channel |
 	remove_manifest_fields '
-		.update_url,
-		.background.persistent' \
+		.update_url' \
 		> "releases/forFirefoxAMO/manifest.json"
 		
 	zip_folder_to \
