@@ -1,7 +1,4 @@
 import { retrieveItemFromStorage } from './common_impex.js';
-// import * as Common from './common_impex.js';
-// import './common_impex.js';
-
 
 
 function getStorageDataPromise(sKey) {
