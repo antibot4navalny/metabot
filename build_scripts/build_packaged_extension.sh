@@ -149,18 +149,12 @@
 
 # Firefox Manifest3 version
 	clone_ext_contents_to_folder "releases/forFirefoxAMO_manifestV3"
-	rm "releases/forFirefoxAMO_manifestV3/background.html"
 
-#   "background": {
-#     "service_worker": "background.js", // Chrome
-#     "scripts": ["background.js"]  // Firefox
-#   }
-
-	manifest2template_for_channel |
-	jq '.background.scripts=[.background.service_worker] ' |
+	manifest3template_for_channel |
   remove_manifest_fields '
     .update_url,
-    .background.service_worker'	 \
+    .background.service_worker,
+    .background.type'	 \
 	  > "releases/forFirefoxAMO_manifestV3/manifest.json"
 
 	zip_folder_to \
@@ -190,7 +184,10 @@
 
 # For Chrome, remove update_url which is only necessary for Opera self-hosting
 	manifest3template_for_channel |
-	remove_manifest_fields '.update_url, .browser_specific_settings' \
+	remove_manifest_fields  '
+	  .update_url,
+	  .background.page,
+	  .browser_specific_settings' \
 	> "releases/ChromeOpera_debug_and_WebStore/manifest.json"
 
 

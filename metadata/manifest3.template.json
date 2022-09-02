@@ -29,6 +29,10 @@
 	],
 
   "background": {
+     // Firefox only:
+     "page": "background.html",
+     
+    // Chrome only:
     "service_worker": "background.js",
     "type": "module"
   },
