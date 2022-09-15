@@ -8,6 +8,8 @@
 ## Firefox
 Работает на компьютере и на смартфонах Android.
 
+На смартфонах только под [Nightly for Developers](https://play.google.com/store/apps/details?id=org.mozilla.fenix), после [этих инструкций](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/).
+
 Устанавливается из магазина расширений (Firefox Addons): https://addons.mozilla.org/en-US/firefox/addon/metabot-for-twitter/
 
 ## Google Chrome
