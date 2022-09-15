@@ -17,6 +17,11 @@
 
 Устанавливается из магазина расширений (Chrome Store): https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
 
+## браузер [Kiwi (Android)](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser)
+
+Устанавливается из магазина расширений (Chrome Store): https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
+
+
 ## Microsoft Edge
 Проверялось только на компьютере.
 
