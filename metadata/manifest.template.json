@@ -26,7 +26,7 @@
 	
 	"background": {
 		"page": "background.html",
-		"persistent": false
+		"persistent": true
 	},
 
 	"web_accessible_resources": [
@@ -34,7 +34,8 @@
 	],
 	
 	"permissions": [
-		"storage"
+		"storage",
+		"alarms"
 	],
 
 	// Firefox only
