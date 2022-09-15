@@ -1,6 +1,6 @@
 # Подсветка кремлеботов в Twitter (расширение для браузера)
 
-Подсвечивает твиты, написанные кремлеботами из [списка в Blocktogether](https://blocktogether.org/show-block/HYZ_Qq1P1xyxcDDbgLQ3l8OhhFLAolDZvpUqHP3A).
+Подсвечивает твиты, написанные кремлеботами.
 
 Также позволяет сообщать о новых ботах и ошибочно подсвеченных аккаунтах.
 
@@ -15,21 +15,15 @@
 
 Устанавливается из магазина расширений (Chrome Store): https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
 
-## Microsoft Edge (пока только Beta)
+## Microsoft Edge
 Проверялось только на компьютере.
 
 Установка:
-1. [[Скачиваем и устанавливаем]() бета-версию браузера MS Edge (Insider Beta Channel), если она ещё не установлена] (Beta ставится рядом с обычным Edge, удалять его не нужно)
-1. Переходим по ссылке [edge://extensions/](edge://extensions/)
-2. Включаем переключатель "Разрешить расширения из других магазинов" (Allow extensions from other stores)
-3. Открываем страницу Метабота для Google Chrome: https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
-4. Нажимаем "Установить" (Add To Chrome) > "Добавить расширение" (Add Extension)
+1. Открываем страницу Метабота для Google Chrome: https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
+2. Если есть синяя полоска в начале страницы, нажимаем "Разрешить расширения из других магазинов" ("Allow extensions from other stores"); подтверждаем "Разрешить" ("Allow")
+3. На странице Метабота нажимаем "Установить" (Add To Chrome) > "Добавить расширение" (Add Extension); всё подтверждаем
 
 
-## Яндекс.Браузер
-Работает на компьютере и на смартфонах Android.
-
-Устанавливается из магазина расширений (Chrome Store): https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
 
 
 ## Opera
