@@ -131,8 +131,8 @@ function normalizedPathname()
 function isStatusView()
 {
 	path=document.location.pathname
-	return path.includes("/status/") &&
- 		(document.location.search=="") 	// Enable comments as cgi params
+	return path.includes("/status/") && 
+ 		! path.startsWith("/search")
 }
 
 function isProfileView()
