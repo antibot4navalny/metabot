@@ -167,15 +167,35 @@ chrome.runtime.onInstalled.addListener(function(details) {
    considerRefreshingJSON()
 });
 
+/*
+
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
 		if (request === 'getLabels')
 		{
 			considerRefreshingJSON()
 		  
-      var outcome;
-			outcome="Fetched"
-			sendResponse({updateResult: outcome});
-			return true
+     		var outcome;
+				outcome="Fetched"
+				sendResponse({updateResult: outcome});
+				return true
 		}
 });
+
+*/
+
+function updateLabels() {
+	considerRefreshingJSON()
+		  
+		var outcome;
+		outcome="Fetched";
+		sendResponse({updateResult: outcome});
+		return true;
+}
+
+
+////// Production-time delay:
+	setInterval(() => updateLabels(), 60*1000);
+	
+////// Debug-time delay:
+//  setInterval(() => updateLabels(), 15*1000);
