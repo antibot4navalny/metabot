@@ -38,8 +38,7 @@
   },
 
   "permissions": [
-    "storage",
-	"alarms"
+    "storage"
   ],
 
   // Firefox only

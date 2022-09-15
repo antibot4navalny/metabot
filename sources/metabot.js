@@ -256,6 +256,22 @@ function markTweets()
 	setTimeout(markTweets, 100);
 }
 
+function requestLabels()
+{
+	// 1. Send the background a message requesting the user's data
+	chrome.runtime.sendMessage('getLabels', (response) => {
+		// 2. Got an asynchronous response with the data from the background
+////		console.log('metabot received response: ', response);
+	})
+	
+////// Production-time delay:
+	setTimeout(requestLabels, 60*1000);
+	
+////// Debug-time delay:
+// 	setTimeout(requestLabels, 15*1000);
+}
+
+requestLabels();
 
 loadPrepackagedLabels();
 
