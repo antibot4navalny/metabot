@@ -1,5 +1,7 @@
 import { retrieveItemFromStorage } from './common_impex.js';
 
+chrome.alarms.create("updateLabels", {periodInMinutes: 1})
+
 
 function getStorageDataPromise(sKey) {
   return new Promise(function(resolve, reject) {
@@ -167,15 +169,11 @@ chrome.runtime.onInstalled.addListener(function(details) {
    considerRefreshingJSON()
 });
 
-chrome.runtime.onMessage.addListener(
-	function(request, sender, sendResponse) {
-		if (request === 'getLabels')
-		{
-			considerRefreshingJSON()
-		  
-      var outcome;
-			outcome="Fetched"
-			sendResponse({updateResult: outcome});
-			return true
-		}
+
+chrome.alarms.onAlarm.addListener(function(alarm) {
+  if (alarm.name === 'updateLabels')  
+    considerRefreshingJSON();
 });
+
+
+considerRefreshingJSON();
