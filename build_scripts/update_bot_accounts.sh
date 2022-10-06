@@ -1,4 +1,4 @@
-SCRIPTPATH=$(dirname "$0")
+SCRIPTPATH=$(dirname "$0")/..
 echo "Switching to script folder:""$SCRIPTPATH" >&2
 cd "$SCRIPTPATH"
 
