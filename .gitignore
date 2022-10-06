@@ -5,6 +5,7 @@
 
 ### No value to store, intermediary files
 releases/*
+assets/labels.previous.json
 
 
 **/.DS_Store
