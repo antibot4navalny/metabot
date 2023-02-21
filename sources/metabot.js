@@ -135,6 +135,13 @@ function isStatusView()
  		! path.startsWith("/search")
 }
 
+function isSearchResults()
+{
+	path=document.location.pathname
+	return path.startsWith("/search") && 
+ 		document.location.search != ""
+}
+
 function isProfileView()
 {
 	pathWithRepliesRemoved=normalizedPathname()
@@ -152,7 +159,7 @@ function isProfileView()
 
 function markTweets()
 {
-	if (isStatusView() || isProfileView() )
+	if (isStatusView() || isSearchResults || isProfileView() )
 	{
 		defineTweetBackgroundStyle()
 
@@ -160,7 +167,7 @@ function markTweets()
 		// In conversation view, works both for focused tweet and
 		// for parent / child replies of the focused tweet.
 			
-		highlight_tweets=isStatusView()
+		highlight_tweets=isStatusView() || isSearchResults
 	
 
 		var i, x, t, linksInsideTweet
