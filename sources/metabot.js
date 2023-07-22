@@ -10,9 +10,27 @@ var prepackaged_labels={};
 
 var webHostedLabelsCached = {};
 
+var webHostedLabelsCachedComponents = { legacy: {}, manual: {} }
+
 async function retrieveLabelsFromStorage()
 {
-	retrievedLabels=await (await commonImporter()).retrieveItemFromStorage('webHostedLabels', {});
+	webHostedLabelsCachedComponents.legacy = Object.assign({}, 
+		await (
+		await commonImporter()).retrieveItemFromStorage(
+			'webHostedLabelsLegacy', {})
+	);
+			
+	webHostedLabelsCachedComponents.manual = Object.assign({}, 
+		await (
+		await commonImporter()).retrieveItemFromStorage(
+			'webHostedLabelsManual', {})
+	);
+
+
+	let retrievedLabels = {
+		 ...webHostedLabelsCachedComponents.legacy,
+		 ...webHostedLabelsCachedComponents.manual
+	};
 
 	return retrievedLabels;
 }
@@ -24,21 +42,36 @@ async function initializeCachedLabelsFromStorage()
 	webHostedLabelsCached = Object.assign({}, labelsFromStorage);
 }
 
-async function updateCachedLabelsOnStorageChange(changes, area) {
 
-  const changedItems = Object.keys(changes);
+function checkLabelsComponentChanges(suffix, property, changes)
+{
+	const changedItems = Object.keys(changes);
 
-	if ((area == "local") &&
-		(Object.keys(changes).includes('webHostedLabels')))
+	if (changedItems.includes('webHostedLabels' + suffix))
 	{
-		console.log("Local changes in Labels:");
+		console.log("Local changes in Labels " + suffix + ":");
 
 // 		const newLabels = await retrieveWebHostedLabels();
-		const newLabels = changes['webHostedLabels'].newValue;
-				
-		webHostedLabelsCached = Object.assign({}, newLabels);
+		const newLabels = changes['webHostedLabels' + suffix].newValue;
+			
+		webHostedLabelsCachedComponents[property] = Object.assign({}, newLabels);
+		
+		webHostedLabelsCached = Object.assign({}, 
+			webHostedLabelsCachedComponents.legacy,
+			webHostedLabelsCachedComponents.manual
+		);
 	}
+}
 
+
+async function updateCachedLabelsOnStorageChange(changes, area) {
+
+	if (area == "local") 
+	{
+		checkLabelsComponentChanges("Legacy", "legacy", changes)
+		checkLabelsComponentChanges("Manual", "manual", changes)
+	}
+	
 	//// Debug-only output:
 	// for (const item of changedItems) {
 	// 	console.log(`${item} has changed:`);

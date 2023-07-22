@@ -1,3 +1,16 @@
+const legacyLabels = {
+  storageSuffix: "Legacy",
+  URL: "https://api.github.com/repos/antibot4navalny/accounts_labelled/contents/labels.json",
+  period: 3 * 60
+};
+
+const manualLabels = {
+  storageSuffix: "Manual",
+  URL: "https://api.github.com/repos/antibot4navalny/accounts_labelled/contents/labels_manual.json",
+  period: 15
+};
+
+
 import { retrieveItemFromStorage } from './common_impex.js';
 
 chrome.alarms.create("updateLabels", {periodInMinutes: 1})
@@ -16,12 +29,12 @@ function getStorageDataPromise(sKey) {
   });
 }
 
-function storeLastTimeUpdateChecked(timeChecked)
+function storeLastTimeUpdateChecked(labelSuffix, timeChecked)
 {
 	const timeCheckedJsoned = timeChecked.toJSON()
 	chrome.storage.local.set(
 	{
-		labelsLastTimeUpdateChecked: timeCheckedJsoned
+		["labelsLastTimeUpdateChecked" + labelSuffix]: timeCheckedJsoned
 	}, function() {
 	});
 }
@@ -34,34 +47,34 @@ async function retrieveDateByKey(key)
 }
 
 
-async function retrieveLastTimeUpdateChecked()
+async function retrieveLastTimeUpdateChecked(labelSuffix)
 {
-	const retrievedDate = retrieveDateByKey('labelsLastTimeUpdateChecked');
+	const retrievedDate = retrieveDateByKey(
+	  'labelsLastTimeUpdateChecked' + labelSuffix);
 	return retrievedDate;
 }
 
-async function retrieveLabelsLastModified()
+async function retrieveLabelsLastModified(labelSuffix)
 {
-	const lastModified = retrieveDateByKey('labelsLastModified')
+	const lastModified = retrieveDateByKey(
+	  'labelsLastModified' + labelSuffix)
 	return lastModified;
 }
 
-
-
-
-function storeJSON(json, lastModified)
+function storeJSON(labelSuffix, json, lastModified)
 {
+    
+    // Any other key/value pairs in storage will not be affected.
 		chrome.storage.local.set(
-		{
-			webHostedLabels: json,
-			labelsLastModified: lastModified.toJSON()
-		}, function() {
-			//// console.log("storeJSON: Done updating JSON")
-		});
+		  {
+        ["webHostedLabels" + labelSuffix]: json,
+        ["labelsLastModified" + labelSuffix]: lastModified.toJSON()
+		  },
+  		function() {
+        //// console.log("storeJSON: Done updating JSON")
+      }
+    );
 }
-
-const labelsBodyGithubApiUrl = 'https://api.github.com/repos/antibot4navalny/accounts_labelled/contents/labels.json'
-
 
 
 var GitHubApiRateLimitRemaining;
@@ -73,8 +86,9 @@ function reportJsonUpdateFailed(reason)
 	console.log("Labels update failed, reason: ", reason)
 }
 
-async function fetchLabelsUpdateIfAvailable()
+async function fetchLabelsUpdateIfAvailable(labelsType)
 {
+  const suffix = labelsType.storageSuffix
 	var JsonLastModifiedDate;
 	var JsonLastModifiedRaw;
 	var JsonLastModifiedEpoch;
@@ -88,29 +102,32 @@ async function fetchLabelsUpdateIfAvailable()
 		/// Just log it to console and keep trying nicely.
 		reportJsonUpdateFailed('ApiRateLimitExceeded, waiting for limit reset')
 	} else {
-		const labelsLastModified=await retrieveLabelsLastModified();
+		const labelsLastModified=await retrieveLabelsLastModified(suffix);
 		const lastTimeUpdateChecked=new Date();
 		
-		const response = await fetch(labelsBodyGithubApiUrl, {
+		const response = await fetch(labelsType.URL, {
 			method: 'GET',
 			headers: {
 				'If-Modified-Since': labelsLastModified.toUTCString()
 			}
 		});
-		storeLastTimeUpdateChecked(lastTimeUpdateChecked);
+		storeLastTimeUpdateChecked(
+		  suffix, lastTimeUpdateChecked);
 		
 		const ok = response.ok;
 		const status = response.status;
 	
 		GitHubApiRateLimitRemaining = response.headers.get("x-ratelimit-remaining");
 		GitHubApiRateLimitReset = new Date(1000*response.headers.get("x-ratelimit-reset"));
-		console.log("GitHub API rate limit remaining: ", GitHubApiRateLimitRemaining)
-		console.log("GitHub API rate limit reset:\n  ",
+		console.log(suffix + " GitHub API rate limit remaining: ", GitHubApiRateLimitRemaining)
+		console.log(suffix + " GitHub API rate limit reset:\n  ",
 			GitHubApiRateLimitReset);
 
 		if (status == 304)
 		{
-			console.log("fetchLabelsUpdateIfAvailable: No JSON update for If-Modified-Since:\n  ",
+			console.log(
+			  "fetchLabelsUpdateIfAvailable: " + suffix +
+			  ": No JSON update for If-Modified-Since:\n  ",
 				labelsLastModified);
 		} else if (status==200) {
 			JsonLastModifiedRaw=response.headers.get("Last-Modified")
@@ -119,8 +136,10 @@ async function fetchLabelsUpdateIfAvailable()
 			const rawJSON = await response.json();
 			const payloadJson=JSON.parse(atob(rawJSON.content));
 		
-			storeJSON(payloadJson, JsonLastModifiedDate);
-			console.log("fetchLabelsUpdateIfAvailable: Fetched JSON updated at:\n  ",
+			storeJSON(suffix, payloadJson, JsonLastModifiedDate);
+			console.log(
+			  "fetchLabelsUpdateIfAvailable: " + suffix +
+			  ": Fetched JSON updated at:\n  ",
 			  JsonLastModifiedDate);
 			
 		} else {
@@ -134,46 +153,53 @@ function isValidDate(d) {
 }
 
 
-async function considerRefreshingJSON()
+async function considerRefreshingJSON(labelsType)
 {
+  const suffix = labelsType.storageSuffix;
 	var lastTimeUpdateChecked;
 
-	lastTimeUpdateChecked=await retrieveLastTimeUpdateChecked();
+	lastTimeUpdateChecked=await retrieveLastTimeUpdateChecked(suffix);
 
 	var currentTime=new Date();
   const timeSinceLastChecked = new Date(currentTime - lastTimeUpdateChecked);
   const timeSinceLastCheckedStr = timeSinceLastChecked.toUTCString().split(' ')[4];
   
 	console.log('considerRefreshingJSON: ',
-		timeSinceLastCheckedStr, ' since last update of labels');
+		timeSinceLastCheckedStr, ' since last update of labels: ' + suffix);
 
   //// Get latest JSON every 15 minutes
 	if ((typeof lastTimeUpdateChecked === undefined) ||
   		! isValidDate(lastTimeUpdateChecked) ||
   		//// Production timeouts:
- 			(((currentTime - lastTimeUpdateChecked) / (1000*60)) > 15))
+ 			(((currentTime - lastTimeUpdateChecked) / (1000*60)) > labelsType.period))
 			//// Debug timeouts:
 			//(((currentTime - lastTimeUpdateChecked) / (1000)) > 15))
 	{
-		console.log("considerRefreshingJSON: Time to check JSON for updates");
+		console.log("considerRefreshingJSON: Time to check JSON for updates: " + suffix);
 		
-		fetchLabelsUpdateIfAvailable()
+		fetchLabelsUpdateIfAvailable(labelsType)
   } else {
-  	console.log("considerRefreshingJSON: Too early to check for JSON updates")
+  	console.log("considerRefreshingJSON: Too early to check for JSON updates: " + suffix)
   }
+}
+
+function considerRefreshingAllJSONs()
+{
+  considerRefreshingJSON(legacyLabels)
+  considerRefreshingJSON(manualLabels)
 }
 
 
 /* Check whether new version is installed / updated */
 chrome.runtime.onInstalled.addListener(function(details) {
-   considerRefreshingJSON()
+   considerRefreshingAllJSONs()
 });
 
 
 chrome.alarms.onAlarm.addListener(function(alarm) {
   if (alarm.name === 'updateLabels')  
-    considerRefreshingJSON();
+    considerRefreshingAllJSONs();
 });
 
 
-considerRefreshingJSON();
+considerRefreshingAllJSONs();
