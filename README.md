@@ -65,5 +65,15 @@
 
 Устанавливается из магазина расширений Firefox Addons: https://addons.mozilla.org/en-US/firefox/addon/metabot-for-twitter/
 
+
+# Поддержите нашу работу
+
+
+
+Если вы считаете нашу работу важной, пожалуйста поддержите нас донатами в крипто-валюте: 
+   - BTC: 12MoEGwmEaQUWPK1GHJvrypYGKwxiPREKP
+   - ETH: 0x96e25dc68a0379300e1142a7351e546d170671f6
+
+
 ----
 Создано на базе и благодаря расширению [Metabot для Youtube](https://github.com/CupIvan/metabot) (c) [CupIvan](https://github.com/CupIvan).
