@@ -40,7 +40,6 @@ https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkc
 Работает только на компьютере.
 
 Установка:
-### Способ попроще
 1. Откройте страницу Метабота для Google Chrome:  
   https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
 2. Нажмите Add to Opera
