@@ -37,7 +37,7 @@ https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkc
 
 
 ### Microsoft Edge
-(проверялось только на компьютере)
+(проверялось только на компьютере; теоретически [возможен](https://9to5google.com/2024/01/31/microsoft-edge-android-extensions/) Android)
 
 1. Откройте страницу Метабота для Google Chrome:  
   https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
