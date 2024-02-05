@@ -7,10 +7,13 @@
 ## Firefox
 Работает на компьютере и на смартфонах Android.
 
-На смартфонах только под [Beta](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta)-версией (либо [Nightly for Developers](https://play.google.com/store/apps/details?id=org.mozilla.fenix)), после [этих инструкций](https://support.mozilla.org/en-US/kb/extended-add-support).
-
-Установите из магазина расширений (Firefox Addons):  
+Установка:
+1. Только для смартфонов:
+   - установите [Firefox  Beta](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta), либо [Nightly for Developers](https://play.google.com/store/apps/details?id=org.mozilla.fenix)
+   - выполните [эти инструкции](https://support.mozilla.org/en-US/kb/extended-add-support)
+2. Установите из магазина расширений (Firefox Addons):  
 https://addons.mozilla.org/en-US/firefox/addon/metabot-for-twitter/
+
 
 ## Google Chrome
 Работает только на компьютере.
