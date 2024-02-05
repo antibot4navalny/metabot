@@ -41,30 +41,15 @@ https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkc
 
 Установка:
 ### Способ попроще
-1. [[Скачайте и установите](https://www.opera.com/download) браузер Opera, если он ещё не установлен]
-2. Запустите браузер Opera
-3. Установите расширение [Install Chrome Extensions](https://addons.opera.com/en/extensions/details/install-chrome-extensions/)
-4. Зайдите на страницу [расширения Metabot for Twitter](https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi) в магазине расширений для Chrome
-5. Нажмите Add to Opera
-6. Нажмите OK в ответ на "Install Chrome Extensions: To complete installation, go to extensions manager and confirm installation by clicking install button."
-7. На открывшейся новой вкладке с расширениями (Extensions):
+1. Откройте страницу Метабота для Google Chrome:  
+  https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
+2. Нажмите Add to Opera
+3. Нажмите OK в ответ на "Install Chrome Extensions: To complete installation, go to extensions manager and confirm installation by clicking install button."
+4. На открывшейся новой вкладке с расширениями (Extensions):
    - найдите Metabot for Twitter
    - нажмите справа от него Install
    - подтвердите установку: Yes, Install
 
-
-### Способ посложнее
-1. [[Скачайте и устанавите](https://www.opera.com/download) браузер Opera, если он ещё не установлен]
-2. Запустите браузер Opera
-3. Скачайте и сохраните на диск файл по этой ссылке: [ChromeOpera_self_distribution.crx](https://raw.githubusercontent.com/antibot4navalny/metabot/master/releases/ChromeOpera_self_distribution.crx)
-4. Откройте этот файл браузером Opera
-    - в MacOS: Open With > Opera
-5. В верхней части окна появляется "The extension was disabled because it is from an unknown source...."
-6. В правом верхнем углу нажмите Go To Extensions
-7. В открывшемся табе с расширениями (Extensions):
-    - найдите Metabot for Twitter
-    - нажмите справа от него Install
-    - подтвердите установку
 
 ## TOR
 Работает на компьютере.
