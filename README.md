@@ -9,25 +9,29 @@
 
 На смартфонах только под [Beta](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta)-версией (либо [Nightly for Developers](https://play.google.com/store/apps/details?id=org.mozilla.fenix)), после [этих инструкций](https://support.mozilla.org/en-US/kb/extended-add-support).
 
-Устанавливается из магазина расширений (Firefox Addons): https://addons.mozilla.org/en-US/firefox/addon/metabot-for-twitter/
+Устанавливается из магазина расширений (Firefox Addons):  
+https://addons.mozilla.org/en-US/firefox/addon/metabot-for-twitter/
 
 ## Google Chrome
 Работает только на компьютере.
 
-Устанавливается из магазина расширений (Chrome Store): https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
+Устанавливается из магазина расширений (Chrome Store):  
+https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
 
 ## браузер [Kiwi (Android)](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser)
 
-Устанавливается из магазина расширений (Chrome Store): https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
+Устанавливается из магазина расширений (Chrome Store):  
+https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
 
 
 ## Microsoft Edge
 Проверялось только на компьютере.
 
 Установка:
-1. Открываем страницу Метабота для Google Chrome: https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
-2. Если есть синяя полоска в начале страницы, нажимаем "Разрешить расширения из других магазинов" ("Allow extensions from other stores"); подтверждаем "Разрешить" ("Allow")
-3. На странице Метабота нажимаем "Установить" (Add To Chrome) > "Добавить расширение" (Add Extension); всё подтверждаем
+1. Открываем страницу Метабота для Google Chrome:  
+  https://chrome.google.com/webstore/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
+3. Если есть синяя полоска в начале страницы, нажимаем "Разрешить расширения из других магазинов" ("Allow extensions from other stores"); подтверждаем "Разрешить" ("Allow")
+4. На странице Метабота нажимаем "Установить" (Add To Chrome) > "Добавить расширение" (Add Extension); всё подтверждаем
 
 
 
@@ -65,7 +69,8 @@
 ## TOR
 Работает на компьютере.
 
-Устанавливается из магазина расширений Firefox Addons: https://addons.mozilla.org/en-US/firefox/addon/metabot-for-twitter/
+Устанавливается из магазина расширений Firefox Addons:  
+https://addons.mozilla.org/en-US/firefox/addon/metabot-for-twitter/
 
 
 # Поддержите нашу работу
