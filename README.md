@@ -4,6 +4,9 @@
 
 См. [подробные доказательства](https://twitter.com/antibot4navalny/status/1658713744665374722), что подсвечиваются именно поддельные аккаунты, действующие в пользу Кремля.
 
+<img width="556" alt="1500x500 KremlinTruth" src="https://github.com/antibot4navalny/metabot/assets/41168195/27e524d9-3160-4144-89cb-f641e37ca87b">
+
+
 ## Установка
 ### Firefox
 (работает на компьютере и на смартфонах Android)
