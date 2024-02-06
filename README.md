@@ -31,7 +31,7 @@
 2. [Поддержите](#поддержите-нашу-работу) нашу каждодневную работу по пополнению списка кремлеботов.
 
 
-### Microsoft Edge (работает только на компьютере; в перспективе [возможен](https://9to5google.com/2024/01/31/microsoft-edge-android-extensions/) Android
+### Microsoft Edge (работает только на компьютере; в перспективе [возможен](https://9to5google.com/2024/01/31/microsoft-edge-android-extensions/) Android)
 
 1. Откройте страницу Метабота для Google Chrome:  
   https://chromewebstore.google.com/detail/metabot-for-twitter/cooadmmiojjmmfifkcainbnmhghfcbfi
