@@ -1,4 +1,4 @@
-  #!/bin/bash
+#!/bin/bash
   . ../../common/sh/utils/common_funcs.sh
 
 
